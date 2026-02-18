@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "OdtSharpConsole": {
+      "commandName": "Project",
+      "commandLineArgs": "odtsharpconsole /wait /action:OpenWorkingDocument /infile:TheImportanceOfOpenSource.odt /workingpath:C:\\Files\\Dropbox\\Develop\\Projects\\OdtSharp\\Docs\\ReferenceDocument"
+    }
+  }
+}

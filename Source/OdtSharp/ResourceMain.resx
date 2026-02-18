@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="rxBoolTrue" xml:space="preserve">
+    <value>(?i:(?&lt;bool&gt;1|True|Yes|^OK|Up|Good|Fine))</value>
+    <comment>Regular expression to match when a true boolean value is found.</comment>
+  </data>
+  <data name="tsvAttributeNameMap" xml:space="preserve">
+    <value>AboutText	xhtml:about
+ClassNames	text:class-names
+ConditionalStyleName	text:cond-style-name
+ContentText	xhtml:content
+DataTypeText	xhtml:datatype
+Global	text:global
+Id	text:id
+Property	xhtml:property
+StyleName	text:style-name
+UseSoftPageBreaks	text:use-soft-page-breaks
+XmlId	xml:id</value>
+    <comment>The map of attributes to property names.</comment>
+  </data>
+  <data name="tsvTextBlockTypeMap" xml:space="preserve">
+    <value>AlphabeticalIndex	text:alphabetical-index
+AlphabeticalIndexAutoMarkFile	text:alphabetical-index-auto-mark-file
+AlphabeticalIndexMark	text:alphabetical-index-mark
+AlphabeticalIndexMarkEnd	text:alphabetical-index-mark-end
+AlphabeticalIndexMarkStart	text:alphabetical-index-mark-start
+Anchor	text:a
+Annotation	office:annotation
+AnnotationEnd	office:annotation-end
+AuthorInitial	text:author-initials
+AuthorName	text:author-name
+Bibliography	text:bibliography
+BibliographyMark	text:bibliography-mark
+Bookmark	text:bookmark
+BookmarkEnd	text:bookmark-end
+BookmarkReference	text:bookmark-ref
+BookmarkStart	text:bookmark-start
+Change	text:change
+ChangeEnd	text:change-end
+ChangeStart	text:change-start
+Chapter	text:chapter
+CharacterCount	text:character-count
+ConditionalText	text:conditional-text
+CreationDate	text:creation-date
+CreationTime	text:creation-time
+Creator	text:creator
+DatabaseDisplay	text:database-display
+DatabaseName	text:database-name
+DatabaseNext	text:database-next
+DatabaseRowNumber	text:database-row-number
+DatabaseRowSelect	text:database-row-select
+DataPilotTable	table:data-pilot-tables
+Date	text:date
+DateTime	presentation:date-time
+DdeConnection	text:dde-connection
+DdeConnectionGroup	text:dde-connection-decls
+DdeLink	table:dde-links
+Description	text:description
+Draw3DScene	dr3d:scene
+DrawAnchor	draw:a
+DrawCaption	draw:caption
+DrawCircle	draw:circle
+DrawConnector	draw:connector
+DrawControl	draw:control
+DrawCustomShape	draw:custom-shape
+DrawEllipse	draw:ellipse
+DrawFrame	draw:frame
+DrawGroup	draw:g
+DrawLine	draw:line
+DrawMeasure	draw:measure
+DrawPageThumbnail	draw:page-thumbnail
+DrawPath	draw:path
+DrawPolygon	draw:polygon
+DrawPolyline	draw:polyline
+DrawRect	draw:rect
+DrawRegularPolygon	draw:regular-polygon
+EditingCycles	text:editing-cycles
+EditingDuration	text:editing-duration
+ExecuteMacro	text:execute-macro
+Expression	text:expression
+Filename	text:file-name
+Footer	presentation:footer
+Form	office:forms
+Header	presentation:header
+Heading	text:h
+HiddenParagraph	text:hidden-paragraph
+HiddenText	text:hidden-text
+IllustrationIndex	text:illustration-index
+ImageCount	text:image-count
+InitialCreator	text:initial-creator
+Keywords	text:keywords
+LabelRange	table:label-ranges
+LineBreak	text:line-break
+List	text:list
+Measure	text:measure
+Meta	text:meta
+MetaField	text:meta-field
+ModificationDate	text:modification-date
+ModificationTime	text:modification-time
+NamedExpression	table:named-expressions
+Note	text:note
+NoteRef	text:note-ref
+NumberedParagraph	text:numbered-paragraph
+ObjectCount	text:object-count
+ObjectIndex	text:object-index
+PageContinuation	text:page-continuation
+PageCount	text:page-count
+PageNumber	text:page-number
+PageSequence	text:page-sequence
+PageVariableGet	text:page-variable-get
+PageVariableSet	text:page-variable-set
+Paragraph	text:p
+ParagraphCount	text:paragraph-count
+Placeholder	text:placeholder
+PrintDate	text:print-date
+PrintedBy	text:printed-by
+PrintTime	text:print-time
+ReferenceMark	text:reference-mark
+ReferenceMarkEnd	text:reference-mark-end
+ReferenceMarkStart	text:reference-mark-start
+ReferenceRef	text:reference-ref
+Ruby	text:ruby
+Script	text:script
+Section	text:section
+SenderCity	text:sender-city
+SenderCompany	text:sender-company
+SenderCountry	text:sender-country
+SenderEmail	text:sender-email
+SenderFax	text:sender-fax
+SenderFirstName	text:sender-firstname
+SenderInitials	text:sender-initials
+SenderLastName	text:sender-lastname
+SenderPhonePrivate	text:sender-phone-private
+SenderPhoneWork	text:sender-phone-work
+SenderPosition	text:sender-position
+SenderPostalCode	text:sender-postal-code
+SenderStateOrProvince	text:sender-state-or-province
+SenderStreet	text:sender-street
+SenderTitle	text:sender-title
+Sequence	text:sequence
+SequenceDeclaration	text:sequence-decls
+SequenceRef	text:sequence-ref
+SheetName	text:sheet-name
+SoftPageBreak	text:soft-page-break
+Space	text:s
+Span	text:span
+Subject	text:subject
+Tab	text:tab
+Table	table:table
+TableCalculationSetting	table:calculation-settings
+TableConsolidation	table:consolidation
+TableContentValidation	table:content-validations
+TableCount	text:table-count
+TableDatabaseRange	table:database-ranges
+TableFormula	text:table-formula
+TableIndex	text:table-index
+TableOfContents	text:table-of-content
+TableOfContentsMark	text:toc-mark
+TableOfContentsMarkEnd	text:toc-mark-end
+TableOfContentsMarkStart	text:toc-mark-start
+TemplateName	text:template-name
+TextInput	text:text-input
+Time	text:time
+Title	text:title
+TrackedChange	text:tracked-changes
+UserDefined	text:user-defined
+UserFieldDeclaration	text:user-field-decls
+UserFieldGet	text:user-field-get
+UserFieldInput	text:user-field-input
+UserIndex	text:user-index
+UserIndexMark	text:user-index-mark
+UserIndexMarkEnd	text:user-index-mark-end
+UserIndexMarkStart	text:user-index-mark-start
+VariableDeclaration	text:variable-decls
+VariableGet	text:variable-get
+VariableInput	text:variable-input
+VariableSet	text:variable-set
+WordCount	text:word-count</value>
+    <comment>The text block type map of block types for each XML text node tag, as Tab-Separated values.</comment>
+  </data>
+</root>
