@@ -99,6 +99,12 @@ namespace OdtSharpConsole
 							prg.mActionItem.OutputName = argItem.Value;
 						}
 						break;
+					case "option":
+						if(argItem.Value.Length > 0)
+						{
+							prg.mActionItem.Options.Add(argItem.Value);
+						}
+						break;
 					case "workingpath":
 						prg.mActionItem.WorkingPath = argItem.Value;
 						break;

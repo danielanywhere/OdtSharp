@@ -80,6 +80,7 @@ namespace OdtSharpConsole
 			string content = "";
 			ActionDocumentItem doc = null;
 			int docIndex = 0;
+			ActionOptionItem option = null;
 
 			if(CheckElements(this,
 				ActionElementEnum.InputFilename))
@@ -93,12 +94,20 @@ namespace OdtSharpConsole
 					Trace.WriteLine(
 						$" Working document: {this.InputFiles[docIndex].Name}",
 						$"{MessageImportanceEnum.Info}");
-					if(WorkingDocument is OdtWorkingDocumentItem document)
+					option = Options.FirstOrDefault(x => x.Name.ToLower() == "dump");
+					if(option?.Value.Length > 0 &&
+						WorkingDocument is OdtWorkingDocumentItem document)
 					{
 						builder = new StringBuilder();
 						OdtDocumentItem.DumpBlocks(document.Document, builder);
-						File.WriteAllText(@"C:\Temp\OdtDocumentBlocks.txt",
-							builder.ToString());
+						if(option.Value.ToLower() == "console")
+						{
+							Trace.WriteLine(builder.ToString());
+						}
+						else
+						{
+							File.WriteAllText(option.Value, builder.ToString());
+						}
 					}
 				}
 				else
