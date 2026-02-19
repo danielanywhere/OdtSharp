@@ -107,6 +107,8 @@ namespace OdtSharpConsole
 						else
 						{
 							File.WriteAllText(option.Value, builder.ToString());
+							Trace.WriteLine(
+								$"Working document dump written to: {option.Value}");
 						}
 					}
 				}
