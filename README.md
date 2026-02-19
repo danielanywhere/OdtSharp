@@ -25,3 +25,11 @@ Additionally, although the files are stored in an XML format, I will be processi
 ## Status
 
 Preliminary development of this project is currently in progress. If you find a bug, please don't hesitate to create an issue. If you have an idea for its direction, you are invited to start or participate in a discussion. If you intend to level off some functionality, please create a fork and submit those changes as a pull request.
+
+<p>&nbsp;</p>
+
+## Digital Sovereignty
+
+Digital sovereignty coat of arms. Public domain by Daniel Patterson.
+
+<img src="Images/DigitalSovereignty256.png" width="256" alt="Digital Sovereignty Coat of Arms - Public Domain by Daniel Patterson" />
