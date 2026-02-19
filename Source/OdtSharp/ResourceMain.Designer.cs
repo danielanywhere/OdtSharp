@@ -71,16 +71,24 @@ namespace OdtSharp {
         
         /// <summary>
         ///   Looks up a localized string similar to AboutText	xhtml:about
+        ///ActuateX	xlink:actuate
+        ///AnchorType	text:anchor-type
+        ///ApplyDesignMode	form:apply-design-mode
+        ///AutomaticFocus	form:automatic-focus
         ///ClassNames	text:class-names
         ///ConditionalStyleName	text:cond-style-name
         ///ContentText	xhtml:content
         ///DataTypeText	xhtml:datatype
+        ///DisplayOutlineLevel	text:display-outline-level
+        ///DrawName	draw:name
+        ///DrawStyleName	draw:style-name
         ///Global	text:global
+        ///HeightSVG	svg:height
+        ///Hyperlink	xlink:href
         ///Id	text:id
-        ///Property	xhtml:property
-        ///StyleName	text:style-name
-        ///UseSoftPageBreaks	text:use-soft-page-breaks
-        ///XmlId	xml:id.
+        ///LinkTypeX	xlink:type
+        ///MimeType	draw:mime-type
+        ///Name	text [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string tsvAttributeNameMap {
             get {
