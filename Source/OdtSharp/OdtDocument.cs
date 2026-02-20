@@ -117,6 +117,22 @@ namespace OdtSharp
 		////*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
+		//* DeserializeStyles																											*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Deserialize the style definitions.
+		/// </summary>
+		/// <param name="document">
+		/// Reference to the document for which the styles will be processed.
+		/// </param>
+		private static void DeserializeStyles(OdtDocumentItem document)
+		{
+			//	TODO: !1 - Stopped here...
+			//	TODO: Populate styles.
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
 		//* DeserializeTextContent																								*
 		//*-----------------------------------------------------------------------*
 		/// <summary>
@@ -824,7 +840,7 @@ namespace OdtSharp
 						result.mMimeType = File.ReadAllText(
 							Path.Combine(result.mOdtProject.FullName, "mimetype"));
 						//DeserializeSettings(result);
-						//DeserializeStyles(result);
+						DeserializeStyles(result);
 						DeserializeTextContent(result);
 					}
 				}
