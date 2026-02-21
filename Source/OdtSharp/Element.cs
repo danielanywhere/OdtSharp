@@ -22,16 +22,17 @@ using System.Linq;
 using System.Text;
 
 using Html;
+using OdtSharp.OpenDocument;
 
 namespace OdtSharp
 {
 	//*-------------------------------------------------------------------------*
-	//*	TextBlockCollection																											*
+	//*	ElementCollection																												*
 	//*-------------------------------------------------------------------------*
 	/// <summary>
-	/// Collection of TextBlockItem Items.
+	/// Collection of ElementItem Items.
 	/// </summary>
-	public class TextBlockCollection : List<TextBlockItem>
+	public class ElementCollection : List<ElementItem>
 	{
 		//*************************************************************************
 		//*	Private																																*
@@ -47,12 +48,12 @@ namespace OdtSharp
 	//*-------------------------------------------------------------------------*
 
 	//*-------------------------------------------------------------------------*
-	//*	TextBlockItem																														*
+	//*	ElementItem																															*
 	//*-------------------------------------------------------------------------*
 	/// <summary>
-	/// Information about an individual ODT text block.
+	/// Information about an individual ODT element block.
 	/// </summary>
-	public class TextBlockItem
+	public class ElementItem
 	{
 		//*************************************************************************
 		//*	Private																																*
@@ -64,35 +65,36 @@ namespace OdtSharp
 		//*	Public																																*
 		//*************************************************************************
 		//*-----------------------------------------------------------------------*
-		//*	Blocks																																*
+		//*	Elements																															*
 		//*-----------------------------------------------------------------------*
 		/// <summary>
-		/// Private member for <see cref="Blocks">Blocks</see>.
+		/// Private member for <see cref="Elements">Elements</see>.
 		/// </summary>
-		private TextBlockCollection mBlocks = new TextBlockCollection();
+		private ElementCollection mElements = new ElementCollection();
 		/// <summary>
 		/// Get a reference to the collection of child blocks in this block.
 		/// </summary>
-		public TextBlockCollection Blocks
+		public ElementCollection Elements
 		{
-			get { return mBlocks; }
+			get { return mElements; }
 		}
 		//*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
-		//*	BlockType																															*
+		//*	ElementType																														*
 		//*-----------------------------------------------------------------------*
 		/// <summary>
-		/// Private member for <see cref="BlockType">BlockType</see>.
+		/// Private member for <see cref="ElementType">ElementType</see>.
 		/// </summary>
-		private TextBlockTypeEnum mBlockType = TextBlockTypeEnum.None;
+		private OpenDocumentElementTypeEnum mElementType =
+			OpenDocumentElementTypeEnum.None;
 		/// <summary>
 		/// Get/Set the recognized type of this block.
 		/// </summary>
-		public TextBlockTypeEnum BlockType
+		public OpenDocumentElementTypeEnum ElementType
 		{
-			get { return mBlockType; }
-			set { mBlockType = value; }
+			get { return mElementType; }
+			set { mElementType = value; }
 		}
 		//*-----------------------------------------------------------------------*
 
@@ -157,9 +159,9 @@ namespace OdtSharp
 		{
 			string result = "";
 
-			if(mBlockType != TextBlockTypeEnum.None)
+			if(mElementType != OpenDocumentElementTypeEnum.None)
 			{
-				result = mBlockType.ToString();
+				result = mElementType.ToString();
 			}
 			else
 			{

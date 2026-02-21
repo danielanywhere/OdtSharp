@@ -43,6 +43,10 @@
       "DisplayName": "AlphabeticalIndexMark",
       "MappedName": "text:alphabetical-index-mark",
       "Attributes": [
+        "text:key1",
+        "text:key1-phonetic",
+        "text:key2",
+        "text:key2-phonetic",
         "text:main-entry",
         "text:string-value",
         "text:string-value-phonetic"
@@ -57,6 +61,10 @@
       "MappedName": "text:alphabetical-index-mark-start",
       "Attributes": [
         "text:id",
+        "text:key1",
+        "text:key1-phonetic",
+        "text:key2",
+        "text:key2-phonetic",
         "text:main-entry",
         "text:string-value-phonetic"
       ]
@@ -83,7 +91,8 @@
         "text:use-keys-as-entries"
       ],
       "ChildElements": [
-        "text:alphabetical-index-entry-template"
+        "text:alphabetical-index-entry-template",
+        "text:index-title-template"
       ]
     },
     {
@@ -346,6 +355,7 @@
       "Attributes": [
         "db:append-table-alias-name",
         "db:boolean-comparison-mode",
+        "db:enable-sql92-check",
         "db:ignore-driver-privileges",
         "db:is-table-name-length-limited",
         "db:max-row-count",
@@ -354,7 +364,8 @@
       ],
       "ChildElements": [
         "db:data-source-settings",
-        "db:table-filter"
+        "db:table-filter",
+        "db:table-type-filter"
       ]
     },
     {
@@ -370,6 +381,11 @@
         "xlink:href",
         "xlink:show",
         "xlink:type"
+      ],
+      "ChildElements": [
+        "office:event-listeners",
+        "svg:desc",
+        "svg:title"
       ]
     },
     {
@@ -388,6 +404,11 @@
         "xlink:href",
         "xlink:show",
         "xlink:type"
+      ],
+      "ChildElements": [
+        "office:event-listeners",
+        "svg:desc",
+        "svg:title"
       ]
     },
     {
@@ -404,6 +425,11 @@
         "xlink:href",
         "xlink:show",
         "xlink:type"
+      ],
+      "ChildElements": [
+        "office:event-listeners",
+        "svg:desc",
+        "svg:title"
       ]
     },
     {
@@ -560,6 +586,11 @@
         "text:bibliography-type",
         "text:booktitle",
         "text:chapter",
+        "text:custom1",
+        "text:custom2",
+        "text:custom3",
+        "text:custom4",
+        "text:custom5",
         "text:edition",
         "text:editor",
         "text:howpublished",
@@ -1002,6 +1033,10 @@
         "style:direction",
         "style:rotation-angle",
         "text:line-break"
+      ],
+      "ChildElements": [
+        "chart:label-separator",
+        "chart:symbol-image"
       ]
     },
     {
@@ -1254,7 +1289,12 @@
     },
     {
       "DisplayName": "ConnectionData",
-      "MappedName": "db:connection-data"
+      "MappedName": "db:connection-data",
+      "ChildElements": [
+        "db:connection-resource",
+        "db:database-description",
+        "db:login"
+      ]
     },
     {
       "DisplayName": "Connector",
@@ -1279,6 +1319,10 @@
         "presentation:style-name",
         "svg:d",
         "svg:viewBox",
+        "svg:x1",
+        "svg:x2",
+        "svg:y1",
+        "svg:y2",
         "table:end-cell-address",
         "table:end-x",
         "table:end-y",
@@ -1319,7 +1363,9 @@
       ],
       "ChildElements": [
         "office:event-listeners",
-        "table:error-macro"
+        "table:error-macro",
+        "table:error-message",
+        "table:help-message"
       ]
     },
     {
@@ -1404,6 +1450,46 @@
         "xhtml:datatype",
         "xhtml:property",
         "xml:id"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:annotation",
+        "table:cell-range-source",
+        "table:detective",
+        "table:table",
+        "text:alphabetical-index",
+        "text:bibliography",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:h",
+        "text:illustration-index",
+        "text:list",
+        "text:numbered-paragraph",
+        "text:object-index",
+        "text:p",
+        "text:section",
+        "text:soft-page-break",
+        "text:table-index",
+        "text:table-of-content",
+        "text:user-index"
       ]
     },
     {
@@ -1413,6 +1499,23 @@
         "style:data-style-name",
         "text:fixed",
         "text:time-value"
+      ]
+    },
+    {
+      "DisplayName": "Cube",
+      "MappedName": "dr3d:cube",
+      "Attributes": [
+        "dr3d:max-edge",
+        "dr3d:min-edge",
+        "dr3d:transform",
+        "draw:class-names",
+        "draw:id",
+        "draw:layer",
+        "draw:style-name",
+        "draw:z-index",
+        "presentation:class-names",
+        "presentation:style-name",
+        "xml:id"
       ]
     },
     {
@@ -1479,11 +1582,24 @@
         "text:anchor-page-number",
         "text:anchor-type",
         "xml:id"
+      ],
+      "ChildElements": [
+        "draw:enhanced-geometry",
+        "draw:glue-point",
+        "office:event-listeners",
+        "svg:desc",
+        "svg:title",
+        "text:list",
+        "text:p"
       ]
     },
     {
       "DisplayName": "CutOffs",
-      "MappedName": "table:cut-offs"
+      "MappedName": "table:cut-offs",
+      "ChildElements": [
+        "table:insertion-cut-off",
+        "table:movement-cut-off"
+      ]
     },
     {
       "DisplayName": "Database",
@@ -1492,7 +1608,9 @@
         "db:data-source",
         "db:forms",
         "db:queries",
-        "db:reports"
+        "db:reports",
+        "db:schema-definition",
+        "db:table-representations"
       ]
     },
     {
@@ -1530,7 +1648,11 @@
     },
     {
       "DisplayName": "DatabaseDescription",
-      "MappedName": "db:database-description"
+      "MappedName": "db:database-description",
+      "ChildElements": [
+        "db:file-based-database",
+        "db:server-database"
+      ]
     },
     {
       "DisplayName": "DatabaseDisplay",
@@ -1675,6 +1797,11 @@
         "table:selected-page",
         "table:source-field-name",
         "table:used-hierarchy"
+      ],
+      "ChildElements": [
+        "table:data-pilot-field-reference",
+        "table:data-pilot-groups",
+        "table:data-pilot-level"
       ]
     },
     {
@@ -1718,7 +1845,14 @@
     },
     {
       "DisplayName": "DataPilotLevel",
-      "MappedName": "table:data-pilot-level"
+      "MappedName": "table:data-pilot-level",
+      "ChildElements": [
+        "table:data-pilot-display-info",
+        "table:data-pilot-layout-info",
+        "table:data-pilot-members",
+        "table:data-pilot-sort-info",
+        "table:data-pilot-subtotals"
+      ]
     },
     {
       "DisplayName": "DataPilotMember",
@@ -1788,7 +1922,12 @@
     },
     {
       "DisplayName": "DataSource",
-      "MappedName": "db:data-source"
+      "MappedName": "db:data-source",
+      "ChildElements": [
+        "db:application-connection-settings",
+        "db:connection-data",
+        "db:driver-settings"
+      ]
     },
     {
       "DisplayName": "DataSourceSetting",
@@ -1924,7 +2063,8 @@
       "MappedName": "style:default-page-layout",
       "ChildElements": [
         "style:footer-style",
-        "style:header-style"
+        "style:header-style",
+        "style:page-layout-properties"
       ]
     },
     {
@@ -1932,6 +2072,19 @@
       "MappedName": "style:default-style",
       "Attributes": [
         "style:family"
+      ],
+      "ChildElements": [
+        "style:chart-properties",
+        "style:drawing-page-properties",
+        "style:graphic-properties",
+        "style:paragraph-properties",
+        "style:ruby-properties",
+        "style:section-properties",
+        "style:table-cell-properties",
+        "style:table-column-properties",
+        "style:table-properties",
+        "style:table-row-properties",
+        "style:text-properties"
       ]
     },
     {
@@ -1945,7 +2098,11 @@
     },
     {
       "DisplayName": "Deletions",
-      "MappedName": "table:deletions"
+      "MappedName": "table:deletions",
+      "ChildElements": [
+        "table:cell-content-deletion",
+        "table:change-deletion"
+      ]
     },
     {
       "DisplayName": "Delimiter",
@@ -1967,7 +2124,11 @@
     },
     {
       "DisplayName": "Detective",
-      "MappedName": "table:detective"
+      "MappedName": "table:detective",
+      "ChildElements": [
+        "table:highlighted-range",
+        "table:operation"
+      ]
     },
     {
       "DisplayName": "Dim",
@@ -1984,6 +2145,16 @@
         "grddl:transformation",
         "office:mimetype",
         "office:version"
+      ],
+      "ChildElements": [
+        "office:automatic-styles",
+        "office:body",
+        "office:font-face-decls",
+        "office:master-styles",
+        "office:meta",
+        "office:scripts",
+        "office:settings",
+        "office:styles"
       ]
     },
     {
@@ -1995,7 +2166,9 @@
       ],
       "ChildElements": [
         "office:automatic-styles",
-        "office:body"
+        "office:body",
+        "office:font-face-decls",
+        "office:scripts"
       ]
     },
     {
@@ -2065,7 +2238,12 @@
         "table:data-pilot-tables",
         "table:dde-links",
         "table:label-ranges",
-        "table:named-expressions"
+        "table:named-expressions",
+        "text:alphabetical-index-auto-mark-file",
+        "text:dde-connection-decls",
+        "text:sequence-decls",
+        "text:user-field-decls",
+        "text:variable-decls"
       ]
     },
     {
@@ -2081,6 +2259,25 @@
         "xlink:show",
         "xlink:type",
         "xml:id"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon"
       ]
     },
     {
@@ -2174,6 +2371,10 @@
         "draw:z-index",
         "presentation:class-names",
         "presentation:style-name",
+        "svg:x1",
+        "svg:x2",
+        "svg:y1",
+        "svg:y2",
         "table:end-cell-address",
         "table:end-x",
         "table:end-y",
@@ -2217,7 +2418,31 @@
         "anim:par",
         "anim:seq",
         "anim:set",
-        "anim:transitionFilter"
+        "anim:transitionFilter",
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:layer-set",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:forms",
+        "presentation:animations",
+        "presentation:notes",
+        "svg:desc",
+        "svg:title"
       ]
     },
     {
@@ -2276,6 +2501,12 @@
         "db:parameter-name-substitution",
         "db:show-deleted",
         "db:system-driver-settings"
+      ],
+      "ChildElements": [
+        "db:auto-increment",
+        "db:character-set",
+        "db:delimiter",
+        "db:table-settings"
       ]
     },
     {
@@ -2359,8 +2590,8 @@
       "DisplayName": "EnhancedGeometry",
       "MappedName": "draw:enhanced-geometry",
       "Attributes": [
-        "d:projection",
-        "d:shade-mode",
+        "dr3d:projection",
+        "dr3d:shade-mode",
         "draw:concentric-gradient-fill-allowed",
         "draw:enhanced-path",
         "draw:extrusion",
@@ -2481,6 +2712,23 @@
       ]
     },
     {
+      "DisplayName": "Extrude",
+      "MappedName": "dr3d:extrude",
+      "Attributes": [
+        "dr3d:transform",
+        "draw:class-names",
+        "draw:id",
+        "draw:layer",
+        "draw:style-name",
+        "draw:z-index",
+        "presentation:class-names",
+        "presentation:style-name",
+        "svg:d",
+        "svg:viewBox",
+        "xml:id"
+      ]
+    },
+    {
       "DisplayName": "File",
       "MappedName": "form:file",
       "Attributes": [
@@ -2554,7 +2802,11 @@
     },
     {
       "DisplayName": "FilterAnd",
-      "MappedName": "table:filter-and"
+      "MappedName": "table:filter-and",
+      "ChildElements": [
+        "table:filter-condition",
+        "table:filter-or"
+      ]
     },
     {
       "DisplayName": "FilterCondition",
@@ -2670,6 +2922,7 @@
         "svg:mathematical",
         "svg:overline-position",
         "svg:overline-thickness",
+        "svg:panose-1",
         "svg:slope",
         "svg:stemh",
         "svg:stemv",
@@ -2705,7 +2958,11 @@
     },
     {
       "DisplayName": "FontFaceSrc",
-      "MappedName": "svg:font-face-src"
+      "MappedName": "svg:font-face-src",
+      "ChildElements": [
+        "svg:font-face-name",
+        "svg:font-face-uri"
+      ]
     },
     {
       "DisplayName": "FontFaceUri",
@@ -2722,7 +2979,34 @@
     },
     {
       "DisplayName": "FooterLeft",
-      "MappedName": "style:footer-left"
+      "MappedName": "style:footer-left",
+      "ChildElements": [
+        "style:region-center",
+        "style:region-left",
+        "style:region-right",
+        "table:table",
+        "text:alphabetical-index",
+        "text:alphabetical-index-auto-mark-file",
+        "text:bibliography",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:dde-connection-decls",
+        "text:h",
+        "text:illustration-index",
+        "text:index-title",
+        "text:list",
+        "text:object-index",
+        "text:p",
+        "text:section",
+        "text:sequence-decls",
+        "text:table-index",
+        "text:table-of-content",
+        "text:tracked-changes",
+        "text:user-field-decls",
+        "text:user-index",
+        "text:variable-decls"
+      ]
     },
     {
       "DisplayName": "FooterStyle",
@@ -3110,30 +3394,30 @@
       "DisplayName": "GraphicProperties",
       "MappedName": "style:graphic-properties",
       "Attributes": [
-        "d:ambient-color",
-        "d:backface-culling",
-        "d:back-scale",
-        "d:close-back",
-        "d:close-front",
-        "d:depth",
-        "d:diffuse-color",
-        "d:edge-rounding",
-        "d:edge-rounding-mode",
-        "d:emissive-color",
-        "d:end-angle",
-        "d:horizontal-segments",
-        "d:lighting-mode",
-        "d:normals-direction",
-        "d:normals-kind",
-        "d:shadow",
-        "d:shininess",
-        "d:specular-color",
-        "d:texture-filter",
-        "d:texture-generation-mode-x",
-        "d:texture-generation-mode-y",
-        "d:texture-kind",
-        "d:texture-mode",
-        "d:vertical-segments",
+        "dr3d:ambient-color",
+        "dr3d:backface-culling",
+        "dr3d:back-scale",
+        "dr3d:close-back",
+        "dr3d:close-front",
+        "dr3d:depth",
+        "dr3d:diffuse-color",
+        "dr3d:edge-rounding",
+        "dr3d:edge-rounding-mode",
+        "dr3d:emissive-color",
+        "dr3d:end-angle",
+        "dr3d:horizontal-segments",
+        "dr3d:lighting-mode",
+        "dr3d:normals-direction",
+        "dr3d:normals-kind",
+        "dr3d:shadow",
+        "dr3d:shininess",
+        "dr3d:specular-color",
+        "dr3d:texture-filter",
+        "dr3d:texture-generation-mode-x",
+        "dr3d:texture-generation-mode-y",
+        "dr3d:texture-kind",
+        "dr3d:texture-mode",
+        "dr3d:vertical-segments",
         "draw:auto-grow-height",
         "draw:auto-grow-width",
         "draw:blue",
@@ -3311,6 +3595,16 @@
         "text:anchor-page-number",
         "text:anchor-type",
         "xml:id"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse"
       ]
     },
     {
@@ -3340,6 +3634,26 @@
         "presentation:use-footer-name",
         "presentation:use-header-name",
         "style:page-layout-name"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon"
       ]
     },
     {
@@ -3391,7 +3705,34 @@
     },
     {
       "DisplayName": "HeaderLeft",
-      "MappedName": "style:header-left"
+      "MappedName": "style:header-left",
+      "ChildElements": [
+        "style:region-center",
+        "style:region-left",
+        "style:region-right",
+        "table:table",
+        "text:alphabetical-index",
+        "text:alphabetical-index-auto-mark-file",
+        "text:bibliography",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:dde-connection-decls",
+        "text:h",
+        "text:illustration-index",
+        "text:index-title",
+        "text:list",
+        "text:object-index",
+        "text:p",
+        "text:section",
+        "text:sequence-decls",
+        "text:table-index",
+        "text:table-of-content",
+        "text:tracked-changes",
+        "text:user-field-decls",
+        "text:user-index",
+        "text:variable-decls"
+      ]
     },
     {
       "DisplayName": "HeaderStyle",
@@ -3414,6 +3755,64 @@
         "xhtml:datatype",
         "xhtml:property",
         "xml:id"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:annotation",
+        "office:annotation-end",
+        "presentation:date-time",
+        "presentation:footer",
+        "presentation:header",
+        "text:a",
+        "text:alphabetical-index-mark",
+        "text:alphabetical-index-mark-end",
+        "text:alphabetical-index-mark-start",
+        "text:author-initials",
+        "text:author-name",
+        "text:bibliography-mark",
+        "text:bookmark",
+        "text:bookmark-end",
+        "text:bookmark-ref",
+        "text:bookmark-start",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:chapter",
+        "text:character-count",
+        "text:conditional-text",
+        "text:creation-date",
+        "text:creation-time",
+        "text:creator",
+        "text:database-display",
+        "text:database-name",
+        "text:database-next",
+        "text:database-row-number",
+        "text:database-row-select",
+        "text:date",
+        "text:dde-connection",
+        "text:description",
+        "text:editing-cycles",
+        "text:editing-duration",
+        "text:execute-macro",
+        "text:expression",
+        "text:file-name"
       ]
     },
     {
@@ -3543,7 +3942,8 @@
         "text:use-caption"
       ],
       "ChildElements": [
-        "text:illustration-index-entry-template"
+        "text:illustration-index-entry-template",
+        "text:index-title-template"
       ]
     },
     {
@@ -3596,7 +3996,45 @@
     },
     {
       "DisplayName": "IndexBody",
-      "MappedName": "text:index-body"
+      "MappedName": "text:index-body",
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "table:table",
+        "text:alphabetical-index",
+        "text:bibliography",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:h",
+        "text:illustration-index",
+        "text:index-title",
+        "text:list",
+        "text:numbered-paragraph",
+        "text:object-index",
+        "text:p",
+        "text:section",
+        "text:soft-page-break",
+        "text:table-index",
+        "text:table-of-content",
+        "text:user-index"
+      ]
     },
     {
       "DisplayName": "IndexColumn",
@@ -3675,6 +4113,44 @@
         "text:protection-key-digest-algorithm",
         "text:style-name",
         "xml:id"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "table:table",
+        "text:alphabetical-index",
+        "text:bibliography",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:h",
+        "text:illustration-index",
+        "text:index-title",
+        "text:list",
+        "text:numbered-paragraph",
+        "text:object-index",
+        "text:p",
+        "text:section",
+        "text:soft-page-break",
+        "text:table-index",
+        "text:table-of-content",
+        "text:user-index"
       ]
     },
     {
@@ -3853,6 +4329,16 @@
       ]
     },
     {
+      "DisplayName": "Light",
+      "MappedName": "dr3d:light",
+      "Attributes": [
+        "dr3d:diffuse-color",
+        "dr3d:direction",
+        "dr3d:enabled",
+        "dr3d:specular"
+      ]
+    },
+    {
       "DisplayName": "Line",
       "MappedName": "draw:line",
       "Attributes": [
@@ -3867,6 +4353,10 @@
         "draw:z-index",
         "presentation:class-names",
         "presentation:style-name",
+        "svg:x1",
+        "svg:x2",
+        "svg:y1",
+        "svg:y2",
         "table:end-cell-address",
         "table:end-x",
         "table:end-y",
@@ -3892,7 +4382,11 @@
         "draw:name",
         "svg:gradientTransform",
         "svg:gradientUnits",
-        "svg:spreadMethod"
+        "svg:spreadMethod",
+        "svg:x1",
+        "svg:x2",
+        "svg:y1",
+        "svg:y2"
       ]
     },
     {
@@ -3972,7 +4466,8 @@
         "text:h",
         "text:list",
         "text:number",
-        "text:p"
+        "text:p",
+        "text:soft-page-break"
       ]
     },
     {
@@ -3987,7 +4482,8 @@
         "text:h",
         "text:list",
         "text:number",
-        "text:p"
+        "text:p",
+        "text:soft-page-break"
       ]
     },
     {
@@ -4084,6 +4580,11 @@
         "style:display-name",
         "style:name",
         "text:consecutive-numbering"
+      ],
+      "ChildElements": [
+        "text:list-level-style-bullet",
+        "text:list-level-style-image",
+        "text:list-level-style-number"
       ]
     },
     {
@@ -4148,12 +4649,42 @@
         "anim:par",
         "anim:seq",
         "anim:set",
-        "anim:transitionFilter"
+        "anim:transitionFilter",
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:layer-set",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:forms",
+        "presentation:notes",
+        "style:footer",
+        "style:footer-left",
+        "style:header",
+        "style:header-left"
       ]
     },
     {
       "DisplayName": "MasterStyles",
-      "MappedName": "office:master-styles"
+      "MappedName": "office:master-styles",
+      "ChildElements": [
+        "draw:layer-set",
+        "style:handout-master",
+        "style:master-page"
+      ]
     },
     {
       "DisplayName": "Math",
@@ -4201,6 +4732,26 @@
       "Attributes": [
         "style:data-style-name",
         "xml:id"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon"
       ]
     },
     {
@@ -4250,7 +4801,9 @@
       "ChildElements": [
         "office:change-info",
         "table:deletions",
-        "table:dependencies"
+        "table:dependencies",
+        "table:source-range-address",
+        "table:target-range-address"
       ]
     },
     {
@@ -4307,7 +4860,44 @@
     },
     {
       "DisplayName": "NoteBody",
-      "MappedName": "text:note-body"
+      "MappedName": "text:note-body",
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "table:table",
+        "text:alphabetical-index",
+        "text:bibliography",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:h",
+        "text:illustration-index",
+        "text:list",
+        "text:numbered-paragraph",
+        "text:object-index",
+        "text:p",
+        "text:section",
+        "text:soft-page-break",
+        "text:table-index",
+        "text:table-of-content",
+        "text:user-index"
+      ]
     },
     {
       "DisplayName": "NoteCitation",
@@ -4339,6 +4929,27 @@
         "presentation:use-footer-name",
         "presentation:use-header-name",
         "style:page-layout-name"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:forms"
       ]
     },
     {
@@ -4357,6 +4968,10 @@
         "text:note-class",
         "text:start-numbering-at",
         "text:start-value"
+      ],
+      "ChildElements": [
+        "text:note-continuation-notice-backward",
+        "text:note-continuation-notice-forward"
       ]
     },
     {
@@ -4414,7 +5029,11 @@
       ],
       "ChildElements": [
         "number:fraction",
-        "number:number"
+        "number:number",
+        "number:scientific-number",
+        "number:text",
+        "style:map",
+        "style:text-properties"
       ]
     },
     {
@@ -4542,7 +5161,12 @@
         "table:data-pilot-tables",
         "table:dde-links",
         "table:label-ranges",
-        "table:named-expressions"
+        "table:named-expressions",
+        "text:alphabetical-index-auto-mark-file",
+        "text:dde-connection-decls",
+        "text:sequence-decls",
+        "text:user-field-decls",
+        "text:variable-decls"
       ]
     },
     {
@@ -4576,7 +5200,14 @@
         "meta:document-statistic",
         "meta:editing-cycles",
         "meta:editing-duration",
-        "meta:generator"
+        "meta:generator",
+        "meta:hyperlink-behaviour",
+        "meta:initial-creator",
+        "meta:keyword",
+        "meta:print-date",
+        "meta:printed-by",
+        "meta:template",
+        "meta:user-defined"
       ]
     },
     {
@@ -4593,6 +5224,59 @@
       "Attributes": [
         "text:global",
         "text:use-soft-page-breaks"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:forms",
+        "table:calculation-settings",
+        "table:consolidation",
+        "table:content-validations",
+        "table:database-ranges",
+        "table:data-pilot-tables",
+        "table:dde-links",
+        "table:label-ranges",
+        "table:named-expressions",
+        "table:table",
+        "text:alphabetical-index",
+        "text:alphabetical-index-auto-mark-file",
+        "text:bibliography",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:dde-connection-decls",
+        "text:h",
+        "text:illustration-index",
+        "text:list",
+        "text:numbered-paragraph",
+        "text:object-index",
+        "text:p",
+        "text:page-sequence",
+        "text:section",
+        "text:sequence-decls",
+        "text:soft-page-break",
+        "text:table-index",
+        "text:table-of-content",
+        "text:tracked-changes",
+        "text:user-field-decls",
+        "text:user-index",
+        "text:variable-decls"
       ]
     },
     {
@@ -4680,6 +5364,11 @@
       "Attributes": [
         "style:name",
         "style:page-usage"
+      ],
+      "ChildElements": [
+        "style:footer-style",
+        "style:header-style",
+        "style:page-layout-properties"
       ]
     },
     {
@@ -4739,7 +5428,8 @@
       ],
       "ChildElements": [
         "style:background-image",
-        "style:columns"
+        "style:columns",
+        "style:footnote-sep"
       ]
     },
     {
@@ -4821,6 +5511,136 @@
         "xhtml:datatype",
         "xhtml:property",
         "xml:id"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:annotation",
+        "office:annotation-end",
+        "presentation:date-time",
+        "presentation:footer",
+        "presentation:header",
+        "text:a",
+        "text:alphabetical-index-mark",
+        "text:alphabetical-index-mark-end",
+        "text:alphabetical-index-mark-start",
+        "text:author-initials",
+        "text:author-name",
+        "text:bibliography-mark",
+        "text:bookmark",
+        "text:bookmark-end",
+        "text:bookmark-ref",
+        "text:bookmark-start",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:chapter",
+        "text:character-count",
+        "text:conditional-text",
+        "text:creation-date",
+        "text:creation-time",
+        "text:creator",
+        "text:database-display",
+        "text:database-name",
+        "text:database-next",
+        "text:database-row-number",
+        "text:database-row-select",
+        "text:date",
+        "text:dde-connection",
+        "text:description",
+        "text:editing-cycles",
+        "text:editing-duration",
+        "text:execute-macro",
+        "text:expression",
+        "text:file-name",
+        "text:hidden-paragraph",
+        "text:hidden-text",
+        "text:image-count",
+        "text:initial-creator",
+        "text:keywords",
+        "text:line-break",
+        "text:measure",
+        "text:meta",
+        "text:meta-field",
+        "text:modification-date",
+        "text:modification-time",
+        "text:note",
+        "text:note-ref",
+        "text:object-count",
+        "text:page-continuation",
+        "text:page-count",
+        "text:page-number",
+        "text:page-variable-get",
+        "text:page-variable-set",
+        "text:paragraph-count",
+        "text:placeholder",
+        "text:print-date",
+        "text:printed-by",
+        "text:print-time",
+        "text:reference-mark",
+        "text:reference-mark-end",
+        "text:reference-mark-start",
+        "text:reference-ref",
+        "text:ruby",
+        "text:s",
+        "text:script",
+        "text:sender-city",
+        "text:sender-company",
+        "text:sender-country",
+        "text:sender-email",
+        "text:sender-fax",
+        "text:sender-firstname",
+        "text:sender-initials",
+        "text:sender-lastname",
+        "text:sender-phone-private",
+        "text:sender-phone-work",
+        "text:sender-position",
+        "text:sender-postal-code",
+        "text:sender-state-or-province",
+        "text:sender-street",
+        "text:sender-title",
+        "text:sequence",
+        "text:sequence-ref",
+        "text:sheet-name",
+        "text:soft-page-break",
+        "text:span",
+        "text:subject",
+        "text:tab",
+        "text:table-count",
+        "text:table-formula",
+        "text:template-name",
+        "text:text-input",
+        "text:time",
+        "text:title",
+        "text:toc-mark",
+        "text:toc-mark-end",
+        "text:toc-mark-start",
+        "text:user-defined",
+        "text:user-field-get",
+        "text:user-field-input",
+        "text:user-index-mark",
+        "text:user-index-mark-end",
+        "text:user-index-mark-start",
+        "text:variable-get",
+        "text:variable-input",
+        "text:variable-set",
+        "text:word-count"
       ]
     },
     {
@@ -5036,17 +5856,17 @@
       "Attributes": [
         "chart:data-source-has-labels",
         "chart:style-name",
-        "d:ambient-color",
-        "d:distance",
-        "d:focal-length",
-        "d:lighting-mode",
-        "d:projection",
-        "d:shade-mode",
-        "d:shadow-slant",
-        "d:transform",
-        "d:vpn",
-        "d:vrp",
-        "d:vup",
+        "dr3d:ambient-color",
+        "dr3d:distance",
+        "dr3d:focal-length",
+        "dr3d:lighting-mode",
+        "dr3d:projection",
+        "dr3d:shade-mode",
+        "dr3d:shadow-slant",
+        "dr3d:transform",
+        "dr3d:vpn",
+        "dr3d:vrp",
+        "dr3d:vup",
         "svg:height",
         "svg:width",
         "svg:x",
@@ -5061,7 +5881,8 @@
         "chart:stock-gain-marker",
         "chart:stock-loss-marker",
         "chart:stock-range-line",
-        "chart:wall"
+        "chart:wall",
+        "dr3d:light"
       ]
     },
     {
@@ -5168,7 +5989,12 @@
         "table:data-pilot-tables",
         "table:dde-links",
         "table:label-ranges",
-        "table:named-expressions"
+        "table:named-expressions",
+        "text:alphabetical-index-auto-mark-file",
+        "text:dde-connection-decls",
+        "text:sequence-decls",
+        "text:user-field-decls",
+        "text:variable-decls"
       ]
     },
     {
@@ -5301,7 +6127,8 @@
       "ChildElements": [
         "db:columns",
         "db:filter-statement",
-        "db:order-statement"
+        "db:order-statement",
+        "db:update-table"
       ]
     },
     {
@@ -5466,6 +6293,14 @@
         "text:anchor-page-number",
         "text:anchor-type",
         "xml:id"
+      ],
+      "ChildElements": [
+        "draw:glue-point",
+        "office:event-listeners",
+        "svg:desc",
+        "svg:title",
+        "text:list",
+        "text:p"
       ]
     },
     {
@@ -5474,6 +6309,23 @@
       "ChildElements": [
         "db:component",
         "db:component-collection"
+      ]
+    },
+    {
+      "DisplayName": "Rotate",
+      "MappedName": "dr3d:rotate",
+      "Attributes": [
+        "dr3d:transform",
+        "draw:class-names",
+        "draw:id",
+        "draw:layer",
+        "draw:style-name",
+        "draw:z-index",
+        "presentation:class-names",
+        "presentation:style-name",
+        "svg:d",
+        "svg:viewBox",
+        "xml:id"
       ]
     },
     {
@@ -5486,7 +6338,32 @@
     },
     {
       "DisplayName": "RubyBase",
-      "MappedName": "text:ruby-base"
+      "MappedName": "text:ruby-base",
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:annotation",
+        "office:annotation-end",
+        "presentation:date-time",
+        "presentation:footer",
+        "presentation:header"
+      ]
     },
     {
       "DisplayName": "RubyProperties",
@@ -5513,6 +6390,53 @@
         "table:is-active",
         "table:protected",
         "table:scenario-ranges"
+      ]
+    },
+    {
+      "DisplayName": "Scene",
+      "MappedName": "dr3d:scene",
+      "Attributes": [
+        "dr3d:ambient-color",
+        "dr3d:distance",
+        "dr3d:focal-length",
+        "dr3d:lighting-mode",
+        "dr3d:projection",
+        "dr3d:shade-mode",
+        "dr3d:shadow-slant",
+        "dr3d:transform",
+        "dr3d:vpn",
+        "dr3d:vrp",
+        "dr3d:vup",
+        "draw:caption-id",
+        "draw:class-names",
+        "draw:id",
+        "draw:layer",
+        "draw:style-name",
+        "draw:z-index",
+        "presentation:class-names",
+        "presentation:style-name",
+        "svg:height",
+        "svg:width",
+        "svg:x",
+        "svg:y",
+        "table:end-cell-address",
+        "table:end-x",
+        "table:end-y",
+        "table:table-background",
+        "text:anchor-page-number",
+        "text:anchor-type",
+        "xml:id"
+      ],
+      "ChildElements": [
+        "dr3d:cube",
+        "dr3d:extrude",
+        "dr3d:light",
+        "dr3d:rotate",
+        "dr3d:scene",
+        "dr3d:sphere",
+        "draw:glue-point",
+        "svg:desc",
+        "svg:title"
       ]
     },
     {
@@ -5543,7 +6467,11 @@
     },
     {
       "DisplayName": "Scripts",
-      "MappedName": "office:scripts"
+      "MappedName": "office:scripts",
+      "ChildElements": [
+        "office:event-listeners",
+        "office:script"
+      ]
     },
     {
       "DisplayName": "Seconds",
@@ -5565,6 +6493,45 @@
         "text:protection-key-digest-algorithm",
         "text:style-name",
         "xml:id"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:dde-source",
+        "table:table",
+        "text:alphabetical-index",
+        "text:bibliography",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:h",
+        "text:illustration-index",
+        "text:list",
+        "text:numbered-paragraph",
+        "text:object-index",
+        "text:p",
+        "text:section",
+        "text:section-source",
+        "text:soft-page-break",
+        "text:table-index",
+        "text:table-of-content",
+        "text:user-index"
       ]
     },
     {
@@ -5581,7 +6548,8 @@
       ],
       "ChildElements": [
         "style:background-image",
-        "style:columns"
+        "style:columns",
+        "text:notes-configuration"
       ]
     },
     {
@@ -5784,7 +6752,27 @@
     },
     {
       "DisplayName": "Shapes",
-      "MappedName": "table:shapes"
+      "MappedName": "table:shapes",
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon"
+      ]
     },
     {
       "DisplayName": "SheetName",
@@ -5920,6 +6908,114 @@
       "Attributes": [
         "text:class-names",
         "text:style-name"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:annotation",
+        "office:annotation-end",
+        "presentation:date-time",
+        "presentation:footer",
+        "presentation:header",
+        "text:a",
+        "text:alphabetical-index-mark",
+        "text:alphabetical-index-mark-end",
+        "text:alphabetical-index-mark-start",
+        "text:author-initials",
+        "text:author-name",
+        "text:bibliography-mark",
+        "text:bookmark",
+        "text:bookmark-end",
+        "text:bookmark-ref",
+        "text:bookmark-start",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:chapter",
+        "text:character-count",
+        "text:conditional-text",
+        "text:creation-date",
+        "text:creation-time",
+        "text:creator",
+        "text:database-display",
+        "text:database-name",
+        "text:database-next",
+        "text:database-row-number",
+        "text:database-row-select",
+        "text:date",
+        "text:dde-connection",
+        "text:description",
+        "text:editing-cycles",
+        "text:editing-duration",
+        "text:execute-macro",
+        "text:expression",
+        "text:file-name",
+        "text:hidden-paragraph",
+        "text:hidden-text",
+        "text:image-count",
+        "text:initial-creator",
+        "text:keywords",
+        "text:line-break",
+        "text:measure",
+        "text:meta",
+        "text:meta-field",
+        "text:modification-date",
+        "text:modification-time",
+        "text:note",
+        "text:note-ref",
+        "text:object-count",
+        "text:page-continuation",
+        "text:page-count",
+        "text:page-number",
+        "text:page-variable-get",
+        "text:page-variable-set",
+        "text:paragraph-count",
+        "text:placeholder",
+        "text:print-date",
+        "text:printed-by",
+        "text:print-time",
+        "text:reference-mark",
+        "text:reference-mark-end",
+        "text:reference-mark-start",
+        "text:reference-ref",
+        "text:ruby",
+        "text:s",
+        "text:script",
+        "text:sender-city",
+        "text:sender-company"
+      ]
+    },
+    {
+      "DisplayName": "Sphere",
+      "MappedName": "dr3d:sphere",
+      "Attributes": [
+        "dr3d:center",
+        "dr3d:size",
+        "dr3d:transform",
+        "draw:class-names",
+        "draw:id",
+        "draw:layer",
+        "draw:style-name",
+        "draw:z-index",
+        "presentation:class-names",
+        "presentation:style-name",
+        "xml:id"
       ]
     },
     {
@@ -5939,7 +7035,13 @@
         "table:dde-links",
         "table:label-ranges",
         "table:named-expressions",
-        "table:table"
+        "table:table",
+        "table:tracked-changes",
+        "text:alphabetical-index-auto-mark-file",
+        "text:dde-connection-decls",
+        "text:sequence-decls",
+        "text:user-field-decls",
+        "text:variable-decls"
       ]
     },
     {
@@ -5969,6 +7071,10 @@
       "Attributes": [
         "draw:display-name",
         "draw:distance",
+        "draw:dots1",
+        "draw:dots1-length",
+        "draw:dots2",
+        "draw:dots2-length",
         "draw:name",
         "draw:style"
       ]
@@ -5996,7 +7102,14 @@
         "style:drawing-page-properties",
         "style:graphic-properties",
         "style:map",
-        "style:paragraph-properties"
+        "style:paragraph-properties",
+        "style:ruby-properties",
+        "style:section-properties",
+        "style:table-cell-properties",
+        "style:table-column-properties",
+        "style:table-properties",
+        "style:table-row-properties",
+        "style:text-properties"
       ]
     },
     {
@@ -6041,7 +7154,27 @@
         "style:region-left",
         "style:region-right",
         "table:table",
-        "text:alphabetical-index"
+        "text:alphabetical-index",
+        "text:alphabetical-index-auto-mark-file",
+        "text:bibliography",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:dde-connection-decls",
+        "text:h",
+        "text:illustration-index",
+        "text:index-title",
+        "text:list",
+        "text:object-index",
+        "text:p",
+        "text:section",
+        "text:sequence-decls",
+        "text:table-index",
+        "text:table-of-content",
+        "text:tracked-changes",
+        "text:user-field-decls",
+        "text:user-index",
+        "text:variable-decls"
       ]
     },
     {
@@ -6060,7 +7193,19 @@
         "number:number-style",
         "number:percentage-style",
         "number:text-style",
-        "number:time-style"
+        "number:time-style",
+        "style:default-page-layout",
+        "style:default-style",
+        "style:presentation-page-layout",
+        "style:style",
+        "svg:linearGradient",
+        "svg:radialGradient",
+        "table:table-template",
+        "text:bibliography-configuration",
+        "text:linenumbering-configuration",
+        "text:list-style",
+        "text:notes-configuration",
+        "text:outline-style"
       ]
     },
     {
@@ -6096,6 +7241,10 @@
         "table:bind-styles-to-content",
         "table:case-sensitive",
         "table:page-breaks-on-group-change"
+      ],
+      "ChildElements": [
+        "table:sort-groups",
+        "table:subtotal-rule"
       ]
     },
     {
@@ -6193,6 +7342,46 @@
         "xhtml:datatype",
         "xhtml:property",
         "xml:id"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:annotation",
+        "table:cell-range-source",
+        "table:detective",
+        "table:table",
+        "text:alphabetical-index",
+        "text:bibliography",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:h",
+        "text:illustration-index",
+        "text:list",
+        "text:numbered-paragraph",
+        "text:object-index",
+        "text:p",
+        "text:section",
+        "text:soft-page-break",
+        "text:table-index",
+        "text:table-of-content",
+        "text:user-index"
       ]
     },
     {
@@ -6251,7 +7440,9 @@
       "MappedName": "table:table-column-group",
       "ChildElements": [
         "table:table-column",
-        "table:table-column-group"
+        "table:table-column-group",
+        "table:table-columns",
+        "table:table-header-columns"
       ]
     },
     {
@@ -6285,6 +7476,11 @@
         "db:name",
         "db:schema-name",
         "db:type"
+      ],
+      "ChildElements": [
+        "db:column-definitions",
+        "db:indices",
+        "db:keys"
       ]
     },
     {
@@ -6320,7 +7516,11 @@
     },
     {
       "DisplayName": "TableFilter",
-      "MappedName": "db:table-filter"
+      "MappedName": "db:table-filter",
+      "ChildElements": [
+        "db:table-exclude-filter",
+        "db:table-include-filter"
+      ]
     },
     {
       "DisplayName": "TableFilterPattern",
@@ -6387,6 +7587,10 @@
         "text:index-scope",
         "text:relative-tab-stop-position",
         "text:use-caption"
+      ],
+      "ChildElements": [
+        "text:index-title-template",
+        "text:table-index-entry-template"
       ]
     },
     {
@@ -6417,6 +7621,10 @@
         "text:protection-key-digest-algorithm",
         "text:style-name",
         "xml:id"
+      ],
+      "ChildElements": [
+        "text:index-body",
+        "text:table-of-content-source"
       ]
     },
     {
@@ -6508,11 +7716,22 @@
         "table:style-name",
         "table:visibility",
         "xml:id"
+      ],
+      "ChildElements": [
+        "table:covered-table-cell",
+        "table:table-cell"
       ]
     },
     {
       "DisplayName": "TableRowGroup",
-      "MappedName": "table:table-row-group"
+      "MappedName": "table:table-row-group",
+      "ChildElements": [
+        "table:table-header-rows",
+        "table:table-row",
+        "table:table-row-group",
+        "table:table-rows",
+        "text:soft-page-break"
+      ]
     },
     {
       "DisplayName": "TableRowProperties",
@@ -6583,7 +7802,9 @@
         "table:first-column",
         "table:first-row",
         "table:last-column",
-        "table:last-row"
+        "table:last-row",
+        "table:odd-columns",
+        "table:odd-rows"
       ]
     },
     {
@@ -6592,7 +7813,13 @@
     },
     {
       "DisplayName": "TableTrackedChanges",
-      "MappedName": "table:tracked-changes"
+      "MappedName": "table:tracked-changes",
+      "ChildElements": [
+        "table:cell-content-change",
+        "table:deletion",
+        "table:insertion",
+        "table:movement"
+      ]
     },
     {
       "DisplayName": "TableType",
@@ -6663,6 +7890,61 @@
         "xlink:href",
         "xlink:show",
         "xlink:type"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:annotation",
+        "office:annotation-end",
+        "office:event-listeners",
+        "presentation:date-time",
+        "presentation:footer",
+        "presentation:header",
+        "text:alphabetical-index-mark",
+        "text:alphabetical-index-mark-end",
+        "text:alphabetical-index-mark-start",
+        "text:author-initials",
+        "text:author-name",
+        "text:bibliography-mark",
+        "text:bookmark",
+        "text:bookmark-end",
+        "text:bookmark-ref",
+        "text:bookmark-start",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:chapter",
+        "text:character-count",
+        "text:conditional-text",
+        "text:creation-date",
+        "text:creation-time",
+        "text:creator",
+        "text:database-display",
+        "text:database-name",
+        "text:database-next",
+        "text:database-row-number",
+        "text:database-row-select",
+        "text:date",
+        "text:dde-connection",
+        "text:description",
+        "text:editing-cycles",
+        "text:editing-duration"
       ]
     },
     {
@@ -6705,6 +7987,38 @@
         "fo:min-width",
         "text:id",
         "xml:id"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "table:table",
+        "text:alphabetical-index",
+        "text:bibliography",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:h",
+        "text:illustration-index",
+        "text:list",
+        "text:numbered-paragraph",
+        "text:object-index",
+        "text:p"
       ]
     },
     {
@@ -6736,7 +8050,45 @@
     },
     {
       "DisplayName": "TextDeletion",
-      "MappedName": "text:deletion"
+      "MappedName": "text:deletion",
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:change-info",
+        "table:table",
+        "text:alphabetical-index",
+        "text:bibliography",
+        "text:change",
+        "text:change-end",
+        "text:change-start",
+        "text:h",
+        "text:illustration-index",
+        "text:list",
+        "text:numbered-paragraph",
+        "text:object-index",
+        "text:p",
+        "text:section",
+        "text:soft-page-break",
+        "text:table-index",
+        "text:table-of-content",
+        "text:user-index"
+      ]
     },
     {
       "DisplayName": "TextDescription",
@@ -6780,6 +8132,37 @@
         "xhtml:datatype",
         "xhtml:property",
         "xml:id"
+      ],
+      "ChildElements": [
+        "dr3d:scene",
+        "draw:a",
+        "draw:caption",
+        "draw:circle",
+        "draw:connector",
+        "draw:control",
+        "draw:custom-shape",
+        "draw:ellipse",
+        "draw:frame",
+        "draw:g",
+        "draw:line",
+        "draw:measure",
+        "draw:page-thumbnail",
+        "draw:path",
+        "draw:polygon",
+        "draw:polyline",
+        "draw:rect",
+        "draw:regular-polygon",
+        "office:annotation",
+        "office:annotation-end",
+        "presentation:date-time",
+        "presentation:footer",
+        "presentation:header",
+        "text:a",
+        "text:alphabetical-index-mark",
+        "text:alphabetical-index-mark-end",
+        "text:alphabetical-index-mark-start",
+        "text:author-initials",
+        "text:author-name"
       ]
     },
     {
@@ -6930,7 +8313,8 @@
       "ChildElements": [
         "number:text",
         "number:text-content",
-        "style:map"
+        "style:map",
+        "style:text-properties"
       ]
     },
     {
@@ -7131,6 +8515,11 @@
         "text:use-index-source-styles",
         "text:use-objects",
         "text:use-tables"
+      ],
+      "ChildElements": [
+        "text:index-source-styles",
+        "text:index-title-template",
+        "text:user-index-entry-template"
       ]
     },
     {
@@ -7330,6 +8719,10 @@
       "MappedName": "text:alphabetical-separators"
     },
     {
+      "DisplayName": "AmbientColor",
+      "MappedName": "dr3d:ambient-color"
+    },
+    {
       "DisplayName": "AnchorPageNumber",
       "MappedName": "text:anchor-page-number"
     },
@@ -7494,6 +8887,10 @@
       "MappedName": "chart:axis-position"
     },
     {
+      "DisplayName": "BackfaceCulling",
+      "MappedName": "dr3d:backface-culling"
+    },
+    {
       "DisplayName": "BackgroundColor",
       "MappedName": "fo:background-color"
     },
@@ -7512,6 +8909,10 @@
     {
       "DisplayName": "BackgroundVisible",
       "MappedName": "presentation:background-visible"
+    },
+    {
+      "DisplayName": "BackScale",
+      "MappedName": "dr3d:back-scale"
     },
     {
       "DisplayName": "BaseCellAddress",
@@ -7746,6 +9147,10 @@
       "MappedName": "table:cell-range-address"
     },
     {
+      "DisplayName": "Center",
+      "MappedName": "dr3d:center"
+    },
+    {
       "DisplayName": "CenterX",
       "MappedName": "draw:cx"
     },
@@ -7820,6 +9225,14 @@
     {
       "DisplayName": "Clip",
       "MappedName": "fo:clip"
+    },
+    {
+      "DisplayName": "CloseBack",
+      "MappedName": "dr3d:close-back"
+    },
+    {
+      "DisplayName": "CloseFront",
+      "MappedName": "dr3d:close-front"
     },
     {
       "DisplayName": "Code",
@@ -8082,8 +9495,24 @@
       "MappedName": "text:current-value"
     },
     {
-      "DisplayName": "Custom",
-      "MappedName": "text:custom"
+      "DisplayName": "Custom1",
+      "MappedName": "text:custom1"
+    },
+    {
+      "DisplayName": "Custom2",
+      "MappedName": "text:custom2"
+    },
+    {
+      "DisplayName": "Custom3",
+      "MappedName": "text:custom3"
+    },
+    {
+      "DisplayName": "Custom4",
+      "MappedName": "text:custom4"
+    },
+    {
+      "DisplayName": "Custom5",
+      "MappedName": "text:custom5"
     },
     {
       "DisplayName": "Data",
@@ -8282,6 +9711,10 @@
       "MappedName": "number:denominator-value"
     },
     {
+      "DisplayName": "Depth",
+      "MappedName": "dr3d:depth"
+    },
+    {
       "DisplayName": "Descent",
       "MappedName": "svg:descent"
     },
@@ -8314,8 +9747,16 @@
       "MappedName": "style:diagonal-tl-br-widths"
     },
     {
+      "DisplayName": "DiffuseColor",
+      "MappedName": "dr3d:diffuse-color"
+    },
+    {
       "DisplayName": "Dimension",
       "MappedName": "chart:dimension"
+    },
+    {
+      "DisplayName": "Direction",
+      "MappedName": "dr3d:direction"
     },
     {
       "DisplayName": "Direction",
@@ -8427,6 +9868,10 @@
     },
     {
       "DisplayName": "Distance",
+      "MappedName": "dr3d:distance"
+    },
+    {
+      "DisplayName": "Distance",
       "MappedName": "draw:distance"
     },
     {
@@ -8446,8 +9891,20 @@
       "MappedName": "text:dont-balance-text-columns"
     },
     {
-      "DisplayName": "Dots",
-      "MappedName": "draw:dots"
+      "DisplayName": "Dots1",
+      "MappedName": "draw:dots1"
+    },
+    {
+      "DisplayName": "Dots1Length",
+      "MappedName": "draw:dots1-length"
+    },
+    {
+      "DisplayName": "Dots2",
+      "MappedName": "draw:dots2"
+    },
+    {
+      "DisplayName": "Dots2Length",
+      "MappedName": "draw:dots2-length"
     },
     {
       "DisplayName": "DrawAspect",
@@ -8486,6 +9943,14 @@
       "MappedName": "form:echo-char"
     },
     {
+      "DisplayName": "EdgeRounding",
+      "MappedName": "dr3d:edge-rounding"
+    },
+    {
+      "DisplayName": "EdgeRoundingMode",
+      "MappedName": "dr3d:edge-rounding-mode"
+    },
+    {
       "DisplayName": "Editable",
       "MappedName": "style:editable"
     },
@@ -8506,12 +9971,20 @@
       "MappedName": "table:embedded-number-behavior"
     },
     {
+      "DisplayName": "EmissiveColor",
+      "MappedName": "dr3d:emissive-color"
+    },
+    {
+      "DisplayName": "Enabled",
+      "MappedName": "dr3d:enabled"
+    },
+    {
       "DisplayName": "Enabled",
       "MappedName": "table:enabled"
     },
     {
-      "DisplayName": "EnableSql",
-      "MappedName": "db:enable-sql"
+      "DisplayName": "EnableSql92Check",
+      "MappedName": "db:enable-sql92-check"
     },
     {
       "DisplayName": "Encoding",
@@ -8532,6 +10005,10 @@
     {
       "DisplayName": "End",
       "MappedName": "table:end"
+    },
+    {
+      "DisplayName": "EndAngle",
+      "MappedName": "dr3d:end-angle"
     },
     {
       "DisplayName": "EndAngle",
@@ -8888,6 +10365,10 @@
     {
       "DisplayName": "FlowWithText",
       "MappedName": "style:flow-with-text"
+    },
+    {
+      "DisplayName": "FocalLength",
+      "MappedName": "dr3d:focal-length"
     },
     {
       "DisplayName": "FocalX",
@@ -9286,6 +10767,10 @@
       "MappedName": "style:horizontal-rel"
     },
     {
+      "DisplayName": "HorizontalSegments",
+      "MappedName": "dr3d:horizontal-segments"
+    },
+    {
       "DisplayName": "Hostname",
       "MappedName": "db:hostname"
     },
@@ -9534,6 +11019,22 @@
       "MappedName": "text:key"
     },
     {
+      "DisplayName": "Key1",
+      "MappedName": "text:key1"
+    },
+    {
+      "DisplayName": "Key1Phonetic",
+      "MappedName": "text:key1-phonetic"
+    },
+    {
+      "DisplayName": "Key2",
+      "MappedName": "text:key2"
+    },
+    {
+      "DisplayName": "Key2Phonetic",
+      "MappedName": "text:key2-phonetic"
+    },
+    {
       "DisplayName": "KeySplines",
       "MappedName": "smil:keySplines"
     },
@@ -9732,6 +11233,10 @@
     {
       "DisplayName": "Level",
       "MappedName": "text:level"
+    },
+    {
+      "DisplayName": "LightingMode",
+      "MappedName": "dr3d:lighting-mode"
     },
     {
       "DisplayName": "LineBreak",
@@ -10014,6 +11519,10 @@
       "MappedName": "number:min-denominator-digits"
     },
     {
+      "DisplayName": "MinimumEdge",
+      "MappedName": "dr3d:min-edge"
+    },
+    {
       "DisplayName": "MinimumExponentDigits",
       "MappedName": "number:min-exponent-digits"
     },
@@ -10172,6 +11681,14 @@
     {
       "DisplayName": "NonWhitespaceCharacterCount",
       "MappedName": "meta:non-whitespace-character-count"
+    },
+    {
+      "DisplayName": "NormalsDirection",
+      "MappedName": "dr3d:normals-direction"
+    },
+    {
+      "DisplayName": "NormalsKind",
+      "MappedName": "dr3d:normals-kind"
     },
     {
       "DisplayName": "Note",
@@ -10422,8 +11939,8 @@
       "MappedName": "fo:page-width"
     },
     {
-      "DisplayName": "Panose",
-      "MappedName": "svg:panose-"
+      "DisplayName": "Panose1",
+      "MappedName": "svg:panose-1"
     },
     {
       "DisplayName": "PaperTrayName",
@@ -10588,6 +12105,10 @@
     {
       "DisplayName": "ProcessContent",
       "MappedName": "office:process-content"
+    },
+    {
+      "DisplayName": "Projection",
+      "MappedName": "dr3d:projection"
     },
     {
       "DisplayName": "Property",
@@ -10942,6 +12463,14 @@
       "MappedName": "office:server-map"
     },
     {
+      "DisplayName": "ShadeMode",
+      "MappedName": "dr3d:shade-mode"
+    },
+    {
+      "DisplayName": "Shadow",
+      "MappedName": "dr3d:shadow"
+    },
+    {
       "DisplayName": "Shadow",
       "MappedName": "draw:shadow"
     },
@@ -10966,12 +12495,20 @@
       "MappedName": "draw:shadow-opacity"
     },
     {
+      "DisplayName": "ShadowSlant",
+      "MappedName": "dr3d:shadow-slant"
+    },
+    {
       "DisplayName": "ShapeId",
       "MappedName": "draw:shape-id"
     },
     {
       "DisplayName": "Sharpness",
       "MappedName": "draw:sharpness"
+    },
+    {
+      "DisplayName": "Shininess",
+      "MappedName": "dr3d:shininess"
     },
     {
       "DisplayName": "Show",
@@ -11012,6 +12549,10 @@
     {
       "DisplayName": "ShrinkToFit",
       "MappedName": "style:shrink-to-fit"
+    },
+    {
+      "DisplayName": "Size",
+      "MappedName": "dr3d:size"
     },
     {
       "DisplayName": "Size",
@@ -11084,6 +12625,14 @@
     {
       "DisplayName": "SpaceCharacterCount",
       "MappedName": "text:c"
+    },
+    {
+      "DisplayName": "Specular",
+      "MappedName": "dr3d:specular"
+    },
+    {
+      "DisplayName": "SpecularColor",
+      "MappedName": "dr3d:specular-color"
     },
     {
       "DisplayName": "Speed",
@@ -11654,6 +13203,26 @@
       "MappedName": "style:text-underline-width"
     },
     {
+      "DisplayName": "TextureFilter",
+      "MappedName": "dr3d:texture-filter"
+    },
+    {
+      "DisplayName": "TextureGenerationModeX",
+      "MappedName": "dr3d:texture-generation-mode-x"
+    },
+    {
+      "DisplayName": "TextureGenerationModeY",
+      "MappedName": "dr3d:texture-generation-mode-y"
+    },
+    {
+      "DisplayName": "TextureKind",
+      "MappedName": "dr3d:texture-kind"
+    },
+    {
+      "DisplayName": "TextureMode",
+      "MappedName": "dr3d:texture-mode"
+    },
+    {
       "DisplayName": "Thousand",
       "MappedName": "db:thousand"
     },
@@ -11740,6 +13309,10 @@
     {
       "DisplayName": "TrackChanges",
       "MappedName": "text:track-changes"
+    },
+    {
+      "DisplayName": "Transform",
+      "MappedName": "dr3d:transform"
     },
     {
       "DisplayName": "Transform",
@@ -12086,8 +13659,24 @@
       "MappedName": "style:vertical-rel"
     },
     {
+      "DisplayName": "VerticalSegments",
+      "MappedName": "dr3d:vertical-segments"
+    },
+    {
+      "DisplayName": "VerticalUpVector",
+      "MappedName": "dr3d:vup"
+    },
+    {
       "DisplayName": "ViewBox",
       "MappedName": "svg:viewBox"
+    },
+    {
+      "DisplayName": "ViewPointNormal",
+      "MappedName": "dr3d:vpn"
+    },
+    {
+      "DisplayName": "ViewReferencePoint",
+      "MappedName": "dr3d:vrp"
     },
     {
       "DisplayName": "Visibility",
@@ -12198,6 +13787,10 @@
       "MappedName": "svg:x"
     },
     {
+      "DisplayName": "X1",
+      "MappedName": "svg:x1"
+    },
+    {
       "DisplayName": "XformsListSource",
       "MappedName": "form:xforms-list-source"
     },
@@ -12212,6 +13805,14 @@
     {
       "DisplayName": "Y",
       "MappedName": "svg:y"
+    },
+    {
+      "DisplayName": "Y1",
+      "MappedName": "svg:y1"
+    },
+    {
+      "DisplayName": "Y2",
+      "MappedName": "svg:y2"
     },
     {
       "DisplayName": "Year",

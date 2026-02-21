@@ -27,7 +27,7 @@ using System.Xml;
 using Html;
 using ICSharpCode.SharpZipLib.Core;
 using ICSharpCode.SharpZipLib.Zip;
-
+using OdtSharp.OpenDocument;
 using static OdtSharp.OdtSharpUtil;
 
 namespace OdtSharp
@@ -65,25 +65,30 @@ namespace OdtSharp
 		//*************************************************************************
 		//*	Private																																*
 		//*************************************************************************
-		/// <summary>
-		/// The map of property names to XML attribute counterparts.
-		/// </summary>
-		private static PropertyAttributeNameCollection mPropertyNames =
-			GetPropertyNames();
+		///// <summary>
+		///// The map of property names to XML attribute counterparts.
+		///// </summary>
+		//private static PropertyAttributeNameCollection mPropertyNames =
+		//	GetPropertyNames();
 		/// <summary>
 		/// The active debug directory for ODT files.
 		/// </summary>
 		private static string mOdtDebugDirectory = "";
+		/// <summary>
+		/// Load the document definition from the local resource.
+		/// </summary>
+		private static OpenDocumentDefinition mDocumentDefinition =
+			OpenDocumentDefinition.LoadFromResource();
 		//	C:\Temp\Active
 		/// <summary>
 		/// Value indicating whether C:\Temp is the current directory.
 		/// </summary>
 		private static bool mTempIsCurrentDirectory = true;
-		/// <summary>
-		/// The map of text block types to their XML tag counterparts.
-		/// </summary>
-		private static TextBlockTypeCollection mTextBlockTypes =
-			GetTextBlockTypeDefinitions();
+		///// <summary>
+		///// The map of text block types to their XML tag counterparts.
+		///// </summary>
+		//private static TextBlockTypeCollection mTextBlockTypes =
+		//	GetTextBlockTypeDefinitions();
 
 		////*-----------------------------------------------------------------------*
 		////* AddParagraph																													*
@@ -103,7 +108,7 @@ namespace OdtSharp
 		///// Reference to the node containing the information to add.
 		///// </param>
 		//public static void AddParagraph(OdtContentFileItem content,
-		//	TextBlockCollection blocks, XmlNode node)
+		//	ElementCollection blocks, XmlNode node)
 		//{
 		//	ParagraphItem paragraph = null;
 
@@ -145,23 +150,23 @@ namespace OdtSharp
 		/// Reference to the colleciton of nodes to be parsed as child blocks
 		/// to the current block.
 		/// </param>
-		private static void DeserializeTextContent(TextBlockItem parentBlock,
+		private static void DeserializeTextContent(ElementItem parentBlock,
 			HtmlNodeCollection nodes)
 		{
-			TextBlockItem block = null;
-			TextBlockCollection blocks = null;
+			ElementItem block = null;
+			ElementCollection blocks = null;
 			int propertyCount = 0;
 
 			if(parentBlock != null && nodes?.Count > 0)
 			{
-				blocks = parentBlock.Blocks;
+				blocks = parentBlock.Elements;
 				foreach(HtmlNodeItem nodeItem in nodes)
 				{
 					if(nodeItem.NodeType == "text" || nodeItem.NodeType.Length == 0)
 					{
-						block = new TextBlockItem()
+						block = new ElementItem()
 						{
-							BlockType = TextBlockTypeEnum.Text
+							ElementType = OpenDocumentElementTypeEnum.Text
 						};
 						block.Properties.Add(new PropertyItem()
 						{
@@ -172,12 +177,12 @@ namespace OdtSharp
 					}
 					else
 					{
-						block = new TextBlockItem()
+						block = new ElementItem()
 						{
-							BlockType = mTextBlockTypes.GetTypeFromTag(nodeItem.NodeType),
+							ElementType = mDocumentDefinition.GetTypeFromTag(nodeItem.NodeType),
 								NodeType = nodeItem.NodeType
 						};
-						if(block.BlockType == TextBlockTypeEnum.None)
+						if(block.ElementType == OpenDocumentElementTypeEnum.None)
 						{
 							block.OriginalContent = nodeItem.Html;
 						}
@@ -198,8 +203,8 @@ namespace OdtSharp
 		/// </param>
 		private static void DeserializeTextContent(OdtDocumentItem document)
 		{
-			TextBlockItem block = null;
-			TextBlockCollection blocks = null;
+			ElementItem block = null;
+			ElementCollection blocks = null;
 			HtmlNodeItem body = null;
 			HtmlDocument html = null;
 			//XmlNodeList nodes = null;
@@ -223,9 +228,9 @@ namespace OdtSharp
 					{
 						if(nodeItem.NodeType == "text" || nodeItem.NodeType.Length == 0)
 						{
-							block = new TextBlockItem()
+							block = new ElementItem()
 							{
-								BlockType = TextBlockTypeEnum.Text
+								ElementType = OpenDocumentElementTypeEnum.Text
 							};
 							block.Properties.Add(new PropertyItem()
 							{
@@ -236,12 +241,13 @@ namespace OdtSharp
 						}
 						else
 						{
-							block = new TextBlockItem()
+							block = new ElementItem()
 							{
-								BlockType = mTextBlockTypes.GetTypeFromTag(nodeItem.NodeType),
+								ElementType = mDocumentDefinition.GetTypeFromTag(
+									nodeItem.NodeType),
 								NodeType = nodeItem.NodeType
 							};
-							if(block.BlockType == TextBlockTypeEnum.None)
+							if(block.ElementType == OpenDocumentElementTypeEnum.None)
 							{
 								block.OriginalContent = nodeItem.Html;
 							}
@@ -300,7 +306,7 @@ namespace OdtSharp
 		private static List<PropertyItem> GetMappedProperties(HtmlNodeItem node)
 		{
 			PropertyItem property = null;
-			PropertyAttributeNameItem propertyAttribute = null;
+			OpenDocumentAttributeItem propertyAttribute = null;
 			List<PropertyItem> result = new List<PropertyItem>();
 
 			if(node != null)
@@ -308,13 +314,13 @@ namespace OdtSharp
 				foreach(HtmlAttributeItem attributeItem in node.Attributes)
 				{
 					propertyAttribute =
-						mPropertyNames.FirstOrDefault(x =>
-							x.AttributeName == attributeItem.Name);
+						mDocumentDefinition.Attributes.FirstOrDefault(x =>
+							x.MappedName == attributeItem.Name);
 					if(propertyAttribute != null)
 					{
 						property = new PropertyItem()
 						{
-							Name = propertyAttribute.PropertyName
+							Name = propertyAttribute.DisplayName
 						};
 					}
 					else
@@ -332,45 +338,45 @@ namespace OdtSharp
 		}
 		//*-----------------------------------------------------------------------*
 
-		//*-----------------------------------------------------------------------*
-		//* GetPropertyNames																											*
-		//*-----------------------------------------------------------------------*
-		/// <summary>
-		/// Return a list of property names and their base XML attribute name
-		/// counterparts.
-		/// </summary>
-		/// <returns>
-		/// Reference to a collection of property names, associated with their
-		/// XML attribute name counterparts.
-		/// </returns>
-		private static PropertyAttributeNameCollection GetPropertyNames()
-		{
-			PropertyAttributeNameItem item = null;
-			string[] lines = ResourceMain.tsvAttributeNameMap.Split('\n');
-			PropertyAttributeNameCollection result =
-				new PropertyAttributeNameCollection();
-			string[] values = null;
+		////*-----------------------------------------------------------------------*
+		////* GetPropertyNames																											*
+		////*-----------------------------------------------------------------------*
+		///// <summary>
+		///// Return a list of property names and their base XML attribute name
+		///// counterparts.
+		///// </summary>
+		///// <returns>
+		///// Reference to a collection of property names, associated with their
+		///// XML attribute name counterparts.
+		///// </returns>
+		//private static PropertyAttributeNameCollection GetPropertyNames()
+		//{
+		//	PropertyAttributeNameItem item = null;
+		//	string[] lines = ResourceMain.tsvAttributeNameMap.Split('\n');
+		//	PropertyAttributeNameCollection result =
+		//		new PropertyAttributeNameCollection();
+		//	string[] values = null;
 
-			foreach(string lineItem in lines)
-			{
-				item = null;
-				values = lineItem.Trim().Split('\t');
-				if(values.Length > 0)
-				{
-					item = new PropertyAttributeNameItem()
-					{
-						PropertyName = values[0].Trim()
-					};
-					result.Add(item);
-				}
-				if(item != null && values.Length > 1)
-				{
-					item.AttributeName = values[1].Trim();
-				}
-			}
-			return result;
-		}
-		//*-----------------------------------------------------------------------*
+		//	foreach(string lineItem in lines)
+		//	{
+		//		item = null;
+		//		values = lineItem.Trim().Split('\t');
+		//		if(values.Length > 0)
+		//		{
+		//			item = new PropertyAttributeNameItem()
+		//			{
+		//				PropertyName = values[0].Trim()
+		//			};
+		//			result.Add(item);
+		//		}
+		//		if(item != null && values.Length > 1)
+		//		{
+		//			item.AttributeName = values[1].Trim();
+		//		}
+		//	}
+		//	return result;
+		//}
+		////*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
 		//* GetTextBlockTypeDefinitions																						*
@@ -565,16 +571,16 @@ namespace OdtSharp
 		//*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
-		//*	Blocks																																*
+		//*	Elements																																*
 		//*-----------------------------------------------------------------------*
 		/// <summary>
 		/// Private member for <see cref="Blocks">Blocks</see>.
 		/// </summary>
-		private TextBlockCollection mBlocks = new TextBlockCollection();
+		private ElementCollection mBlocks = new ElementCollection();
 		/// <summary>
 		/// Get a reference to the collection of content blocks in this document.
 		/// </summary>
-		public TextBlockCollection Blocks
+		public ElementCollection Blocks
 		{
 			get { return mBlocks; }
 		}
@@ -647,12 +653,12 @@ namespace OdtSharp
 		/// <param name="builder">
 		/// The string builder to which the content will be sent.
 		/// </param>
-		public static void DumpBlocks(TextBlockCollection blocks, int indent,
+		public static void DumpBlocks(ElementCollection blocks, int indent,
 			StringBuilder builder)
 		{
 			if(blocks?.Count > 0 && indent > -1)
 			{
-				foreach(TextBlockItem blockItem in blocks)
+				foreach(ElementItem blockItem in blocks)
 				{
 					if(indent > 0)
 					{
@@ -667,7 +673,7 @@ namespace OdtSharp
 						builder.AppendLine(propertyItem.ToString());
 					}
 					builder.AppendLine("");
-					DumpBlocks(blockItem.Blocks, indent + 1, builder);
+					DumpBlocks(blockItem.Elements, indent + 1, builder);
 				}
 			}
 		}

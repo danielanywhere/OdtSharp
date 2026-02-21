@@ -6,7 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\OpenDocumentDefinition.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Dans.Html.Library" Version="26.2218.4544" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="SharpZipLib" Version="1.4.2" />
   </ItemGroup>
 
@@ -23,6 +28,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ResourceMain.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\OpenDocumentDefinition.json" />
   </ItemGroup>
 
 </Project>
