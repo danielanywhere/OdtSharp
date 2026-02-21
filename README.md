@@ -28,8 +28,20 @@ Preliminary development of this project is currently in progress. If you find a 
 
 <p>&nbsp;</p>
 
+## Progress
+
+The following section follows the early progress of this project.
+
+**20260221.0804**. In this update, I have moved to a single definition for all blocks. Basic nodes can now be referred to as simple elements instead of text blocks, style blocks, or other specialized entities. This means that whether deserializing text content, styles, or settings, the process is virtually the same. The challenge it will bring the library begins accepting input is properly regulating the types of elements and attributes that are allowed to be fitted into any target area since at this time, literally anything can be placed anywhere.
+
+Rules and associations will be created soon to add guardrails for various contexts. However, the current definition has a complete hierarchy that can assure the success of those guardrails, as you can see in the file Docs/OpenDocumentDefinition.json, which is in a working draft version at this time.
+
+Even with the challenges of governing perfect fit on input, this changes moves us closer to a type of interaction where a single display property like 'Width' can apply to different width attributes in several namespaces, each for its own specialized object, but without ever requiring the user to memorize which namespaces are required for which elements, thereby drastically reducing the memory demands of the human user. The result of this change also yields a much more humanly readable, self-descriptive output when the active object model is dumped directly to a text file.
+
+<p>&nbsp;</p>
+
 ## Digital Sovereignty
 
-Digital sovereignty coat of arms. Public domain by Daniel Patterson.
+Digital sovereignty coat of arms. This image is public domain, 2026 by Daniel Patterson. You are free to use it any way you like.
 
-<img src="Images/DigitalSovereignty256.png" width="256" alt="Digital Sovereignty Coat of Arms - Public Domain by Daniel Patterson" />
+<img src="Images/DigitalSovereignty256.png" width="128" alt="Digital Sovereignty Coat of Arms - Public Domain by Daniel Patterson" />
