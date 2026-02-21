@@ -36,7 +36,7 @@ The following section follows the early progress of this project.
 
 Rules and associations will be created soon to add guardrails for various contexts. However, the current definition has a complete hierarchy that can assure the success of those guardrails, as you can see in the file Docs/OpenDocumentDefinition.json, which is in a working draft version at this time.
 
-Even with the challenges of governing perfect fit on input, this changes moves us closer to a type of interaction where a single display property like 'Width' can apply to different width attributes in several namespaces, each for its own specialized object, but without ever requiring the user to memorize which namespaces are required for which elements, thereby drastically reducing the memory demands of the human user. The result of this change also yields a much more humanly readable, self-descriptive output when the active object model is dumped directly to a text file.
+Even with the challenges of governing perfect fit on input, this change moves us closer to a type of interaction where a single display property like 'Width' can apply to different width attributes in several namespaces, each for its own specialized object, but without ever requiring the user to memorize which namespaces are required for which elements, thereby drastically reducing the perception and memory load on the human user. The result of this change also yields a much more humanly readable, self-descriptive output when the active object model is dumped directly to a text file.
 
 <p>&nbsp;</p>
 
