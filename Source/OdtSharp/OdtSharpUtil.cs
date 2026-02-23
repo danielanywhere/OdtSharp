@@ -171,6 +171,32 @@ namespace OdtSharp
 		//*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
+		//* SeparateWords																													*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Return a string representing the caller's text where spaces have been
+		/// inserted before capital letters.
+		/// </summary>
+		/// <param name="text">
+		/// The text to inspect.
+		/// </param>
+		/// <returns>
+		/// String of words and spaces representing the caller's text, where words
+		/// have been separated at the capitals.
+		/// </returns>
+		public static string SeparateWords(string text)
+		{
+			string result = "";
+
+			if(text?.Length > 0)
+			{
+				result = Regex.Replace(text, ResourceMain.rxCapitalWords, " ${word}");
+			}
+			return result;
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
 		//* ToBool																																*
 		//*-----------------------------------------------------------------------*
 		/// <summary>

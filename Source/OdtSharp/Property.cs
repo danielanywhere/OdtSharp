@@ -20,6 +20,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
+using static OdtSharp.OdtSharpUtil;
+
 namespace OdtSharp
 {
 	//*-------------------------------------------------------------------------*
@@ -88,7 +90,7 @@ namespace OdtSharp
 		/// </returns>
 		public override string ToString()
 		{
-			string result = $"{mName} = {mValue}";
+			string result = $"{SeparateWords(mName)} = {mValue}";
 
 			return result;
 		}

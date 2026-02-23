@@ -467,55 +467,55 @@ namespace OdtSharp
 		//}
 		////*-----------------------------------------------------------------------*
 
-		//*-----------------------------------------------------------------------*
-		//* GetTextBlockTypeDefinitions																						*
-		//*-----------------------------------------------------------------------*
-		/// <summary>
-		/// Return a master collection of text block type definitions.
-		/// </summary>
-		/// <returns>
-		/// Reference to the master list of text block type definitions.
-		/// </returns>
-		private static TextBlockTypeCollection GetTextBlockTypeDefinitions()
-		{
-			string[] lines = null;
-			TextBlockTypeCollection result = new TextBlockTypeCollection();
-			TextBlockTypeItem typeItem = null;
-			TextBlockTypeEnum typeType = TextBlockTypeEnum.None;
-			string[] values = null;
+		////*-----------------------------------------------------------------------*
+		////* GetTextBlockTypeDefinitions																						*
+		////*-----------------------------------------------------------------------*
+		///// <summary>
+		///// Return a master collection of text block type definitions.
+		///// </summary>
+		///// <returns>
+		///// Reference to the master list of text block type definitions.
+		///// </returns>
+		//private static TextBlockTypeCollection GetTextBlockTypeDefinitions()
+		//{
+		//	string[] lines = null;
+		//	TextBlockTypeCollection result = new TextBlockTypeCollection();
+		//	TextBlockTypeItem typeItem = null;
+		//	TextBlockTypeEnum typeType = TextBlockTypeEnum.None;
+		//	string[] values = null;
 
-			lines = ResourceMain.tsvTextBlockTypeMap.Split('\n',
-				StringSplitOptions.RemoveEmptyEntries);
-			foreach(string lineItem in lines)
-			{
-				typeItem = null;
-				values = lineItem.Trim().Split('\t');
-				if(values.Length > 0)
-				{
-					//	Readable type name is present.
-					if(Enum.TryParse<TextBlockTypeEnum>(values[0].Trim(),
-						true, out typeType))
-					{
-						typeItem = new TextBlockTypeItem()
-						{
-							BlockType = typeType
-						};
-						result.Add(typeItem);
-					}
-					else
-					{
-						Trace.WriteLine("Unrecognized Text Block Type definition: " +
-							$"{values[0]}");
-					}
-				}
-				if(typeItem != null && values.Length > 1)
-				{
-					typeItem.NodeTag = values[1].Trim();
-				}
-			}
-			return result;
-		}
-		//*-----------------------------------------------------------------------*
+		//	lines = ResourceMain.tsvTextBlockTypeMap.Split('\n',
+		//		StringSplitOptions.RemoveEmptyEntries);
+		//	foreach(string lineItem in lines)
+		//	{
+		//		typeItem = null;
+		//		values = lineItem.Trim().Split('\t');
+		//		if(values.Length > 0)
+		//		{
+		//			//	Readable type name is present.
+		//			if(Enum.TryParse<TextBlockTypeEnum>(values[0].Trim(),
+		//				true, out typeType))
+		//			{
+		//				typeItem = new TextBlockTypeItem()
+		//				{
+		//					BlockType = typeType
+		//				};
+		//				result.Add(typeItem);
+		//			}
+		//			else
+		//			{
+		//				Trace.WriteLine("Unrecognized Text Block Type definition: " +
+		//					$"{values[0]}");
+		//			}
+		//		}
+		//		if(typeItem != null && values.Length > 1)
+		//		{
+		//			typeItem.NodeTag = values[1].Trim();
+		//		}
+		//	}
+		//	return result;
+		//}
+		////*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
 		//* InitializeStyles																											*

@@ -70,46 +70,11 @@ namespace OdtSharp {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to AboutText	xhtml:about
-        ///ActuateX	xlink:actuate
-        ///AlignTable	table:align
-        ///AllowOverlap	loext:allow-overlap
-        ///AmbientColor	dr3d:ambientcolor
-        ///AnchorPageNumber	text:anchor-page-number
-        ///AnchorType	text:anchor-type
-        ///Animation	text:animation
-        ///AnimationDelay	text:animation-delay
-        ///AnimationDirection	text:animation-direction
-        ///AnimationRepeat	text:animation-repeat
-        ///AnimationStartInside	text:animation-start-inside
-        ///AnimationSteps	text:animation-steps
-        ///AnimationStopInside	text:animation-stop-inside
-        ///ApplyDesignMode	form:a [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to (?&lt;word&gt;(?!^)[A-Z][a-z0-9]*).
         /// </summary>
-        internal static string tsvAttributeNameMap {
+        internal static string rxCapitalWords {
             get {
-                return ResourceManager.GetString("tsvAttributeNameMap", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to AlphabeticalIndex	text:alphabetical-index
-        ///AlphabeticalIndexAutoMarkFile	text:alphabetical-index-auto-mark-file
-        ///AlphabeticalIndexMark	text:alphabetical-index-mark
-        ///AlphabeticalIndexMarkEnd	text:alphabetical-index-mark-end
-        ///AlphabeticalIndexMarkStart	text:alphabetical-index-mark-start
-        ///Anchor	text:a
-        ///Annotation	office:annotation
-        ///AnnotationEnd	office:annotation-end
-        ///AuthorInitial	text:author-initials
-        ///AuthorName	text:author-name
-        ///Bibliography	text:bibliography
-        ///BibliographyMark	text:bibliography-mark
-        ///Bookm [rest of string was truncated]&quot;;.
-        /// </summary>
-        internal static string tsvTextBlockTypeMap {
-            get {
-                return ResourceManager.GetString("tsvTextBlockTypeMap", resourceCulture);
+                return ResourceManager.GetString("rxCapitalWords", resourceCulture);
             }
         }
     }
