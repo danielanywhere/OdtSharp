@@ -156,55 +156,43 @@ namespace OdtSharp
 		////*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
-		//* DeserializeSettings																										*
+		//* DeserializeXml																												*
 		//*-----------------------------------------------------------------------*
 		/// <summary>
-		/// Deserialize the settings definitions.
+		/// Deserialize the general content of the document from the underlying
+		/// XML data.
 		/// </summary>
 		/// <param name="document">
-		/// Reference to the document for which the settings will be processed.
+		/// Reference to the user document.
 		/// </param>
-		private static void DeserializeSettings(OdtDocumentItem document)
-		{
-			ElementCollection blocks = null;
-			HtmlDocument html = null;
-			HtmlNodeItem node = null;
-
-			if(document?.mContentFile?.Nodes.Count > 0)
-			{
-				html = document.mSettingsFile;
-				//	Font faces.
-				blocks = document.mSettings;
-				blocks.Clear();
-				node = html.Nodes.FindMatch(x =>
-					x.NodeType == "config:config-item-set");
-				if(node != null)
-				{
-					AddNodesAsBlocks(node.Nodes, blocks);
-				}
-			}
-		}
-		//*-----------------------------------------------------------------------*
-
-		//*-----------------------------------------------------------------------*
-		//* DeserializeStyles																											*
-		//*-----------------------------------------------------------------------*
-		/// <summary>
-		/// Deserialize the style definitions.
-		/// </summary>
-		/// <param name="document">
-		/// Reference to the document for which the styles will be processed.
-		/// </param>
-		private static void DeserializeStyles(OdtDocumentItem document)
+		private static void DeserializeXml(OdtDocumentItem document)
 		{
 			ElementItem block = null;
 			ElementCollection blocks = null;
+			HtmlNodeItem body = null;
 			HtmlDocument html = null;
 			HtmlNodeItem node = null;
+			//XmlNodeList nodes = null;
+			//ParagraphItem paragraph = null;
 
 			if(document?.mContentFile?.Nodes.Count > 0)
 			{
+				//	*** Content ***
 				html = document.mContentFile;
+				blocks = document.mElements;
+				blocks.Clear();
+				body = html.Nodes.FindMatch(x => x.NodeType == "office:text");
+				if(body != null)
+				{
+					document.mUseSoftPageBreaks =
+						ToBool(body.Attributes["text:use-soft-page-breaks"]);
+					document.mGlobalText =
+						(ToBool(body.Attributes["text:global"]) ||
+						document.mMimeType.ToLower() ==
+						"application/vnd.oasis.opendocument.text-master");
+					AddNodesAsBlocks(body.Nodes, blocks);
+				}
+				//	*** Page Styles ***
 				//	Font faces.
 				blocks = document.mFontFaces;
 				blocks.Clear();
@@ -223,6 +211,10 @@ namespace OdtSharp
 				{
 					AddNodesAsBlocks(node.Nodes, blocks);
 				}
+			}
+			//	*** Base Styles ***
+			if(document?.mStylesFile?.Nodes.Count > 0)
+			{
 				//	Base styles.
 				html = document.mStylesFile;
 				blocks = document.mBaseStyles;
@@ -251,43 +243,18 @@ namespace OdtSharp
 					AddNodesAsBlocks(node.Nodes, blocks);
 				}
 			}
-		}
-		//*-----------------------------------------------------------------------*
-
-		//*-----------------------------------------------------------------------*
-		//* DeserializeTextContent																								*
-		//*-----------------------------------------------------------------------*
-		/// <summary>
-		/// Deserialize the general text content of the document from the
-		/// underlying data.
-		/// </summary>
-		/// <param name="document">
-		/// Reference to the user document.
-		/// </param>
-		private static void DeserializeTextContent(OdtDocumentItem document)
-		{
-			ElementItem block = null;
-			ElementCollection blocks = null;
-			HtmlNodeItem body = null;
-			HtmlDocument html = null;
-			//XmlNodeList nodes = null;
-			//ParagraphItem paragraph = null;
-
+			//	*** Settings ***
 			if(document?.mContentFile?.Nodes.Count > 0)
 			{
-				html = document.mContentFile;
-				blocks = document.mElements;
+				html = document.mSettingsFile;
+				//	Font faces.
+				blocks = document.mSettings;
 				blocks.Clear();
-				body = html.Nodes.FindMatch(x => x.NodeType == "office:text");
-				if(body != null)
+				node = html.Nodes.FindMatch(x =>
+					x.NodeType == "config:config-item-set");
+				if(node != null)
 				{
-					document.mUseSoftPageBreaks =
-						ToBool(body.Attributes["text:use-soft-page-breaks"]);
-					document.mGlobalText =
-						(ToBool(body.Attributes["text:global"]) ||
-						document.mMimeType.ToLower() ==
-						"application/vnd.oasis.opendocument.text-master");
-					AddNodesAsBlocks(body.Nodes, blocks);
+					AddNodesAsBlocks(node.Nodes, blocks);
 				}
 			}
 		}
@@ -806,9 +773,7 @@ namespace OdtSharp
 						result.mStylesFile = new HtmlDocument(content, true, true, true);
 						result.mMimeType = File.ReadAllText(
 							Path.Combine(result.mOdtProject.FullName, "mimetype"));
-						DeserializeSettings(result);
-						DeserializeStyles(result);
-						DeserializeTextContent(result);
+						DeserializeXml(result);
 					}
 				}
 				else
