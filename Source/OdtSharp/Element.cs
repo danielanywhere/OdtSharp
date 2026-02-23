@@ -148,6 +148,71 @@ namespace OdtSharp
 		}
 		//*-----------------------------------------------------------------------*
 
+		////*-----------------------------------------------------------------------*
+		////*	Text																																	*
+		////*-----------------------------------------------------------------------*
+		///// <summary>
+		///// Get/Set the text of this element.
+		///// </summary>
+		//public string Text
+		//{
+		//	get
+		//	{
+		//		string result = "";
+		//		string text = "";
+		//		ElementItem textItem = (
+		//			this.mElementType == OpenDocumentElementTypeEnum.Text ?
+		//				this :
+		//				mElements.FirstOrDefault(x =>
+		//					x.ElementType == OpenDocumentElementTypeEnum.Text));
+
+		//		if(textItem != null)
+		//		{
+		//			text = textItem.mProperties
+		//				.Where(x => x.Name == "text")
+		//				.Select(y => y.Value).FirstOrDefault();
+		//			if(text?.Length > 0)
+		//			{
+		//				result = text;
+		//			}
+		//		}
+		//		return result;
+		//	}
+		//	set
+		//	{
+		//		ElementItem textItem = null;
+
+		//		if(value?.Length > 0)
+		//		{
+		//			if(this.mElementType == OpenDocumentElementTypeEnum.Text)
+		//			{
+		//				textItem = this;
+		//			}
+		//			else
+		//			{
+		//				textItem = mElements.FirstOrDefault(x =>
+		//					x.ElementType == OpenDocumentElementTypeEnum.Text);
+		//				if(textItem == null)
+		//				{
+		//					textItem = new ElementItem()
+		//					{
+		//						ElementType = OpenDocumentElementTypeEnum.Text
+		//					};
+		//					this.mElements.Add(textItem);
+		//				}
+		//			}
+		//			PropertyCollection.SetPropertyValue(textItem.mProperties,
+		//				"Text", value);
+		//		}
+		//		else
+		//		{
+		//			this.mElements.RemoveAll(x =>
+		//				x.ElementType == OpenDocumentElementTypeEnum.Text);
+		//		}
+		//	}
+		//}
+		////*-----------------------------------------------------------------------*
+
 		//*-----------------------------------------------------------------------*
 		//* ToString																															*
 		//*-----------------------------------------------------------------------*

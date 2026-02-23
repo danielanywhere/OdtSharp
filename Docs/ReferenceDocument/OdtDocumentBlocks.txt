@@ -36,10 +36,7 @@ Heading
   Properties:
    Style Name = P1
    Outline Level = 1
-
- Text
-   Properties:
-    Text = The Importance of Open-Source
+   Text = The Importance of Open-Source
 
 Paragraph
   Properties:
@@ -74,10 +71,7 @@ Paragraph
 
    SvgTitle
      Properties:
-
-    Text
-      Properties:
-       Text = A massive modern bridge spanning the scene, but underneath it, supporting the entire structure, is a house of tattered cards and a bent, empty pop can. A sign at the top reads: &apos;Modern Infrastructure: Proprietary Access Only&apos;. Tourists walk across the bridge admiring the view, oblivious..
+      Text = A massive modern bridge spanning the scene, but underneath it, supporting the entire structure, is a house of tattered cards and a bent, empty pop can. A sign at the top reads: &apos;Modern Infrastructure: Proprietary Access Only&apos;. Tourists walk across the bridge admiring the view, oblivious..
 
 Paragraph
   Properties:
@@ -107,10 +101,7 @@ Table
    Paragraph
      Properties:
       Style Name = P2
-
-    Text
-      Properties:
-       Text = Published:
+      Text = Published:
 
   TableCell
     Properties:
@@ -120,10 +111,7 @@ Table
    Paragraph
      Properties:
       Style Name = P3
-
-    Text
-      Properties:
-       Text = Monday, November 24, 2025
+      Text = Monday, November 24, 2025
 
  TableRow
    Properties:
@@ -136,10 +124,7 @@ Table
    Paragraph
      Properties:
       Style Name = P2
-
-    Text
-      Properties:
-       Text = Author:
+      Text = Author:
 
   TableCell
     Properties:
@@ -149,10 +134,7 @@ Table
    Paragraph
      Properties:
       Style Name = P3
-
-    Text
-      Properties:
-       Text = Daniel Patterson
+      Text = Daniel Patterson
 
 Paragraph
   Properties:
@@ -161,10 +143,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = How Open-Source in Science and Engineering Is Humanity&apos;s Forgotten Tradition
+   Text = How Open-Source in Science and Engineering Is Humanity&apos;s Forgotten Tradition
 
 Paragraph
   Properties:
@@ -178,10 +157,7 @@ Heading
  Span
    Properties:
     Style Name = T1
-
-  Text
-    Properties:
-     Text = I
+    Text = I
 
  Text
    Properties:
@@ -190,18 +166,12 @@ Heading
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = For many people today, the term 
+   Text = For many people today, the term 
 
  Span
    Properties:
     Style Name = T2
-
-  Text
-    Properties:
-     Text = open-source
+    Text = open-source
 
  Text
    Properties:
@@ -214,17 +184,11 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = In this article I am going to address a simple but existential question, which is whether our future can be secured without reclaiming openness as the foundational norm for all knowledge and technology, because if we truly allow secrecy to become our instinct, or proprietary control 
+   Text = In this article I am going to address a simple but existential question, which is whether our future can be secured without reclaiming openness as the foundational norm for all knowledge and technology, because if we truly allow secrecy to become our instinct, or proprietary control 
 
  SoftPageBreak
    Properties:
-
-  Text
-    Properties:
-     Text = to become our value system, and if the circle of participation continues to steadily shrink, then the progress we take for granted will ultimately prove much more fragile than we realize. What is at stake is not merely the pace of innovation but the cultural mechanism by which humanity has always protected and advanced itself.
+    Text = to become our value system, and if the circle of participation continues to steadily shrink, then the progress we take for granted will ultimately prove much more fragile than we realize. What is at stake is not merely the pace of innovation but the cultural mechanism by which humanity has always protected and advanced itself.
 
  Text
    Properties:
@@ -237,10 +201,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = Until somewhat recently, that is.
+   Text = Until somewhat recently, that is.
 
 Paragraph
   Properties:
@@ -250,18 +211,12 @@ Heading
   Properties:
    Style Name = Heading_20_2
    Outline Level = 2
-
- Text
-   Properties:
-    Text = Knowledge as a Cultural Norm in Earlier Centuries
+   Text = Knowledge as a Cultural Norm in Earlier Centuries
 
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = From the mid-Renaissance through the industrial age, knowledge sharing wasn&apos;t just encouraged, it was celebrated. A discovery was considered incomplete until it had been communicated, scrutinized, and made usable by others. Inventors and scientists might keep their work private during the delicate period of development, but such privacy was temporary and pragmatic, a way to ensure proper credit in publication rather than to lock knowledge away indefinitely.
+   Text = From the mid-Renaissance through the industrial age, knowledge sharing wasn&apos;t just encouraged, it was celebrated. A discovery was considered incomplete until it had been communicated, scrutinized, and made usable by others. Inventors and scientists might keep their work private during the delicate period of development, but such privacy was temporary and pragmatic, a way to ensure proper credit in publication rather than to lock knowledge away indefinitely.
 
 Paragraph
   Properties:
@@ -270,10 +225,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = Once a concept was ready for the world, it was released in full, and it included designs, diagrams, experimental methods, failures, and maybe several levels of refinements. The expectation was simple. Any claim to truth had to withstand replication, critique, and extension by peers. This cycle created a self-correcting ecosystem in which even obscure insights could become seeds for future breakthroughs.
+   Text = Once a concept was ready for the world, it was released in full, and it included designs, diagrams, experimental methods, failures, and maybe several levels of refinements. The expectation was simple. Any claim to truth had to withstand replication, critique, and extension by peers. This cycle created a self-correcting ecosystem in which even obscure insights could become seeds for future breakthroughs.
 
 Paragraph
   Properties:
@@ -282,10 +234,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = This norm wasn&apos;t purely moral. It was also deeply practical. Open documentation allowed society to build resilient systems whose inner workings were widely understood. When early forms of aviation began to emerge, for example, the builders didn&apos;t hide their methods behind corporate walls. Instead, they documented wing structures, control mechanisms, material considerations, and aerodynamic theories with painstaking detail. Anyone with curiosity, and sufficient patience, could reproduce those machines and improve upon them. This openness wasn&apos;t limited just to flight.
+   Text = This norm wasn&apos;t purely moral. It was also deeply practical. Open documentation allowed society to build resilient systems whose inner workings were widely understood. When early forms of aviation began to emerge, for example, the builders didn&apos;t hide their methods behind corporate walls. Instead, they documented wing structures, control mechanisms, material considerations, and aerodynamic theories with painstaking detail. Anyone with curiosity, and sufficient patience, could reproduce those machines and improve upon them. This openness wasn&apos;t limited just to flight.
 
 Paragraph
   Properties:
@@ -294,10 +243,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = When the study of electricity first took shape, researchers published every experiment in full, including the construction of early devices for generating static charge, the arrangement of metal plates and wires, the conditions under which currents could be sustained, and the precise behaviors of sparks and arcs. Nothing was treated as a private secret. The emerging science grew because each contributor laid out their methods plainly enough that anyone with bits of metal, resin, glass, or cloth could repeat the work and discover the same patterns of attraction, repulsion, conduction, and resistance.
+   Text = When the study of electricity first took shape, researchers published every experiment in full, including the construction of early devices for generating static charge, the arrangement of metal plates and wires, the conditions under which currents could be sustained, and the precise behaviors of sparks and arcs. Nothing was treated as a private secret. The emerging science grew because each contributor laid out their methods plainly enough that anyone with bits of metal, resin, glass, or cloth could repeat the work and discover the same patterns of attraction, repulsion, conduction, and resistance.
 
 Paragraph
   Properties:
@@ -306,17 +252,11 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = When the hidden microscopic world was first unveiled, the pioneers of lens-making didn&apos;t simply produce a device and guard its inner workings. They described how to grind glass, how to polish 
+   Text = When the hidden microscopic world was first unveiled, the pioneers of lens-making didn&apos;t simply produce a device and guard its inner workings. They described how to grind glass, how to polish 
 
  SoftPageBreak
    Properties:
-
-  Text
-    Properties:
-     Text = it to clarity, how to arrange lenses so that distortions were minimized, and how to illuminate tiny structures so they could be observed clearly. They recorded drawings of everything they saw, like fibers, crystals, cells, and swarming organisms, so others could compare notes, challenge interpretations, or extend the catalog of discoveries. The very existence of a microbial universe became accepted because thousands of eyes, not just the privileged few, could peer into it.
+    Text = it to clarity, how to arrange lenses so that distortions were minimized, and how to illuminate tiny structures so they could be observed clearly. They recorded drawings of everything they saw, like fibers, crystals, cells, and swarming organisms, so others could compare notes, challenge interpretations, or extend the catalog of discoveries. The very existence of a microbial universe became accepted because thousands of eyes, not just the privileged few, could peer into it.
 
  Text
    Properties:
@@ -329,10 +269,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = When modern mathematics and physics grew into coherent systems, the greatest thinkers of the time wrote openly about their methods. They laid out their proofs step by step, derived their equations line by line, and demonstrated not only their conclusions but the reasoning that led to them. Ideas about motion, symmetry, continuity, and the nature of physical laws were shared in broad daylight, inviting critique from anyone able to read and think through the arguments. This transparency allowed entire schools of thought to develop in parallel, each building upon a shared foundation rather than reinventing, much less concealing, the fundamentals.
+   Text = When modern mathematics and physics grew into coherent systems, the greatest thinkers of the time wrote openly about their methods. They laid out their proofs step by step, derived their equations line by line, and demonstrated not only their conclusions but the reasoning that led to them. Ideas about motion, symmetry, continuity, and the nature of physical laws were shared in broad daylight, inviting critique from anyone able to read and think through the arguments. This transparency allowed entire schools of thought to develop in parallel, each building upon a shared foundation rather than reinventing, much less concealing, the fundamentals.
 
 Paragraph
   Properties:
@@ -341,10 +278,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = In each of these domains, the pattern was the same. Knowledge became powerful precisely because it was made public, allowing countless contributors to refine tools, test ideas, and correct errors. Progress was not the achievement of isolated geniuses but the product of a culture that treated discovery as a gift meant to be handed forward. In other words, the progress that led us to this age accelerated precisely because no single person or institution was monopolizing it. Openness wasn&apos;t an esoteric exception, but the bedrock of engineering culture.
+   Text = In each of these domains, the pattern was the same. Knowledge became powerful precisely because it was made public, allowing countless contributors to refine tools, test ideas, and correct errors. Progress was not the achievement of isolated geniuses but the product of a culture that treated discovery as a gift meant to be handed forward. In other words, the progress that led us to this age accelerated precisely because no single person or institution was monopolizing it. Openness wasn&apos;t an esoteric exception, but the bedrock of engineering culture.
 
 Paragraph
   Properties:
@@ -354,18 +288,12 @@ Heading
   Properties:
    Style Name = Heading_20_2
    Outline Level = 2
-
- Text
-   Properties:
-    Text = The Twentieth Century
+   Text = The Twentieth Century
 
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = That foundation cracked in the early-mid twentieth century. The first major rupture came from a dictatorial regime that pursued technological supremacy for domination rather than collective advancement. They developed the most advanced technologies of their era in total secrecy, believing that hidden knowledge could be weaponized to control the world. This secrecy was not incidental, but strategic, and knowledge became a tool of coercion and fear.
+   Text = That foundation cracked in the early-mid twentieth century. The first major rupture came from a dictatorial regime that pursued technological supremacy for domination rather than collective advancement. They developed the most advanced technologies of their era in total secrecy, believing that hidden knowledge could be weaponized to control the world. This secrecy was not incidental, but strategic, and knowledge became a tool of coercion and fear.
 
 Paragraph
   Properties:
@@ -374,10 +302,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = After the global conflict that followed, secrecy didn&apos;t recede. Instead, it spread. The poisonous atmosphere of the geopolitical standoff that defined the mid-to-late twentieth century encouraged nations to bury their scientific advances behind classified walls. Corporations, observing this cultural shift and seeing the immoral benefits of unfair advantages through technological means, mirrored it in the commercial realm. Proprietary behavior slowly became the norm, not because it guaranteed better outcomes but because it guaranteed tighter control by the maker.
+   Text = After the global conflict that followed, secrecy didn&apos;t recede. Instead, it spread. The poisonous atmosphere of the geopolitical standoff that defined the mid-to-late twentieth century encouraged nations to bury their scientific advances behind classified walls. Corporations, observing this cultural shift and seeing the immoral benefits of unfair advantages through technological means, mirrored it in the commercial realm. Proprietary behavior slowly became the norm, not because it guaranteed better outcomes but because it guaranteed tighter control by the maker.
 
 Paragraph
   Properties:
@@ -386,17 +311,11 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = This shift resulted in a paradox. While the public was inundated with claims of dazzling progress, like faster machines, new frontiers, and unprecedented capabilities, the real breakthroughs were increasingly concentrated behind closed doors. Critical systems were understood by ever fewer people, creating a brittle civilization dependent on tiny circles of 
+   Text = This shift resulted in a paradox. While the public was inundated with claims of dazzling progress, like faster machines, new frontiers, and unprecedented capabilities, the real breakthroughs were increasingly concentrated behind closed doors. Critical systems were understood by ever fewer people, creating a brittle civilization dependent on tiny circles of 
 
  SoftPageBreak
    Properties:
-
-  Text
-    Properties:
-     Text = experts. Resilience suffered because the ability to persist requires redundancy, transparency, and shared understanding. Without openness, society arguably might have become more capable on paper, but in practice, they ended the century vastly more fragile.
+    Text = experts. Resilience suffered because the ability to persist requires redundancy, transparency, and shared understanding. Without openness, society arguably might have become more capable on paper, but in practice, they ended the century vastly more fragile.
 
  Text
    Properties:
@@ -409,10 +328,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = Now, more than a quarter century later, we find ourselves living inside what feels like an empty shell of a modern world, where the appearance of progress has overtaken the importance of actual progress. Many of the most loudly advertised advancements are little more than marketing slogans wrapped around aging foundations, meant to convince us that superficial upgrades constitute genuine evolution. In reality, vast portions of our technological sphere have become enbleepified and over-complicated, not for our benefit, but for the vendor&apos;s control, inaccessible not for reasons of safety, but of exclusivity, and riddled with fragile subsystems held together by layers of patches, permissions, and proprietary gates. What passes for innovation now is too often an attempt to extract revenue for infrastructures that barely remain standing, and whose complexity no longer reflects deep understanding but sagging, institutional momentum. The tragic irony is that these same systems, while unstable and opaque, have captured near-total control over even the newest knowledge, ensuring that society depends on them even as they erode beneath our feet.
+   Text = Now, more than a quarter century later, we find ourselves living inside what feels like an empty shell of a modern world, where the appearance of progress has overtaken the importance of actual progress. Many of the most loudly advertised advancements are little more than marketing slogans wrapped around aging foundations, meant to convince us that superficial upgrades constitute genuine evolution. In reality, vast portions of our technological sphere have become enbleepified and over-complicated, not for our benefit, but for the vendor&apos;s control, inaccessible not for reasons of safety, but of exclusivity, and riddled with fragile subsystems held together by layers of patches, permissions, and proprietary gates. What passes for innovation now is too often an attempt to extract revenue for infrastructures that barely remain standing, and whose complexity no longer reflects deep understanding but sagging, institutional momentum. The tragic irony is that these same systems, while unstable and opaque, have captured near-total control over even the newest knowledge, ensuring that society depends on them even as they erode beneath our feet.
 
 Paragraph
   Properties:
@@ -422,18 +338,12 @@ Heading
   Properties:
    Style Name = Heading_20_2
    Outline Level = 2
-
- Text
-   Properties:
-    Text = The Cost of Proprietary Technology
+   Text = The Cost of Proprietary Technology
 
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = Secrecy in technology carries costs that accumulate quietly but relentlessly. Vendor lock-in traps customers, often forcing them into systems they can&apos;t meaningfully inspect or modify. Hidden mechanisms stifle creativity by preventing experimentation. Productivity stalls when the tools we depend on can&apos;t be fully understood.
+   Text = Secrecy in technology carries costs that accumulate quietly but relentlessly. Vendor lock-in traps customers, often forcing them into systems they can&apos;t meaningfully inspect or modify. Hidden mechanisms stifle creativity by preventing experimentation. Productivity stalls when the tools we depend on can&apos;t be fully understood.
 
 Paragraph
   Properties:
@@ -442,10 +352,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = A lack of transparency can even lead regulated organizations to unwittingly violate regulations, because they can&apos;t see what their tools are actually doing beneath the surface, or even what kind of result they are producing, in many cases. When mechanisms are concealed, oversight becomes impossible, and compliance becomes guesswork, and in a world reliant upon science and engineering for its foundation of success, guesswork can&apos;t be tolerated during production.
+   Text = A lack of transparency can even lead regulated organizations to unwittingly violate regulations, because they can&apos;t see what their tools are actually doing beneath the surface, or even what kind of result they are producing, in many cases. When mechanisms are concealed, oversight becomes impossible, and compliance becomes guesswork, and in a world reliant upon science and engineering for its foundation of success, guesswork can&apos;t be tolerated during production.
 
 Paragraph
   Properties:
@@ -454,10 +361,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = These problems extend into the most fundamental layers of modern existence. Consider microprocessors, the tiny chips powering nearly all devices. Only a minuscule and tightly-knit group of specialists fully understand the design and fabrication processes. The rest of the world participates only as consumers, unable to inspect, reproduce, or meaningfully alter the systems they depend on. This concentration of knowledge makes all of modern civilization precarious. A failure in any small node of expertise can ripple outward, affecting entire sectors.
+   Text = These problems extend into the most fundamental layers of modern existence. Consider microprocessors, the tiny chips powering nearly all devices. Only a minuscule and tightly-knit group of specialists fully understand the design and fabrication processes. The rest of the world participates only as consumers, unable to inspect, reproduce, or meaningfully alter the systems they depend on. This concentration of knowledge makes all of modern civilization precarious. A failure in any small node of expertise can ripple outward, affecting entire sectors.
 
 Paragraph
   Properties:
@@ -466,17 +370,11 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = Even more troubling is that the individuals responsible for controlling the fate of entire industries are often themselves separated from the scientific principles involved. Their priority becomes the maintenance of competition and secrecy over the advancement of human 
+   Text = Even more troubling is that the individuals responsible for controlling the fate of entire industries are often themselves separated from the scientific principles involved. Their priority becomes the maintenance of competition and secrecy over the advancement of human 
 
  SoftPageBreak
    Properties:
-
-  Text
-    Properties:
-     Text = understanding. Knowledge becomes subordinated to profit for a tiny handful of business-school graduates, while the entire intellectual commons shrinks.
+    Text = understanding. Knowledge becomes subordinated to profit for a tiny handful of business-school graduates, while the entire intellectual commons shrinks.
 
  Text
    Properties:
@@ -489,10 +387,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = It is becoming increasingly obvious that a civilization relying upon opaque technology is a civilization living on borrowed time. Knowledge must be widely distributed not for ideological reasons but for basic survival.
+   Text = It is becoming increasingly obvious that a civilization relying upon opaque technology is a civilization living on borrowed time. Knowledge must be widely distributed not for ideological reasons but for basic survival.
 
 Paragraph
   Properties:
@@ -502,18 +397,12 @@ Heading
   Properties:
    Style Name = Heading_20_2
    Outline Level = 2
-
- Text
-   Properties:
-    Text = Software Developers Are Also Modern Authors
+   Text = Software Developers Are Also Modern Authors
 
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = In today&apos;s world, a close parallel to the technical authors and writers of earlier eras is the software developer. Software developers write in a functional language, or a language not just of ideas but of fully realized mechanisms. At the press of a key, their writing virtually lifts up off of the page to perform tasks, structure systems, and enable entire industries, thanks to the ubiquitous capabilities of the computing devices upon which they run.
+   Text = In today&apos;s world, a close parallel to the technical authors and writers of earlier eras is the software developer. Software developers write in a functional language, or a language not just of ideas but of fully realized mechanisms. At the press of a key, their writing virtually lifts up off of the page to perform tasks, structure systems, and enable entire industries, thanks to the ubiquitous capabilities of the computing devices upon which they run.
 
 Paragraph
   Properties:
@@ -522,10 +411,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = Yet the economic model surrounding open-source development remains dysfunctional. Unlike the traditional book publishing world, where authorship can directly generate sustainable income, open-source contributors often labor without adequate compensation. The result is a misaligned system in which many creators feel pressured toward proprietary models simply to survive.
+   Text = Yet the economic model surrounding open-source development remains dysfunctional. Unlike the traditional book publishing world, where authorship can directly generate sustainable income, open-source contributors often labor without adequate compensation. The result is a misaligned system in which many creators feel pressured toward proprietary models simply to survive.
 
 Paragraph
   Properties:
@@ -534,10 +420,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = But this economic failure can&apos;t be honored as an argument in favor of secrecy. It must be limited, if possible, to one in favor of redesigning the ideas around compensation for publication. If open authorship protects users, allowing them to audit code, repair it, understand it, and adapt it, then society has a vested interest in ensuring that those who build openly can thrive. Open development transforms users from passive consumers into active participants. It distributes agency among all of civilization rather than concentrating it. It invites everyone into the creative process, expanding the circle rather than contracting it.
+   Text = But this economic failure can&apos;t be honored as an argument in favor of secrecy. It must be limited, if possible, to one in favor of redesigning the ideas around compensation for publication. If open authorship protects users, allowing them to audit code, repair it, understand it, and adapt it, then society has a vested interest in ensuring that those who build openly can thrive. Open development transforms users from passive consumers into active participants. It distributes agency among all of civilization rather than concentrating it. It invites everyone into the creative process, expanding the circle rather than contracting it.
 
 Paragraph
   Properties:
@@ -546,10 +429,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = In this sense, software developers aren&apos;t just builders, but custodians of cultural continuity. When they publish openly, they keep alive the same tradition that once guided the natural philosophers of earlier centuries.
+   Text = In this sense, software developers aren&apos;t just builders, but custodians of cultural continuity. When they publish openly, they keep alive the same tradition that once guided the natural philosophers of earlier centuries.
 
 Paragraph
   Properties:
@@ -559,18 +439,12 @@ Heading
   Properties:
    Style Name = Heading_20_2
    Outline Level = 2
-
- Text
-   Properties:
-    Text = Beyond Software: The Universality of Openness
+   Text = Beyond Software: The Universality of Openness
 
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = Openness isn&apos;t really a software philosophy, either, as much as it is a long-lived universal engineering principle.
+   Text = Openness isn&apos;t really a software philosophy, either, as much as it is a long-lived universal engineering principle.
 
 Paragraph
   Properties:
@@ -579,17 +453,11 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = When farm equipment is open, for example, rural communities can repair it rather than waiting for authorized technicians or proprietary parts. This autonomy can determine whether crops 
+   Text = When farm equipment is open, for example, rural communities can repair it rather than waiting for authorized technicians or proprietary parts. This autonomy can determine whether crops 
 
  SoftPageBreak
    Properties:
-
-  Text
-    Properties:
-     Text = survive or fail, whether families remain stable or fall into debt. Openness in this context isn&apos;t an abstract ideal, but a lifeline.
+    Text = survive or fail, whether families remain stable or fall into debt. Openness in this context isn&apos;t an abstract ideal, but a lifeline.
 
  Text
    Properties:
@@ -602,10 +470,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = In electronics, open circuits and schematics of commonly used techniques allow entire regions to develop technical literacy. They allow students, hobbyists, and small businesses to study devices at their deepest layers, ensuring that knowledge is not confined to only those who can afford exclusive training.
+   Text = In electronics, open circuits and schematics of commonly used techniques allow entire regions to develop technical literacy. They allow students, hobbyists, and small businesses to study devices at their deepest layers, ensuring that knowledge is not confined to only those who can afford exclusive training.
 
 Paragraph
   Properties:
@@ -614,10 +479,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = Openness in advanced propulsion systems allows diverse groups of engineers to scrutinize safety, performance, and material behavior. When many eyes can audit a technology, the chances of catastrophic failure decline drastically. Innovation becomes safer, more incremental, and more collaborative.
+   Text = Openness in advanced propulsion systems allows diverse groups of engineers to scrutinize safety, performance, and material behavior. When many eyes can audit a technology, the chances of catastrophic failure decline drastically. Innovation becomes safer, more incremental, and more collaborative.
 
 Paragraph
   Properties:
@@ -626,10 +488,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = When comparing secrecy with openness, the reliable pattern emerges that secrecy narrows participation, while openness expands it. Whenever a technology is essential to human flourishing, whether agricultural machinery, energy systems, medical devices, or communication infrastructure, its workings should be comprehensible and accessible in principle to the entire public. Commerce can thrive under openness, but monopolies on knowledge choke all of human progress and minimize the number of people able to contribute meaningfully.
+   Text = When comparing secrecy with openness, the reliable pattern emerges that secrecy narrows participation, while openness expands it. Whenever a technology is essential to human flourishing, whether agricultural machinery, energy systems, medical devices, or communication infrastructure, its workings should be comprehensible and accessible in principle to the entire public. Commerce can thrive under openness, but monopolies on knowledge choke all of human progress and minimize the number of people able to contribute meaningfully.
 
 Paragraph
   Properties:
@@ -639,18 +498,12 @@ Heading
   Properties:
    Style Name = Heading_20_2
    Outline Level = 2
-
- Text
-   Properties:
-    Text = The Existential Argument for Openness
+   Text = The Existential Argument for Openness
 
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = The central assertion of this article is simple. Human progress hasn&apos;t occurred through magic or because large corporations created it for us, but thanks to the profound sharing of knowledge accumulated during the processes of discovery and invention by individuals and diverse, independent groups.
+   Text = The central assertion of this article is simple. Human progress hasn&apos;t occurred through magic or because large corporations created it for us, but thanks to the profound sharing of knowledge accumulated during the processes of discovery and invention by individuals and diverse, independent groups.
 
 Paragraph
   Properties:
@@ -659,10 +512,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = When knowledge is shared, competence multiplies and innovation scales. Entire generations accumulate understanding rather than losing it through corporate secrecy or classified archives. People become more capable, and communities grow continually stronger.
+   Text = When knowledge is shared, competence multiplies and innovation scales. Entire generations accumulate understanding rather than losing it through corporate secrecy or classified archives. People become more capable, and communities grow continually stronger.
 
 Paragraph
   Properties:
@@ -671,10 +521,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = Secrecy, in contrast, fragments progress. It turns entire populations into dependent consumers who must trust what they cannot verify. It concentrates risk and power simultaneously, creating systems that appear efficient until they fail both catastrophically and permanently.
+   Text = Secrecy, in contrast, fragments progress. It turns entire populations into dependent consumers who must trust what they cannot verify. It concentrates risk and power simultaneously, creating systems that appear efficient until they fail both catastrophically and permanently.
 
 Paragraph
   Properties:
@@ -683,10 +530,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = The existential question, then, is whether humanity will reclaim openness as the cultural expectation for all scientific and engineering ideas, or whether it will accept a hollow version of progress built on dependency and illusion.
+   Text = The existential question, then, is whether humanity will reclaim openness as the cultural expectation for all scientific and engineering ideas, or whether it will accept a hollow version of progress built on dependency and illusion.
 
 Paragraph
   Properties:
@@ -698,10 +542,7 @@ Paragraph
 
  SoftPageBreak
    Properties:
-
-  Text
-    Properties:
-     Text = Civilization is only as strong as the number of people able to understand, maintain, and extend its critical systems. That number must be large because such a narrow circle of expertise as we see today can&apos;t properly support a broad society the way they would have you believe.
+    Text = Civilization is only as strong as the number of people able to understand, maintain, and extend its critical systems. That number must be large because such a narrow circle of expertise as we see today can&apos;t properly support a broad society the way they would have you believe.
 
  Text
    Properties:
@@ -715,18 +556,12 @@ Heading
   Properties:
    Style Name = Heading_20_2
    Outline Level = 2
-
- Text
-   Properties:
-    Text = Conclusion: A Call to Reclaim Our Tradition
+   Text = Conclusion: A Call to Reclaim Our Tradition
 
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = Open-source isn&apos;t a modern invention. It is the tradition that built the entire modern world. It was the principle that allowed humanity to move from isolated experiments to shared, global knowledge. The ethical model for openness is already settled: knowledge worth depending upon is knowledge worth sharing.
+   Text = Open-source isn&apos;t a modern invention. It is the tradition that built the entire modern world. It was the principle that allowed humanity to move from isolated experiments to shared, global knowledge. The ethical model for openness is already settled: knowledge worth depending upon is knowledge worth sharing.
 
 Paragraph
   Properties:
@@ -735,10 +570,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = What remains unsettled is only finding the payment model that will work for everyone involved, and that is a logistical problem, not a philosophical one. The moral foundation is already in place. The future should be measured not by how much knowledge exists but by how widely it is distributed, because that trait alone dictates whether or not the activity is sustainable. Any arrangement that shrinks the circle of participation must be viewed as a threat to human progress itself.
+   Text = What remains unsettled is only finding the payment model that will work for everyone involved, and that is a logistical problem, not a philosophical one. The moral foundation is already in place. The future should be measured not by how much knowledge exists but by how widely it is distributed, because that trait alone dictates whether or not the activity is sustainable. Any arrangement that shrinks the circle of participation must be viewed as a threat to human progress itself.
 
 Paragraph
   Properties:
@@ -747,10 +579,7 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = Human advancement has always depended on the courage to share, and it always will. Our task now is to restore openness to its rightful place, not as an aspiration but as the standard of behavior by which all of civilization survives and thrives.
+   Text = Human advancement has always depended on the courage to share, and it always will. Our task now is to restore openness to its rightful place, not as an aspiration but as the standard of behavior by which all of civilization survives and thrives.
 
 Paragraph
   Properties:
@@ -759,34 +588,22 @@ Paragraph
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = &lt;author&gt;Daniel Patterson&lt;/author&gt;
+   Text = &lt;author&gt;Daniel Patterson&lt;/author&gt;
 
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = &lt;categories&gt;Advantages of Open Source&lt;/categories&gt;
+   Text = &lt;categories&gt;Advantages of Open Source&lt;/categories&gt;
 
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = &lt;description&gt;Why reclaiming openness in science and engineering is essential for humanity&apos;s future resilience and progress.&lt;/description&gt;
+   Text = &lt;description&gt;Why reclaiming openness in science and engineering is essential for humanity&apos;s future resilience and progress.&lt;/description&gt;
 
 Paragraph
   Properties:
    Style Name = Standard
-
- Text
-   Properties:
-    Text = &lt;publication-date&gt;11/24/2025&lt;/publication-date&gt;
+   Text = &lt;publication-date&gt;11/24/2025&lt;/publication-date&gt;
 
 Paragraph
   Properties:
@@ -800,10 +617,7 @@ Heading
   Properties:
    Style Name = P4
    Outline Level = 2
-
- Text
-   Properties:
-    Text = A New Page
+   Text = A New Page
 
 Section
   Properties:
@@ -813,10 +627,7 @@ Section
  Paragraph
    Properties:
     Style Name = P5
-
-  Text
-    Properties:
-     Text = This is some basic text in the four column section.
+    Text = This is some basic text in the four column section.
 
 
 *** Font Faces ***
@@ -3229,55 +3040,37 @@ ConfigItem
   Properties:
    Name = ViewAreaTop
    Type = long
-
- Text
-   Properties:
-    Text = 199510
+   Text = 199510
 
 ConfigItem
   Properties:
    Name = ViewAreaLeft
    Type = long
-
- Text
-   Properties:
-    Text = 0
+   Text = 0
 
 ConfigItem
   Properties:
    Name = ViewAreaWidth
    Type = long
-
- Text
-   Properties:
-    Text = 30080
+   Text = 30080
 
 ConfigItem
   Properties:
    Name = ViewAreaHeight
    Type = long
-
- Text
-   Properties:
-    Text = 16004
+   Text = 16004
 
 ConfigItem
   Properties:
    Name = ShowRedlineChanges
    Type = boolean
-
- Text
-   Properties:
-    Text = false
+   Text = false
 
 ConfigItem
   Properties:
    Name = InBrowseMode
    Type = boolean
-
- Text
-   Properties:
-    Text = false
+   Text = false
 
 ConfigItemMapIndexed
   Properties:
@@ -3290,162 +3083,108 @@ ConfigItemMapIndexed
     Properties:
      Name = ViewId
      Type = string
-
-   Text
-     Properties:
-      Text = view2
+     Text = view2
 
   ConfigItem
     Properties:
      Name = ViewLeft
      Type = long
-
-   Text
-     Properties:
-      Text = 13788
+     Text = 13788
 
   ConfigItem
     Properties:
      Name = ViewTop
      Type = long
-
-   Text
-     Properties:
-      Text = 202773
+     Text = 202773
 
   ConfigItem
     Properties:
      Name = VisibleLeft
      Type = long
-
-   Text
-     Properties:
-      Text = 0
+     Text = 0
 
   ConfigItem
     Properties:
      Name = VisibleTop
      Type = long
-
-   Text
-     Properties:
-      Text = 199510
+     Text = 199510
 
   ConfigItem
     Properties:
      Name = VisibleRight
      Type = long
-
-   Text
-     Properties:
-      Text = 30078
+     Text = 30078
 
   ConfigItem
     Properties:
      Name = VisibleBottom
      Type = long
-
-   Text
-     Properties:
-      Text = 215512
+     Text = 215512
 
   ConfigItem
     Properties:
      Name = ZoomType
      Type = short
-
-   Text
-     Properties:
-      Text = 0
+     Text = 0
 
   ConfigItem
     Properties:
      Name = ViewLayoutColumns
      Type = short
-
-   Text
-     Properties:
-      Text = 1
+     Text = 1
 
   ConfigItem
     Properties:
      Name = ViewLayoutBookMode
      Type = boolean
-
-   Text
-     Properties:
-      Text = false
+     Text = false
 
   ConfigItem
     Properties:
      Name = ZoomFactor
      Type = short
-
-   Text
-     Properties:
-      Text = 100
+     Text = 100
 
   ConfigItem
     Properties:
      Name = IsSelectedFrame
      Type = boolean
-
-   Text
-     Properties:
-      Text = false
+     Text = false
 
   ConfigItem
     Properties:
      Name = KeepRatio
      Type = boolean
-
-   Text
-     Properties:
-      Text = false
+     Text = false
 
   ConfigItem
     Properties:
      Name = AnchoredTextOverflowLegacy
      Type = boolean
-
-   Text
-     Properties:
-      Text = true
+     Text = true
 
   ConfigItem
     Properties:
      Name = LegacySingleLineFontwork
      Type = boolean
-
-   Text
-     Properties:
-      Text = true
+     Text = true
 
   ConfigItem
     Properties:
      Name = ConnectorUseSnapRect
      Type = boolean
-
-   Text
-     Properties:
-      Text = false
+     Text = false
 
   ConfigItem
     Properties:
      Name = IgnoreBreakAfterMultilineField
      Type = boolean
-
-   Text
-     Properties:
-      Text = false
+     Text = false
 
   ConfigItem
     Properties:
      Name = UseTrailingEmptyLinesInLayout
      Type = boolean
-
-   Text
-     Properties:
-      Text = false
+     Text = false
 
 

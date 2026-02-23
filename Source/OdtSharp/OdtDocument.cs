@@ -65,11 +65,6 @@ namespace OdtSharp
 		//*************************************************************************
 		//*	Private																																*
 		//*************************************************************************
-		///// <summary>
-		///// The map of property names to XML attribute counterparts.
-		///// </summary>
-		//private static PropertyAttributeNameCollection mPropertyNames =
-		//	GetPropertyNames();
 		/// <summary>
 		/// The active debug directory for ODT files.
 		/// </summary>
@@ -84,11 +79,6 @@ namespace OdtSharp
 		/// Value indicating whether C:\Temp is the current directory.
 		/// </summary>
 		private static bool mTempIsCurrentDirectory = true;
-		///// <summary>
-		///// The map of text block types to their XML tag counterparts.
-		///// </summary>
-		//private static TextBlockTypeCollection mTextBlockTypes =
-		//	GetTextBlockTypeDefinitions();
 
 		//*-----------------------------------------------------------------------*
 		//* AddNodesAsBlocks																											*
@@ -104,31 +94,21 @@ namespace OdtSharp
 			ElementCollection blocks)
 		{
 			ElementItem block = null;
+			int index = 0;
 
 			if(nodes?.Count > 0 && blocks != null)
 			{
 				foreach(HtmlNodeItem nodeItem in nodes)
 				{
-					if(nodeItem.NodeType == "text" || nodeItem.NodeType.Length == 0)
-					{
-						block = new ElementItem()
-						{
-							ElementType = OpenDocumentElementTypeEnum.Text
-						};
-						block.Properties.Add(new PropertyItem()
-						{
-							Name = "Text",
-							Value = nodeItem.Text
-						});
-						blocks.Add(block);
-					}
-					else
+					if((nodeItem.NodeType?.Length > 0 && nodeItem.NodeType != "text") ||
+						index > 0)
 					{
 						block = new ElementItem()
 						{
 							ElementType = mDocumentDefinition.GetTypeFromTag(
 								nodeItem.NodeType),
-							NodeType = nodeItem.NodeType
+							NodeType = (nodeItem.NodeType.Length > 0 &&
+								nodeItem.NodeType != "text" ? nodeItem.NodeType : "Text")
 						};
 						if(block.ElementType == OpenDocumentElementTypeEnum.None)
 						{
@@ -138,6 +118,7 @@ namespace OdtSharp
 						blocks.Add(block);
 						AddNodesAsBlocks(nodeItem.Nodes, block.Elements);
 					}
+					index++;
 				}
 			}
 		}
@@ -276,60 +257,6 @@ namespace OdtSharp
 		//*-----------------------------------------------------------------------*
 		//* DeserializeTextContent																								*
 		//*-----------------------------------------------------------------------*
-		///// <summary>
-		///// Deserialize the general text content of the presented node item.
-		///// </summary>
-		///// <param name="block">
-		///// Reference to the parent block.
-		///// </param>
-		///// <param name="nodes">
-		///// Reference to the colleciton of nodes to be parsed as child blocks
-		///// to the current block.
-		///// </param>
-		//private static void DeserializeTextContent(ElementItem parentBlock,
-		//	HtmlNodeCollection nodes)
-		//{
-		//	ElementItem block = null;
-		//	ElementCollection blocks = null;
-		//	int propertyCount = 0;
-
-		//	if(parentBlock != null && nodes?.Count > 0)
-		//	{
-		//		blocks = parentBlock.Elements;
-		//		foreach(HtmlNodeItem nodeItem in nodes)
-		//		{
-		//			if(nodeItem.NodeType == "text" || nodeItem.NodeType.Length == 0)
-		//			{
-		//				block = new ElementItem()
-		//				{
-		//					ElementType = OpenDocumentElementTypeEnum.Text
-		//				};
-		//				block.Properties.Add(new PropertyItem()
-		//				{
-		//					Name = "Text",
-		//					Value = nodeItem.Text
-		//				});
-		//				blocks.Add(block);
-		//			}
-		//			else
-		//			{
-		//				block = new ElementItem()
-		//				{
-		//					ElementType = mDocumentDefinition.GetTypeFromTag(nodeItem.NodeType),
-		//						NodeType = nodeItem.NodeType
-		//				};
-		//				if(block.ElementType == OpenDocumentElementTypeEnum.None)
-		//				{
-		//					block.OriginalContent = nodeItem.Html;
-		//				}
-		//				block.Properties.AddRange(GetMappedProperties(nodeItem));
-		//				blocks.Add(block);
-		//				DeserializeTextContent(block, nodeItem.Nodes);
-		//			}
-		//		}
-		//	}
-		//}
-		////*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*
 		/// <summary>
 		/// Deserialize the general text content of the document from the
 		/// underlying data.
@@ -360,70 +287,11 @@ namespace OdtSharp
 						(ToBool(body.Attributes["text:global"]) ||
 						document.mMimeType.ToLower() ==
 						"application/vnd.oasis.opendocument.text-master");
-					foreach(HtmlNodeItem nodeItem in body.Nodes)
-					{
-						if(nodeItem.NodeType == "text" || nodeItem.NodeType.Length == 0)
-						{
-							block = new ElementItem()
-							{
-								ElementType = OpenDocumentElementTypeEnum.Text
-							};
-							block.Properties.Add(new PropertyItem()
-							{
-								Name = "Text",
-								Value = nodeItem.Text
-							});
-							blocks.Add(block);
-						}
-						else
-						{
-							block = new ElementItem()
-							{
-								ElementType = mDocumentDefinition.GetTypeFromTag(
-									nodeItem.NodeType),
-								NodeType = nodeItem.NodeType
-							};
-							if(block.ElementType == OpenDocumentElementTypeEnum.None)
-							{
-								block.OriginalContent = nodeItem.Html;
-							}
-							block.Properties.AddRange(GetMappedProperties(nodeItem));
-							blocks.Add(block);
-							//DeserializeTextContent(block, nodeItem.Nodes);
-							AddNodesAsBlocks(nodeItem.Nodes, block.Elements);
-						}
-					}
+					AddNodesAsBlocks(body.Nodes, blocks);
 				}
 			}
 		}
 		//*-----------------------------------------------------------------------*
-
-		////*-----------------------------------------------------------------------*
-		////* GetContentDocument																										*
-		////*-----------------------------------------------------------------------*
-		///// <summary>
-		///// Return a reference to the content data file.
-		///// </summary>
-		///// <param name="document">
-		///// Reference to the document for which the content item will be returned.
-		///// </param>
-		///// <returns>
-		///// Reference to the raw ODT content document, if found. Otherwise,
-		///// null.
-		///// </returns>
-		//private static HtmlDocument GetContentDocument(OdtDocumentItem document)
-		//{
-		//	string content = "";
-		//	HtmlDocument result = null;
-
-		//	if(document.mOdtProject?.Exists == true)
-		//	{
-		//		content = File.ReadAllText("content.xml");
-		//		result = new HtmlDocument(content, true, true);
-		//	}
-		//	return result;
-		//}
-		////*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
 		//* GetMappedProperties																										*
@@ -442,6 +310,7 @@ namespace OdtSharp
 		/// </returns>
 		private static List<PropertyItem> GetMappedProperties(HtmlNodeItem node)
 		{
+			HtmlNodeItem childNode = null;
 			PropertyItem property = null;
 			OpenDocumentAttributeItem propertyAttribute = null;
 			List<PropertyItem> result = new List<PropertyItem>();
@@ -470,100 +339,33 @@ namespace OdtSharp
 					property.Value = attributeItem.Value;
 					result.Add(property);
 				}
+				if(node.Nodes.Count > 0)
+				{
+					childNode = node.Nodes[0];
+					if(childNode.NodeType == "text" || childNode.NodeType == "")
+					{
+						//	Treat the first text node as a Text property.
+						property = new PropertyItem()
+						{
+							Name = "Text",
+							Value = childNode.Text
+						};
+						result.Add(property);
+					}
+				}
+				else if((node.NodeType.Length == 0 || node.NodeType == "text") &&
+					node.Text?.Length > 0)
+				{
+					result.Add(new PropertyItem()
+					{
+						Name = "Text",
+						Value = node.Text
+					});
+				}
 			}
 			return result;
 		}
 		//*-----------------------------------------------------------------------*
-
-		////*-----------------------------------------------------------------------*
-		////* GetPropertyNames																											*
-		////*-----------------------------------------------------------------------*
-		///// <summary>
-		///// Return a list of property names and their base XML attribute name
-		///// counterparts.
-		///// </summary>
-		///// <returns>
-		///// Reference to a collection of property names, associated with their
-		///// XML attribute name counterparts.
-		///// </returns>
-		//private static PropertyAttributeNameCollection GetPropertyNames()
-		//{
-		//	PropertyAttributeNameItem item = null;
-		//	string[] lines = ResourceMain.tsvAttributeNameMap.Split('\n');
-		//	PropertyAttributeNameCollection result =
-		//		new PropertyAttributeNameCollection();
-		//	string[] values = null;
-
-		//	foreach(string lineItem in lines)
-		//	{
-		//		item = null;
-		//		values = lineItem.Trim().Split('\t');
-		//		if(values.Length > 0)
-		//		{
-		//			item = new PropertyAttributeNameItem()
-		//			{
-		//				PropertyName = values[0].Trim()
-		//			};
-		//			result.Add(item);
-		//		}
-		//		if(item != null && values.Length > 1)
-		//		{
-		//			item.AttributeName = values[1].Trim();
-		//		}
-		//	}
-		//	return result;
-		//}
-		////*-----------------------------------------------------------------------*
-
-		////*-----------------------------------------------------------------------*
-		////* GetTextBlockTypeDefinitions																						*
-		////*-----------------------------------------------------------------------*
-		///// <summary>
-		///// Return a master collection of text block type definitions.
-		///// </summary>
-		///// <returns>
-		///// Reference to the master list of text block type definitions.
-		///// </returns>
-		//private static TextBlockTypeCollection GetTextBlockTypeDefinitions()
-		//{
-		//	string[] lines = null;
-		//	TextBlockTypeCollection result = new TextBlockTypeCollection();
-		//	TextBlockTypeItem typeItem = null;
-		//	TextBlockTypeEnum typeType = TextBlockTypeEnum.None;
-		//	string[] values = null;
-
-		//	lines = ResourceMain.tsvTextBlockTypeMap.Split('\n',
-		//		StringSplitOptions.RemoveEmptyEntries);
-		//	foreach(string lineItem in lines)
-		//	{
-		//		typeItem = null;
-		//		values = lineItem.Trim().Split('\t');
-		//		if(values.Length > 0)
-		//		{
-		//			//	Readable type name is present.
-		//			if(Enum.TryParse<TextBlockTypeEnum>(values[0].Trim(),
-		//				true, out typeType))
-		//			{
-		//				typeItem = new TextBlockTypeItem()
-		//				{
-		//					BlockType = typeType
-		//				};
-		//				result.Add(typeItem);
-		//			}
-		//			else
-		//			{
-		//				Trace.WriteLine("Unrecognized Text Block Type definition: " +
-		//					$"{values[0]}");
-		//			}
-		//		}
-		//		if(typeItem != null && values.Length > 1)
-		//		{
-		//			typeItem.NodeTag = values[1].Trim();
-		//		}
-		//	}
-		//	return result;
-		//}
-		////*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
 		//* InitializeStyles																											*
@@ -813,6 +615,8 @@ namespace OdtSharp
 		public static void DumpElements(ElementCollection blocks, int indent,
 			StringBuilder builder)
 		{
+			string text = "";
+
 			if(blocks?.Count > 0 && indent > -1)
 			{
 				foreach(ElementItem blockItem in blocks)
@@ -929,22 +733,6 @@ namespace OdtSharp
 			get { return mMasterStyles; }
 		}
 		//*-----------------------------------------------------------------------*
-
-		////*-----------------------------------------------------------------------*
-		////*	Meta																																	*
-		////*-----------------------------------------------------------------------*
-		///// <summary>
-		///// Private member for <see cref="Meta">Meta</see>.
-		///// </summary>
-		//private MetaDataCollection mMeta = new MetaDataCollection();
-		///// <summary>
-		///// Get a reference to the collection of meta values on the document.
-		///// </summary>
-		//public MetaDataCollection Meta
-		//{
-		//	get { return mMeta; }
-		//}
-		////*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
 		//*	MimeType																															*
@@ -1071,22 +859,6 @@ namespace OdtSharp
 		}
 		//*-----------------------------------------------------------------------*
 
-		////*-----------------------------------------------------------------------*
-		////*	Sections																															*
-		////*-----------------------------------------------------------------------*
-		///// <summary>
-		///// Private member for <see cref="Sections">Sections</see>.
-		///// </summary>
-		//private SectionCollection mSections = new SectionCollection();
-		///// <summary>
-		///// Get a reference to the collection of sections on this document.
-		///// </summary>
-		//public SectionCollection Sections
-		//{
-		//	get { return mSections; }
-		//}
-		////*-----------------------------------------------------------------------*
-
 		//*-----------------------------------------------------------------------*
 		//*	Settings																															*
 		//*-----------------------------------------------------------------------*
@@ -1117,22 +889,6 @@ namespace OdtSharp
 			set { mSourceFilename = value; }
 		}
 		//*-----------------------------------------------------------------------*
-
-		////*-----------------------------------------------------------------------*
-		////*	Styles																																*
-		////*-----------------------------------------------------------------------*
-		///// <summary>
-		///// Private member for <see cref="Styles">Styles</see>.
-		///// </summary>
-		//private StyleCollection mStyles = new StyleCollection();
-		///// <summary>
-		///// Get a reference to the collection of general styles on this document.
-		///// </summary>
-		//public StyleCollection Styles
-		//{
-		//	get { return mStyles; }
-		//}
-		////*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
 		//*	UseSoftPageBreaks																											*

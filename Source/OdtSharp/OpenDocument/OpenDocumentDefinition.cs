@@ -101,7 +101,7 @@ namespace OdtSharp.OpenDocument
 				OpenDocumentElementTypeEnum.None;
 			OpenDocumentElementTypeEnum result = OpenDocumentElementTypeEnum.None;
 
-			if(tagName?.Length > 0)
+			if(tagName?.Length > 0 && tagName != "text")
 			{
 				item = mElements.FirstOrDefault(x => x.MappedName == tagName);
 				if(item != null)
@@ -112,6 +112,10 @@ namespace OdtSharp.OpenDocument
 						result = localResult;
 					}
 				}
+			}
+			else
+			{
+				result = OpenDocumentElementTypeEnum.Text;
 			}
 			return result;
 		}

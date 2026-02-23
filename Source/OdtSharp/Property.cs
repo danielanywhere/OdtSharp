@@ -18,6 +18,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 using static OdtSharp.OdtSharpUtil;
@@ -41,6 +42,51 @@ namespace OdtSharp
 		//*************************************************************************
 		//*	Public																																*
 		//*************************************************************************
+
+		//*-----------------------------------------------------------------------*
+		//* SetPropertyValue																											*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Set the value of the specified property on the provided target
+		/// collection, creating a new value if it did not yet exist.
+		/// </summary>
+		/// <param name="properties">
+		/// Reference to the collection of properties to receive the value.
+		/// </param>
+		/// <param name="propertyName">
+		/// Name of the property to set.
+		/// </param>
+		/// <param name="propertyValue">
+		/// Value to place on the property.
+		/// </param>
+		public static void SetPropertyValue(PropertyCollection properties,
+			string propertyName, string propertyValue)
+		{
+			PropertyItem property = null;
+
+			if(properties != null && propertyName?.Length > 0)
+			{
+				property = properties.FirstOrDefault(x =>
+					StringComparer.OrdinalIgnoreCase.Equals(x.Name, propertyName));
+				if(property == null)
+				{
+					property = new PropertyItem()
+					{
+						Name = propertyName
+					};
+					properties.Add(property);
+				}
+				if(propertyValue?.Length > 0)
+				{
+					property.Value = propertyValue;
+				}
+				else
+				{
+					property.Value = "";
+				}
+			}
+		}
+		//*-----------------------------------------------------------------------*
 
 	}
 	//*-------------------------------------------------------------------------*
