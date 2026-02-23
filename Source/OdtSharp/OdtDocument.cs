@@ -90,6 +90,59 @@ namespace OdtSharp
 		//private static TextBlockTypeCollection mTextBlockTypes =
 		//	GetTextBlockTypeDefinitions();
 
+		//*-----------------------------------------------------------------------*
+		//* AddNodesAsBlocks																											*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Add HTML nodes to the provided blocks collection.
+		/// </summary>
+		/// <param name="nodes">
+		/// </param>
+		/// <param name="blocks">
+		/// </param>
+		private static void AddNodesAsBlocks(HtmlNodeCollection nodes,
+			ElementCollection blocks)
+		{
+			ElementItem block = null;
+
+			if(nodes?.Count > 0 && blocks != null)
+			{
+				foreach(HtmlNodeItem nodeItem in nodes)
+				{
+					if(nodeItem.NodeType == "text" || nodeItem.NodeType.Length == 0)
+					{
+						block = new ElementItem()
+						{
+							ElementType = OpenDocumentElementTypeEnum.Text
+						};
+						block.Properties.Add(new PropertyItem()
+						{
+							Name = "Text",
+							Value = nodeItem.Text
+						});
+						blocks.Add(block);
+					}
+					else
+					{
+						block = new ElementItem()
+						{
+							ElementType = mDocumentDefinition.GetTypeFromTag(
+								nodeItem.NodeType),
+							NodeType = nodeItem.NodeType
+						};
+						if(block.ElementType == OpenDocumentElementTypeEnum.None)
+						{
+							block.OriginalContent = nodeItem.Html;
+						}
+						block.Properties.AddRange(GetMappedProperties(nodeItem));
+						blocks.Add(block);
+						AddNodesAsBlocks(nodeItem.Nodes, block.Elements);
+					}
+				}
+			}
+		}
+		//*-----------------------------------------------------------------------*
+
 		////*-----------------------------------------------------------------------*
 		////* AddParagraph																													*
 		////*-----------------------------------------------------------------------*
@@ -132,68 +185,103 @@ namespace OdtSharp
 		/// </param>
 		private static void DeserializeStyles(OdtDocumentItem document)
 		{
-			//	TODO: !1 - Stopped here...
-			//	TODO: Populate styles.
+			ElementItem block = null;
+			ElementCollection blocks = null;
+			HtmlDocument html = null;
+			HtmlNodeItem node = null;
+
+			if(document?.mContentFile?.Nodes.Count > 0)
+			{
+				html = document.mContentFile;
+				//	Font faces.
+				blocks = document.mFontFaces;
+				blocks.Clear();
+				node = html.Nodes.FindMatch(x =>
+					x.NodeType == "office:font-face-decls");
+				if(node != null)
+				{
+					AddNodesAsBlocks(node.Nodes, blocks);
+				}
+				//	Automatic styles.
+				blocks = document.mAutomaticStyles;
+				blocks.Clear();
+				node = html.Nodes.FindMatch(x =>
+					x.NodeType == "office:automatic-styles");
+				if(node != null)
+				{
+					AddNodesAsBlocks(node.Nodes, blocks);
+				}
+				//	Base styles.
+				html = document.mStylesFile;
+				blocks = document.mBaseStyles;
+				blocks.Clear();
+				node = html.Nodes.FindMatch(x =>
+					x.NodeType == "office:styles");
+				if(node != null)
+				{
+					AddNodesAsBlocks(node.Nodes, blocks);
+				}
+			}
 		}
 		//*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
 		//* DeserializeTextContent																								*
 		//*-----------------------------------------------------------------------*
-		/// <summary>
-		/// Deserialize the general text content of the presented node item.
-		/// </summary>
-		/// <param name="block">
-		/// Reference to the parent block.
-		/// </param>
-		/// <param name="nodes">
-		/// Reference to the colleciton of nodes to be parsed as child blocks
-		/// to the current block.
-		/// </param>
-		private static void DeserializeTextContent(ElementItem parentBlock,
-			HtmlNodeCollection nodes)
-		{
-			ElementItem block = null;
-			ElementCollection blocks = null;
-			int propertyCount = 0;
+		///// <summary>
+		///// Deserialize the general text content of the presented node item.
+		///// </summary>
+		///// <param name="block">
+		///// Reference to the parent block.
+		///// </param>
+		///// <param name="nodes">
+		///// Reference to the colleciton of nodes to be parsed as child blocks
+		///// to the current block.
+		///// </param>
+		//private static void DeserializeTextContent(ElementItem parentBlock,
+		//	HtmlNodeCollection nodes)
+		//{
+		//	ElementItem block = null;
+		//	ElementCollection blocks = null;
+		//	int propertyCount = 0;
 
-			if(parentBlock != null && nodes?.Count > 0)
-			{
-				blocks = parentBlock.Elements;
-				foreach(HtmlNodeItem nodeItem in nodes)
-				{
-					if(nodeItem.NodeType == "text" || nodeItem.NodeType.Length == 0)
-					{
-						block = new ElementItem()
-						{
-							ElementType = OpenDocumentElementTypeEnum.Text
-						};
-						block.Properties.Add(new PropertyItem()
-						{
-							Name = "Text",
-							Value = nodeItem.Text
-						});
-						blocks.Add(block);
-					}
-					else
-					{
-						block = new ElementItem()
-						{
-							ElementType = mDocumentDefinition.GetTypeFromTag(nodeItem.NodeType),
-								NodeType = nodeItem.NodeType
-						};
-						if(block.ElementType == OpenDocumentElementTypeEnum.None)
-						{
-							block.OriginalContent = nodeItem.Html;
-						}
-						block.Properties.AddRange(GetMappedProperties(nodeItem));
-						blocks.Add(block);
-						DeserializeTextContent(block, nodeItem.Nodes);
-					}
-				}
-			}
-		}
-		//*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*
+		//	if(parentBlock != null && nodes?.Count > 0)
+		//	{
+		//		blocks = parentBlock.Elements;
+		//		foreach(HtmlNodeItem nodeItem in nodes)
+		//		{
+		//			if(nodeItem.NodeType == "text" || nodeItem.NodeType.Length == 0)
+		//			{
+		//				block = new ElementItem()
+		//				{
+		//					ElementType = OpenDocumentElementTypeEnum.Text
+		//				};
+		//				block.Properties.Add(new PropertyItem()
+		//				{
+		//					Name = "Text",
+		//					Value = nodeItem.Text
+		//				});
+		//				blocks.Add(block);
+		//			}
+		//			else
+		//			{
+		//				block = new ElementItem()
+		//				{
+		//					ElementType = mDocumentDefinition.GetTypeFromTag(nodeItem.NodeType),
+		//						NodeType = nodeItem.NodeType
+		//				};
+		//				if(block.ElementType == OpenDocumentElementTypeEnum.None)
+		//				{
+		//					block.OriginalContent = nodeItem.Html;
+		//				}
+		//				block.Properties.AddRange(GetMappedProperties(nodeItem));
+		//				blocks.Add(block);
+		//				DeserializeTextContent(block, nodeItem.Nodes);
+		//			}
+		//		}
+		//	}
+		//}
+		////*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*
 		/// <summary>
 		/// Deserialize the general text content of the document from the
 		/// underlying data.
@@ -213,7 +301,7 @@ namespace OdtSharp
 			if(document?.mContentFile?.Nodes.Count > 0)
 			{
 				html = document.mContentFile;
-				blocks = document.mBlocks;
+				blocks = document.mElements;
 				blocks.Clear();
 				body = html.Nodes.FindMatch(x => x.NodeType == "office:text");
 				if(body != null)
@@ -253,7 +341,8 @@ namespace OdtSharp
 							}
 							block.Properties.AddRange(GetMappedProperties(nodeItem));
 							blocks.Add(block);
-							DeserializeTextContent(block, nodeItem.Nodes);
+							//DeserializeTextContent(block, nodeItem.Nodes);
+							AddNodesAsBlocks(nodeItem.Nodes, block.Elements);
 						}
 					}
 				}
@@ -560,49 +649,31 @@ namespace OdtSharp
 		/// <summary>
 		/// Private member for <see cref="AutomaticStyles">AutomaticStyles</see>.
 		/// </summary>
-		private StyleCollection mAutomaticStyles = new StyleCollection();
+		private ElementCollection mAutomaticStyles = new ElementCollection();
 		/// <summary>
 		/// Get a reference to the collection of automatic styles on this document.
 		/// </summary>
-		public StyleCollection AutomaticStyles
+		public ElementCollection AutomaticStyles
 		{
 			get { return mAutomaticStyles; }
 		}
 		//*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
-		//*	Elements																																*
+		//*	BaseStyles																														*
 		//*-----------------------------------------------------------------------*
 		/// <summary>
-		/// Private member for <see cref="Blocks">Blocks</see>.
+		/// Private member for <see cref="BaseStyles">BaseStyles</see>.
 		/// </summary>
-		private ElementCollection mBlocks = new ElementCollection();
+		private ElementCollection mBaseStyles = new ElementCollection();
 		/// <summary>
-		/// Get a reference to the collection of content blocks in this document.
+		/// Get a reference to the collection of base styles on this document.
 		/// </summary>
-		public ElementCollection Blocks
+		public ElementCollection BaseStyles
 		{
-			get { return mBlocks; }
+			get { return mBaseStyles; }
 		}
 		//*-----------------------------------------------------------------------*
-
-		////*-----------------------------------------------------------------------*
-		////*	BodyElements																													*
-		////*-----------------------------------------------------------------------*
-		///// <summary>
-		///// Private member for <see cref="BodyElements">BodyElements</see>.
-		///// </summary>
-		//private BodyElementCollection mBodyElements =
-		//	new BodyElementCollection();
-		///// <summary>
-		///// Get/Set a reference to the body elements of this document.
-		///// </summary>
-		//public BodyElementCollection BodyElements
-		//{
-		//	get { return mBodyElements; }
-		//	set { mBodyElements = value; }
-		//}
-		////*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
 		//* CreateDocument																												*
@@ -621,7 +692,7 @@ namespace OdtSharp
 		//*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
-		//* DumpBlocks																														*
+		//* DumpElements																													*
 		//*-----------------------------------------------------------------------*
 		/// <summary>
 		/// Dump the text blocks in the document.
@@ -632,12 +703,23 @@ namespace OdtSharp
 		/// <param name="builder">
 		/// The string builder to which the content will be sent.
 		/// </param>
-		public static void DumpBlocks(OdtDocumentItem document,
+		public static void DumpElements(OdtDocumentItem document,
 			StringBuilder builder)
 		{
-			if(document?.mBlocks.Count > 0)
+			if(document?.mElements.Count > 0)
 			{
-				DumpBlocks(document.mBlocks, 0, builder);
+				builder.AppendLine("*** Elements ***");
+				DumpElements(document.mElements, 0, builder);
+				builder.AppendLine();
+				builder.AppendLine("*** Font Faces ***");
+				DumpElements(document.mFontFaces, 0, builder);
+				builder.AppendLine();
+				builder.AppendLine("*** Base Styles ***");
+				DumpElements(document.mBaseStyles, 0, builder);
+				builder.AppendLine();
+				builder.AppendLine("*** Automatic Styles ***");
+				DumpElements(document.mAutomaticStyles, 0, builder);
+				builder.AppendLine();
 			}
 		}
 		//*- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*
@@ -653,7 +735,7 @@ namespace OdtSharp
 		/// <param name="builder">
 		/// The string builder to which the content will be sent.
 		/// </param>
-		public static void DumpBlocks(ElementCollection blocks, int indent,
+		public static void DumpElements(ElementCollection blocks, int indent,
 			StringBuilder builder)
 		{
 			if(blocks?.Count > 0 && indent > -1)
@@ -673,28 +755,44 @@ namespace OdtSharp
 						builder.AppendLine(propertyItem.ToString());
 					}
 					builder.AppendLine("");
-					DumpBlocks(blockItem.Elements, indent + 1, builder);
+					DumpElements(blockItem.Elements, indent + 1, builder);
 				}
 			}
 		}
 		//*-----------------------------------------------------------------------*
 
-		////*-----------------------------------------------------------------------*
-		////*	FontFaces																															*
-		////*-----------------------------------------------------------------------*
-		///// <summary>
-		///// Private member for <see cref="FontFaces">FontFaces</see>.
-		///// </summary>
-		//private FontFaceCollection mFontFaces = new FontFaceCollection();
-		///// <summary>
-		///// Get a reference to the collection of font face declarations on this
-		///// document.
-		///// </summary>
-		//public FontFaceCollection FontFaces
-		//{
-		//	get { return mFontFaces; }
-		//}
-		////*-----------------------------------------------------------------------*
+		//*-----------------------------------------------------------------------*
+		//*	Elements																															*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Private member for <see cref="Elements">Elements</see>.
+		/// </summary>
+		private ElementCollection mElements = new ElementCollection();
+		/// <summary>
+		/// Get a reference to the collection of content elements in this document.
+		/// </summary>
+		public ElementCollection Elements
+		{
+			get { return mElements; }
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
+		//*	FontFaces																															*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Private member for <see cref="FontFaces">FontFaces</see>.
+		/// </summary>
+		private ElementCollection mFontFaces = new ElementCollection();
+		/// <summary>
+		/// Get a reference to the collection of font face declarations in this
+		/// document.
+		/// </summary>
+		public ElementCollection FontFaces
+		{
+			get { return mFontFaces; }
+		}
+		//*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
 		//* GetBaseFilesFolder																										*

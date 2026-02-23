@@ -1122,6 +1122,14 @@
       ]
     },
     {
+      "DisplayName": "ColorObject",
+      "MappedName": "loext:color",
+      "Attributes": [
+        "loext:color",
+        "loext:name"
+      ]
+    },
+    {
       "DisplayName": "ColumnDefinition",
       "MappedName": "db:column-definition",
       "Attributes": [
@@ -3567,7 +3575,8 @@
         "text:animation-repeat",
         "text:animation-start-inside",
         "text:animation-steps",
-        "text:animation-stop-inside"
+        "text:animation-stop-inside",
+        "loext:allow-overlap"
       ],
       "ChildElements": [
         "style:background-image",
@@ -5707,7 +5716,9 @@
         "style:writing-mode",
         "style:writing-mode-automatic",
         "text:line-number",
-        "text:number-lines"
+        "text:number-lines",
+        "loext:hyphenation-keep-line",
+        "loext:hyphenation-keep-type"
       ],
       "ChildElements": [
         "style:background-image",
@@ -8281,7 +8292,11 @@
         "style:text-underline-width",
         "style:use-window-font-color",
         "text:condition",
-        "text:display"
+        "text:display",
+        "loext:hyphenation-no-caps",
+        "loext:hyphenation-no-last-word",
+        "loext:hyphenation-word-char-count",
+        "loext:hyphenation-zone"
       ]
     },
     {
@@ -8351,6 +8366,26 @@
         "style:data-style-name",
         "text:fixed",
         "text:name"
+      ]
+    },
+    {
+      "DisplayName": "ThemeColors",
+      "MappedName": "loext:theme-colors",
+      "Attributes": [
+        "loext:name"
+      ],
+      "ChildElements": [
+        "loext:color"
+      ]
+    },
+    {
+      "DisplayName": "ThemeObject",
+      "MappedName": "loext:theme",
+      "Attributes": [
+        "loext:name"
+      ],
+      "ChildElements": [
+        "loext:theme-colors"
       ]
     },
     {
@@ -8705,6 +8740,10 @@
     {
       "DisplayName": "AllowInserts",
       "MappedName": "form:allow-inserts"
+    },
+    {
+      "DisplayName": "AllowOverlap",
+      "MappedName": "loext:allow-overlap"
     },
     {
       "DisplayName": "AllowUpdates",
@@ -9248,6 +9287,10 @@
     },
     {
       "DisplayName": "Color",
+      "MappedName": "loext:color"
+    },
+    {
+      "DisplayName": "Color",
       "MappedName": "style:color"
     },
     {
@@ -9385,6 +9428,10 @@
     {
       "DisplayName": "ContentValidationName",
       "MappedName": "table:content-validation-name"
+    },
+    {
+      "DisplayName": "ContextualSpacing",
+      "MappedName": "style:contextual-spacing"
     },
     {
       "DisplayName": "ContinueList",
@@ -10795,12 +10842,28 @@
       "MappedName": "fo:hyphenation-ladder-count"
     },
     {
+      "DisplayName": "HyphenationNoCaps",
+      "MappedName": "loext:hyphenation-no-caps"
+    },
+    {
+      "DisplayName": "HyphenationNoLastWord",
+      "MappedName": "loext:hyphenation-no-last-word"
+    },
+    {
       "DisplayName": "HyphenationPushCharacterCount",
       "MappedName": "fo:hyphenation-push-char-count"
     },
     {
       "DisplayName": "HyphenationRemainingCharacterCount",
       "MappedName": "fo:hyphenation-remain-char-count"
+    },
+    {
+      "DisplayName": "HyphenationWordCharacterCount",
+      "MappedName": "loext:hyphenation-word-char-count"
+    },
+    {
+      "DisplayName": "HyphenationZone",
+      "MappedName": "loext:hyphenation-zone"
     },
     {
       "DisplayName": "Id",
@@ -11005,6 +11068,14 @@
     {
       "DisplayName": "JustifySingleWord",
       "MappedName": "style:justify-single-word"
+    },
+    {
+      "DisplayName": "KeepHypenationLine",
+      "MappedName": "loext:hyphenation-keep-line"
+    },
+    {
+      "DisplayName": "KeepHyphenationType",
+      "MappedName": "loext:hyphenation-keep-type"
     },
     {
       "DisplayName": "KeepTogether",
@@ -11632,6 +11703,10 @@
     },
     {
       "DisplayName": "Name",
+      "MappedName": "loext:name"
+    },
+    {
+      "DisplayName": "Name",
       "MappedName": "meta:name"
     },
     {
@@ -11735,6 +11810,10 @@
       "MappedName": "text:number-lines"
     },
     {
+      "DisplayName": "NumberListForward",
+      "MappedName": "loext:num-list-format"
+    },
+    {
       "DisplayName": "NumberMatrixColumnsSpanned",
       "MappedName": "table:number-matrix-columns-spanned"
     },
@@ -11809,6 +11888,10 @@
     {
       "DisplayName": "Opacity",
       "MappedName": "draw:opacity"
+    },
+    {
+      "DisplayName": "Opacity",
+      "MappedName": "loext:opacity"
     },
     {
       "DisplayName": "OpacityName",
@@ -11949,6 +12032,10 @@
     {
       "DisplayName": "ParagraphCount",
       "MappedName": "meta:paragraph-count"
+    },
+    {
+      "DisplayName": "ParagraphRevisionSaveId",
+      "MappedName": "officeooo:paragraph-rsid"
     },
     {
       "DisplayName": "ParagraphStyleName",
@@ -12293,6 +12380,10 @@
     {
       "DisplayName": "ReverseDirection",
       "MappedName": "chart:reverse-direction"
+    },
+    {
+      "DisplayName": "RevisionSaveId",
+      "MappedName": "officeooo:rsid"
     },
     {
       "DisplayName": "RfcLanguageTag",
@@ -12985,6 +13076,10 @@
     {
       "DisplayName": "TabStop",
       "MappedName": "form:tab-stop"
+    },
+    {
+      "DisplayName": "TabStopDistance",
+      "MappedName": "loext:tab-stop-distance"
     },
     {
       "DisplayName": "TabStopDistance",

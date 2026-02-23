@@ -99,7 +99,7 @@ namespace OdtSharpConsole
 						WorkingDocument is OdtWorkingDocumentItem document)
 					{
 						builder = new StringBuilder();
-						OdtDocumentItem.DumpBlocks(document.Document, builder);
+						OdtDocumentItem.DumpElements(document.Document, builder);
 						if(option.Value.ToLower() == "console")
 						{
 							Trace.WriteLine(builder.ToString());
