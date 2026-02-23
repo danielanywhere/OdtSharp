@@ -1,0 +1,3451 @@
+*** Elements ***
+OfficeForms
+  Properties:
+   Automatic Focus = false
+   Apply Design Mode = false
+
+SequenceDeclarations
+  Properties:
+
+ SequenceDeclaration
+   Properties:
+    Display Outline Level = 0
+    Name = Illustration
+
+ SequenceDeclaration
+   Properties:
+    Display Outline Level = 0
+    Name = Table
+
+ SequenceDeclaration
+   Properties:
+    Display Outline Level = 0
+    Name = Text
+
+ SequenceDeclaration
+   Properties:
+    Display Outline Level = 0
+    Name = Drawing
+
+ SequenceDeclaration
+   Properties:
+    Display Outline Level = 0
+    Name = Figure
+
+Heading
+  Properties:
+   Style Name = P1
+   Outline Level = 1
+
+ Text
+   Properties:
+    Text = The Importance of Open-Source
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ DrawingAnchor
+   Properties:
+    Type = simple
+    Hyperlink = ../../../Images/2025112401-01a.jpg
+    Name = 2025112401-01a.jpg
+
+  DrawingFrame
+    Properties:
+     Style Name = fr1
+     Name = 2025112401-01a
+     Anchor Type = as-char
+     Width = 6.4134in
+     Height = 3.2071in
+     Z Index = 0
+
+   DrawingImage
+     Properties:
+      Hyperlink = Pictures/1000000000000400000002009F7FFC34.jpg
+      Type = simple
+      Show = embed
+      Actuate = onLoad
+      Mime Type = image/jpeg
+
+   SvgTitle
+     Properties:
+
+    Text
+      Properties:
+       Text = A massive modern bridge spanning the scene, but underneath it, supporting the entire structure, is a house of tattered cards and a bent, empty pop can. A sign at the top reads: &apos;Modern Infrastructure: Proprietary Access Only&apos;. Tourists walk across the bridge admiring the view, oblivious..
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Table
+  Properties:
+   Name = Table1
+   Style Name = Table1
+
+ TableColumn
+   Properties:
+    Style Name = Table1.A
+
+ TableColumn
+   Properties:
+    Style Name = Table1.B
+
+ TableRow
+   Properties:
+
+  TableCell
+    Properties:
+     Style Name = Table1.A1
+     Value Type = string
+
+   Paragraph
+     Properties:
+      Style Name = P2
+
+    Text
+      Properties:
+       Text = Published:
+
+  TableCell
+    Properties:
+     Style Name = Table1.A1
+     Value Type = string
+
+   Paragraph
+     Properties:
+      Style Name = P3
+
+    Text
+      Properties:
+       Text = Monday, November 24, 2025
+
+ TableRow
+   Properties:
+
+  TableCell
+    Properties:
+     Style Name = Table1.A1
+     Value Type = string
+
+   Paragraph
+     Properties:
+      Style Name = P2
+
+    Text
+      Properties:
+       Text = Author:
+
+  TableCell
+    Properties:
+     Style Name = Table1.A1
+     Value Type = string
+
+   Paragraph
+     Properties:
+      Style Name = P3
+
+    Text
+      Properties:
+       Text = Daniel Patterson
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = How Open-Source in Science and Engineering Is Humanity&apos;s Forgotten Tradition
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Heading
+  Properties:
+   Style Name = Heading_20_2
+   Outline Level = 2
+
+ Span
+   Properties:
+    Style Name = T1
+
+  Text
+    Properties:
+     Text = I
+
+ Text
+   Properties:
+    Text = ntroduction
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = For many people today, the term 
+
+ Span
+   Properties:
+    Style Name = T2
+
+  Text
+    Properties:
+     Text = open-source
+
+ Text
+   Properties:
+    Text =  evokes images of collaborative software projects, online repositories, and volunteer communities building digital tools in the margins of an economy that tends to reward secrecy. But this view of openness, as a trivial, novel, or niche phenomenon, is historically unfaithful. Humanity&apos;s long climb into the modern world wasn&apos;t driven by isolation, by proprietary silos, or by controlled access to knowledge, but by a cultural tradition of openness so deeply ingrained that it functioned as a default expectation for all of civilization. It was woven into the way scientists, engineers, artisans, and natural philosophers approached the very act of discovering.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = In this article I am going to address a simple but existential question, which is whether our future can be secured without reclaiming openness as the foundational norm for all knowledge and technology, because if we truly allow secrecy to become our instinct, or proprietary control 
+
+ SoftPageBreak
+   Properties:
+
+  Text
+    Properties:
+     Text = to become our value system, and if the circle of participation continues to steadily shrink, then the progress we take for granted will ultimately prove much more fragile than we realize. What is at stake is not merely the pace of innovation but the cultural mechanism by which humanity has always protected and advanced itself.
+
+ Text
+   Properties:
+    Text = to become our value system, and if the circle of participation continues to steadily shrink, then the progress we take for granted will ultimately prove much more fragile than we realize. What is at stake is not merely the pace of innovation but the cultural mechanism by which humanity has always protected and advanced itself.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = Until somewhat recently, that is.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Heading
+  Properties:
+   Style Name = Heading_20_2
+   Outline Level = 2
+
+ Text
+   Properties:
+    Text = Knowledge as a Cultural Norm in Earlier Centuries
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = From the mid-Renaissance through the industrial age, knowledge sharing wasn&apos;t just encouraged, it was celebrated. A discovery was considered incomplete until it had been communicated, scrutinized, and made usable by others. Inventors and scientists might keep their work private during the delicate period of development, but such privacy was temporary and pragmatic, a way to ensure proper credit in publication rather than to lock knowledge away indefinitely.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = Once a concept was ready for the world, it was released in full, and it included designs, diagrams, experimental methods, failures, and maybe several levels of refinements. The expectation was simple. Any claim to truth had to withstand replication, critique, and extension by peers. This cycle created a self-correcting ecosystem in which even obscure insights could become seeds for future breakthroughs.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = This norm wasn&apos;t purely moral. It was also deeply practical. Open documentation allowed society to build resilient systems whose inner workings were widely understood. When early forms of aviation began to emerge, for example, the builders didn&apos;t hide their methods behind corporate walls. Instead, they documented wing structures, control mechanisms, material considerations, and aerodynamic theories with painstaking detail. Anyone with curiosity, and sufficient patience, could reproduce those machines and improve upon them. This openness wasn&apos;t limited just to flight.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = When the study of electricity first took shape, researchers published every experiment in full, including the construction of early devices for generating static charge, the arrangement of metal plates and wires, the conditions under which currents could be sustained, and the precise behaviors of sparks and arcs. Nothing was treated as a private secret. The emerging science grew because each contributor laid out their methods plainly enough that anyone with bits of metal, resin, glass, or cloth could repeat the work and discover the same patterns of attraction, repulsion, conduction, and resistance.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = When the hidden microscopic world was first unveiled, the pioneers of lens-making didn&apos;t simply produce a device and guard its inner workings. They described how to grind glass, how to polish 
+
+ SoftPageBreak
+   Properties:
+
+  Text
+    Properties:
+     Text = it to clarity, how to arrange lenses so that distortions were minimized, and how to illuminate tiny structures so they could be observed clearly. They recorded drawings of everything they saw, like fibers, crystals, cells, and swarming organisms, so others could compare notes, challenge interpretations, or extend the catalog of discoveries. The very existence of a microbial universe became accepted because thousands of eyes, not just the privileged few, could peer into it.
+
+ Text
+   Properties:
+    Text = it to clarity, how to arrange lenses so that distortions were minimized, and how to illuminate tiny structures so they could be observed clearly. They recorded drawings of everything they saw, like fibers, crystals, cells, and swarming organisms, so others could compare notes, challenge interpretations, or extend the catalog of discoveries. The very existence of a microbial universe became accepted because thousands of eyes, not just the privileged few, could peer into it.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = When modern mathematics and physics grew into coherent systems, the greatest thinkers of the time wrote openly about their methods. They laid out their proofs step by step, derived their equations line by line, and demonstrated not only their conclusions but the reasoning that led to them. Ideas about motion, symmetry, continuity, and the nature of physical laws were shared in broad daylight, inviting critique from anyone able to read and think through the arguments. This transparency allowed entire schools of thought to develop in parallel, each building upon a shared foundation rather than reinventing, much less concealing, the fundamentals.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = In each of these domains, the pattern was the same. Knowledge became powerful precisely because it was made public, allowing countless contributors to refine tools, test ideas, and correct errors. Progress was not the achievement of isolated geniuses but the product of a culture that treated discovery as a gift meant to be handed forward. In other words, the progress that led us to this age accelerated precisely because no single person or institution was monopolizing it. Openness wasn&apos;t an esoteric exception, but the bedrock of engineering culture.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Heading
+  Properties:
+   Style Name = Heading_20_2
+   Outline Level = 2
+
+ Text
+   Properties:
+    Text = The Twentieth Century
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = That foundation cracked in the early-mid twentieth century. The first major rupture came from a dictatorial regime that pursued technological supremacy for domination rather than collective advancement. They developed the most advanced technologies of their era in total secrecy, believing that hidden knowledge could be weaponized to control the world. This secrecy was not incidental, but strategic, and knowledge became a tool of coercion and fear.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = After the global conflict that followed, secrecy didn&apos;t recede. Instead, it spread. The poisonous atmosphere of the geopolitical standoff that defined the mid-to-late twentieth century encouraged nations to bury their scientific advances behind classified walls. Corporations, observing this cultural shift and seeing the immoral benefits of unfair advantages through technological means, mirrored it in the commercial realm. Proprietary behavior slowly became the norm, not because it guaranteed better outcomes but because it guaranteed tighter control by the maker.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = This shift resulted in a paradox. While the public was inundated with claims of dazzling progress, like faster machines, new frontiers, and unprecedented capabilities, the real breakthroughs were increasingly concentrated behind closed doors. Critical systems were understood by ever fewer people, creating a brittle civilization dependent on tiny circles of 
+
+ SoftPageBreak
+   Properties:
+
+  Text
+    Properties:
+     Text = experts. Resilience suffered because the ability to persist requires redundancy, transparency, and shared understanding. Without openness, society arguably might have become more capable on paper, but in practice, they ended the century vastly more fragile.
+
+ Text
+   Properties:
+    Text = experts. Resilience suffered because the ability to persist requires redundancy, transparency, and shared understanding. Without openness, society arguably might have become more capable on paper, but in practice, they ended the century vastly more fragile.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = Now, more than a quarter century later, we find ourselves living inside what feels like an empty shell of a modern world, where the appearance of progress has overtaken the importance of actual progress. Many of the most loudly advertised advancements are little more than marketing slogans wrapped around aging foundations, meant to convince us that superficial upgrades constitute genuine evolution. In reality, vast portions of our technological sphere have become enbleepified and over-complicated, not for our benefit, but for the vendor&apos;s control, inaccessible not for reasons of safety, but of exclusivity, and riddled with fragile subsystems held together by layers of patches, permissions, and proprietary gates. What passes for innovation now is too often an attempt to extract revenue for infrastructures that barely remain standing, and whose complexity no longer reflects deep understanding but sagging, institutional momentum. The tragic irony is that these same systems, while unstable and opaque, have captured near-total control over even the newest knowledge, ensuring that society depends on them even as they erode beneath our feet.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Heading
+  Properties:
+   Style Name = Heading_20_2
+   Outline Level = 2
+
+ Text
+   Properties:
+    Text = The Cost of Proprietary Technology
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = Secrecy in technology carries costs that accumulate quietly but relentlessly. Vendor lock-in traps customers, often forcing them into systems they can&apos;t meaningfully inspect or modify. Hidden mechanisms stifle creativity by preventing experimentation. Productivity stalls when the tools we depend on can&apos;t be fully understood.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = A lack of transparency can even lead regulated organizations to unwittingly violate regulations, because they can&apos;t see what their tools are actually doing beneath the surface, or even what kind of result they are producing, in many cases. When mechanisms are concealed, oversight becomes impossible, and compliance becomes guesswork, and in a world reliant upon science and engineering for its foundation of success, guesswork can&apos;t be tolerated during production.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = These problems extend into the most fundamental layers of modern existence. Consider microprocessors, the tiny chips powering nearly all devices. Only a minuscule and tightly-knit group of specialists fully understand the design and fabrication processes. The rest of the world participates only as consumers, unable to inspect, reproduce, or meaningfully alter the systems they depend on. This concentration of knowledge makes all of modern civilization precarious. A failure in any small node of expertise can ripple outward, affecting entire sectors.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = Even more troubling is that the individuals responsible for controlling the fate of entire industries are often themselves separated from the scientific principles involved. Their priority becomes the maintenance of competition and secrecy over the advancement of human 
+
+ SoftPageBreak
+   Properties:
+
+  Text
+    Properties:
+     Text = understanding. Knowledge becomes subordinated to profit for a tiny handful of business-school graduates, while the entire intellectual commons shrinks.
+
+ Text
+   Properties:
+    Text = understanding. Knowledge becomes subordinated to profit for a tiny handful of business-school graduates, while the entire intellectual commons shrinks.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = It is becoming increasingly obvious that a civilization relying upon opaque technology is a civilization living on borrowed time. Knowledge must be widely distributed not for ideological reasons but for basic survival.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Heading
+  Properties:
+   Style Name = Heading_20_2
+   Outline Level = 2
+
+ Text
+   Properties:
+    Text = Software Developers Are Also Modern Authors
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = In today&apos;s world, a close parallel to the technical authors and writers of earlier eras is the software developer. Software developers write in a functional language, or a language not just of ideas but of fully realized mechanisms. At the press of a key, their writing virtually lifts up off of the page to perform tasks, structure systems, and enable entire industries, thanks to the ubiquitous capabilities of the computing devices upon which they run.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = Yet the economic model surrounding open-source development remains dysfunctional. Unlike the traditional book publishing world, where authorship can directly generate sustainable income, open-source contributors often labor without adequate compensation. The result is a misaligned system in which many creators feel pressured toward proprietary models simply to survive.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = But this economic failure can&apos;t be honored as an argument in favor of secrecy. It must be limited, if possible, to one in favor of redesigning the ideas around compensation for publication. If open authorship protects users, allowing them to audit code, repair it, understand it, and adapt it, then society has a vested interest in ensuring that those who build openly can thrive. Open development transforms users from passive consumers into active participants. It distributes agency among all of civilization rather than concentrating it. It invites everyone into the creative process, expanding the circle rather than contracting it.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = In this sense, software developers aren&apos;t just builders, but custodians of cultural continuity. When they publish openly, they keep alive the same tradition that once guided the natural philosophers of earlier centuries.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Heading
+  Properties:
+   Style Name = Heading_20_2
+   Outline Level = 2
+
+ Text
+   Properties:
+    Text = Beyond Software: The Universality of Openness
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = Openness isn&apos;t really a software philosophy, either, as much as it is a long-lived universal engineering principle.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = When farm equipment is open, for example, rural communities can repair it rather than waiting for authorized technicians or proprietary parts. This autonomy can determine whether crops 
+
+ SoftPageBreak
+   Properties:
+
+  Text
+    Properties:
+     Text = survive or fail, whether families remain stable or fall into debt. Openness in this context isn&apos;t an abstract ideal, but a lifeline.
+
+ Text
+   Properties:
+    Text = survive or fail, whether families remain stable or fall into debt. Openness in this context isn&apos;t an abstract ideal, but a lifeline.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = In electronics, open circuits and schematics of commonly used techniques allow entire regions to develop technical literacy. They allow students, hobbyists, and small businesses to study devices at their deepest layers, ensuring that knowledge is not confined to only those who can afford exclusive training.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = Openness in advanced propulsion systems allows diverse groups of engineers to scrutinize safety, performance, and material behavior. When many eyes can audit a technology, the chances of catastrophic failure decline drastically. Innovation becomes safer, more incremental, and more collaborative.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = When comparing secrecy with openness, the reliable pattern emerges that secrecy narrows participation, while openness expands it. Whenever a technology is essential to human flourishing, whether agricultural machinery, energy systems, medical devices, or communication infrastructure, its workings should be comprehensible and accessible in principle to the entire public. Commerce can thrive under openness, but monopolies on knowledge choke all of human progress and minimize the number of people able to contribute meaningfully.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Heading
+  Properties:
+   Style Name = Heading_20_2
+   Outline Level = 2
+
+ Text
+   Properties:
+    Text = The Existential Argument for Openness
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = The central assertion of this article is simple. Human progress hasn&apos;t occurred through magic or because large corporations created it for us, but thanks to the profound sharing of knowledge accumulated during the processes of discovery and invention by individuals and diverse, independent groups.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = When knowledge is shared, competence multiplies and innovation scales. Entire generations accumulate understanding rather than losing it through corporate secrecy or classified archives. People become more capable, and communities grow continually stronger.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = Secrecy, in contrast, fragments progress. It turns entire populations into dependent consumers who must trust what they cannot verify. It concentrates risk and power simultaneously, creating systems that appear efficient until they fail both catastrophically and permanently.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = The existential question, then, is whether humanity will reclaim openness as the cultural expectation for all scientific and engineering ideas, or whether it will accept a hollow version of progress built on dependency and illusion.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ SoftPageBreak
+   Properties:
+
+  Text
+    Properties:
+     Text = Civilization is only as strong as the number of people able to understand, maintain, and extend its critical systems. That number must be large because such a narrow circle of expertise as we see today can&apos;t properly support a broad society the way they would have you believe.
+
+ Text
+   Properties:
+    Text = Civilization is only as strong as the number of people able to understand, maintain, and extend its critical systems. That number must be large because such a narrow circle of expertise as we see today can&apos;t properly support a broad society the way they would have you believe.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Heading
+  Properties:
+   Style Name = Heading_20_2
+   Outline Level = 2
+
+ Text
+   Properties:
+    Text = Conclusion: A Call to Reclaim Our Tradition
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = Open-source isn&apos;t a modern invention. It is the tradition that built the entire modern world. It was the principle that allowed humanity to move from isolated experiments to shared, global knowledge. The ethical model for openness is already settled: knowledge worth depending upon is knowledge worth sharing.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = What remains unsettled is only finding the payment model that will work for everyone involved, and that is a logistical problem, not a philosophical one. The moral foundation is already in place. The future should be measured not by how much knowledge exists but by how widely it is distributed, because that trait alone dictates whether or not the activity is sustainable. Any arrangement that shrinks the circle of participation must be viewed as a threat to human progress itself.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = Human advancement has always depended on the courage to share, and it always will. Our task now is to restore openness to its rightful place, not as an aspiration but as the standard of behavior by which all of civilization survives and thrives.
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = &lt;author&gt;Daniel Patterson&lt;/author&gt;
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = &lt;categories&gt;Advantages of Open Source&lt;/categories&gt;
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = &lt;description&gt;Why reclaiming openness in science and engineering is essential for humanity&apos;s future resilience and progress.&lt;/description&gt;
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+ Text
+   Properties:
+    Text = &lt;publication-date&gt;11/24/2025&lt;/publication-date&gt;
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Paragraph
+  Properties:
+   Style Name = Standard
+
+Heading
+  Properties:
+   Style Name = P4
+   Outline Level = 2
+
+ Text
+   Properties:
+    Text = A New Page
+
+Section
+  Properties:
+   Style Name = Sect1
+   Name = Section1
+
+ Paragraph
+   Properties:
+    Style Name = P5
+
+  Text
+    Properties:
+     Text = This is some basic text in the four column section.
+
+
+*** Font Faces ***
+FontFace
+  Properties:
+   Name = Calibri
+   Font Family = Calibri
+   Font Family Generic = swiss
+   Font Pitch = variable
+
+FontFace
+  Properties:
+   Name = Calibri Light
+   Font Family = &apos;Calibri Light&apos;
+   Font Family Generic = swiss
+   Font Pitch = variable
+
+FontFace
+  Properties:
+   Name = Courier New
+   Font Family = &apos;Courier New&apos;
+   Font Family Generic = modern
+   Font Pitch = fixed
+
+FontFace
+  Properties:
+   Name = Liberation Mono
+   Font Family = &apos;Liberation Mono&apos;
+   Font Family Generic = modern
+   Font Pitch = fixed
+
+FontFace
+  Properties:
+   Name = MS Gothic
+   Font Family = &apos;MS Gothic&apos;
+   Font Family Generic = system
+   Font Pitch = variable
+
+FontFace
+  Properties:
+   Name = OpenSymbol
+   Font Family = OpenSymbol
+   Font Character Set = x-symbol
+
+FontFace
+  Properties:
+   Name = Roboto
+   Font Family = Roboto
+   Font Adornments = Regular
+   Font Pitch = variable
+
+FontFace
+  Properties:
+   Name = Roboto Light
+   Font Family = &apos;Roboto Light&apos;
+   Font Adornments = Regular
+   Font Pitch = variable
+
+FontFace
+  Properties:
+   Name = Symbol
+   Font Family = Symbol
+   Font Family Generic = roman
+   Font Pitch = variable
+   Font Character Set = x-symbol
+
+FontFace
+  Properties:
+   Name = Tahoma
+   Font Family = Tahoma
+   Font Family Generic = system
+   Font Pitch = variable
+
+FontFace
+  Properties:
+   Name = Times New Roman
+   Font Family = &apos;Times New Roman&apos;
+   Font Family Generic = roman
+   Font Pitch = variable
+
+FontFace
+  Properties:
+   Name = Wingdings
+   Font Family = Wingdings
+   Font Family Generic = system
+   Font Pitch = variable
+   Font Character Set = x-symbol
+
+
+*** Automatic Base Styles ***
+PageLayout
+  Properties:
+   Name = Mpm1
+
+ PageLayoutProperties
+   Properties:
+    Page Width = 8.5in
+    Page Height = 11in
+    Number Format = 1
+    Print Orientation = portrait
+    Margin Top = 0.7874in
+    Margin Bottom = 0.7874in
+    Margin Left = 0.7874in
+    Margin Right = 0.7874in
+    Writing Mode = lr-tb
+    Layout Grid Color = #c0c0c0
+    Layout Grid Lines = 20
+    Layout Grid Base Height = 0.278in
+    Layout Grid Ruby Height = 0.139in
+    Layout Grid Mode = none
+    Layout Grid Ruby Below = false
+    Layout Grid Print = false
+    Layout Grid Display = false
+    Layout Grid Base Width = 0.278in
+    Layout Grid Snap To = true
+    Footnote Maximum Height = 0in
+    loext:margin-gutter = 0in
+
+  FootnoteSeparation
+    Properties:
+     Width = 0.0071in
+     Distance Before Separation = 0.0398in
+     Distance After Separation = 0.0398in
+     Line Style = solid
+     Adjustment = left
+     Relative Width = 25%
+     Color = #000000
+
+ HeaderStyle
+   Properties:
+
+ FooterStyle
+   Properties:
+
+PageLayout
+  Properties:
+   Name = Mpm2
+
+ PageLayoutProperties
+   Properties:
+    Page Width = 8.5in
+    Page Height = 11in
+    Number Format = 1
+    Print Orientation = portrait
+    Margin Top = 1in
+    Margin Bottom = 1in
+    Margin Left = 1in
+    Margin Right = 1in
+    Writing Mode = lr-tb
+    Layout Grid Color = #c0c0c0
+    Layout Grid Lines = 20
+    Layout Grid Base Height = 0.278in
+    Layout Grid Ruby Height = 0.139in
+    Layout Grid Mode = none
+    Layout Grid Ruby Below = false
+    Layout Grid Print = false
+    Layout Grid Display = false
+    Layout Grid Base Width = 0.278in
+    Layout Grid Snap To = true
+    Footnote Maximum Height = 0in
+    loext:margin-gutter = 0in
+
+  FootnoteSeparation
+    Properties:
+     Width = 0.0071in
+     Line Style = solid
+     Adjustment = left
+     Relative Width = 33%
+     Color = #000000
+
+ HeaderStyle
+   Properties:
+
+ FooterStyle
+   Properties:
+
+PageLayout
+  Properties:
+   Name = Mpm3
+
+ PageLayoutProperties
+   Properties:
+    Page Width = 8.5in
+    Page Height = 11in
+    Number Format = 1
+    Print Orientation = portrait
+    Margin Top = 0.7874in
+    Margin Bottom = 0.7874in
+    Margin Left = 0.7874in
+    Margin Right = 0.7874in
+    Writing Mode = lr-tb
+    Layout Grid Color = #c0c0c0
+    Layout Grid Lines = 20
+    Layout Grid Base Height = 0.278in
+    Layout Grid Ruby Height = 0.139in
+    Layout Grid Mode = none
+    Layout Grid Ruby Below = false
+    Layout Grid Print = false
+    Layout Grid Display = false
+    Layout Grid Base Width = 0.278in
+    Layout Grid Snap To = true
+    Footnote Maximum Height = 0in
+    loext:margin-gutter = 0in
+
+  FootnoteSeparation
+    Properties:
+     Line Style = solid
+     Adjustment = left
+     Relative Width = 25%
+     Color = #000000
+
+ HeaderStyle
+   Properties:
+
+ FooterStyle
+   Properties:
+
+PageLayout
+  Properties:
+   Name = Mpm4
+
+ PageLayoutProperties
+   Properties:
+    Page Width = 8.5in
+    Page Height = 11in
+    Number Format = 1
+    Print Orientation = portrait
+    Margin Top = 0.7874in
+    Margin Bottom = 0.7874in
+    Margin Left = 0.7874in
+    Margin Right = 0.7874in
+    Writing Mode = lr-tb
+    Footnote Maximum Height = 0in
+    loext:margin-gutter = 0in
+
+  FootnoteSeparation
+    Properties:
+     Width = 0.0071in
+     Distance Before Separation = 0.0398in
+     Distance After Separation = 0.0398in
+     Line Style = solid
+     Adjustment = left
+     Relative Width = 25%
+     Color = #000000
+
+ HeaderStyle
+   Properties:
+
+ FooterStyle
+   Properties:
+
+PageLayout
+  Properties:
+   Name = Mpm5
+   Page Usage = left
+
+ PageLayoutProperties
+   Properties:
+    Page Width = 8.5in
+    Page Height = 11in
+    Number Format = 1
+    Print Orientation = portrait
+    Margin Top = 0.7874in
+    Margin Bottom = 0.7874in
+    Margin Left = 0.7874in
+    Margin Right = 0.7874in
+    Writing Mode = lr-tb
+    Footnote Maximum Height = 0in
+    loext:margin-gutter = 0in
+
+  FootnoteSeparation
+    Properties:
+     Width = 0.0071in
+     Distance Before Separation = 0.0398in
+     Distance After Separation = 0.0398in
+     Line Style = solid
+     Adjustment = left
+     Relative Width = 25%
+     Color = #000000
+
+ HeaderStyle
+   Properties:
+
+ FooterStyle
+   Properties:
+
+PageLayout
+  Properties:
+   Name = Mpm6
+   Page Usage = right
+
+ PageLayoutProperties
+   Properties:
+    Page Width = 8.5in
+    Page Height = 11in
+    Number Format = 1
+    Print Orientation = portrait
+    Margin Top = 0.7874in
+    Margin Bottom = 0.7874in
+    Margin Left = 0.7874in
+    Margin Right = 0.7874in
+    Writing Mode = lr-tb
+    Footnote Maximum Height = 0in
+    loext:margin-gutter = 0in
+
+  FootnoteSeparation
+    Properties:
+     Width = 0.0071in
+     Distance Before Separation = 0.0398in
+     Distance After Separation = 0.0398in
+     Line Style = solid
+     Adjustment = left
+     Relative Width = 25%
+     Color = #000000
+
+ HeaderStyle
+   Properties:
+
+ FooterStyle
+   Properties:
+
+PageLayout
+  Properties:
+   Name = Mpm7
+
+ PageLayoutProperties
+   Properties:
+    Page Width = 9.0161in
+    Page Height = 4.4882in
+    Number Format = 1
+    Print Orientation = landscape
+    Margin Top = 0in
+    Margin Bottom = 0in
+    Margin Left = 0in
+    Margin Right = 0in
+    Writing Mode = lr-tb
+    Footnote Maximum Height = 0in
+    loext:margin-gutter = 0in
+
+  FootnoteSeparation
+    Properties:
+     Width = 0.0071in
+     Distance Before Separation = 0.0398in
+     Distance After Separation = 0.0398in
+     Line Style = solid
+     Adjustment = left
+     Relative Width = 25%
+     Color = #000000
+
+ HeaderStyle
+   Properties:
+
+ FooterStyle
+   Properties:
+
+PageLayout
+  Properties:
+   Name = Mpm8
+
+ PageLayoutProperties
+   Properties:
+    Page Width = 8.5in
+    Page Height = 11in
+    Number Format = 1
+    Print Orientation = portrait
+    Margin Top = 0.3937in
+    Margin Bottom = 0.3937in
+    Margin Left = 0.7874in
+    Margin Right = 0.3937in
+    Writing Mode = lr-tb
+    Footnote Maximum Height = 0in
+    loext:margin-gutter = 0in
+
+  FootnoteSeparation
+    Properties:
+     Width = 0.0071in
+     Distance Before Separation = 0.0398in
+     Distance After Separation = 0.0398in
+     Line Style = solid
+     Adjustment = left
+     Relative Width = 25%
+     Color = #000000
+
+ HeaderStyle
+   Properties:
+
+ FooterStyle
+   Properties:
+
+PageLayout
+  Properties:
+   Name = Mpm9
+
+ PageLayoutProperties
+   Properties:
+    Page Width = 8.5in
+    Page Height = 11in
+    Number Format = 1
+    Print Orientation = portrait
+    Margin Top = 0.7874in
+    Margin Bottom = 0.7874in
+    Margin Left = 0.7874in
+    Margin Right = 0.7874in
+    Writing Mode = lr-tb
+    Footnote Maximum Height = 0in
+    loext:margin-gutter = 0in
+
+  FootnoteSeparation
+    Properties:
+     Line Style = solid
+     Adjustment = left
+     Relative Width = 25%
+     Color = #000000
+
+ HeaderStyle
+   Properties:
+
+ FooterStyle
+   Properties:
+
+PageLayout
+  Properties:
+   Name = Mpm10
+
+ PageLayoutProperties
+   Properties:
+    Page Width = 11in
+    Page Height = 8.5in
+    Number Format = 1
+    Print Orientation = landscape
+    Margin Top = 0.7874in
+    Margin Bottom = 0.7874in
+    Margin Left = 0.7874in
+    Margin Right = 0.7874in
+    Writing Mode = lr-tb
+    Footnote Maximum Height = 0in
+    loext:margin-gutter = 0in
+
+  FootnoteSeparation
+    Properties:
+     Width = 0.0071in
+     Distance Before Separation = 0.0398in
+     Distance After Separation = 0.0398in
+     Line Style = solid
+     Adjustment = left
+     Relative Width = 25%
+     Color = #000000
+
+ HeaderStyle
+   Properties:
+
+ FooterStyle
+   Properties:
+
+Style
+  Properties:
+   Name = Mdp1
+   Family = drawing-page
+
+ DrawingPageProperties
+   Properties:
+    Background Size = full
+
+
+*** Automatic Page Styles ***
+Style
+  Properties:
+   Name = Table1
+   Family = table
+
+ TableProperties
+   Properties:
+    Width = 3.0403in
+    Alignment = left
+
+Style
+  Properties:
+   Name = Table1.A
+   Family = table-column
+
+ TableColumnProperties
+   Properties:
+    Column Width = 0.916in
+
+Style
+  Properties:
+   Name = Table1.B
+   Family = table-column
+
+ TableColumnProperties
+   Properties:
+    Column Width = 2.1243in
+
+Style
+  Properties:
+   Name = Table1.A1
+   Family = table-cell
+
+ TableCellProperties
+   Properties:
+    Padding = 0.0382in
+    Border = none
+
+Style
+  Properties:
+   Name = P1
+   Family = paragraph
+   Parent Style Name = Heading_20_1
+   Master Page Name = MP0
+
+ ParagraphProperties
+   Properties:
+    Page Number = auto
+    Break Before = page
+
+Style
+  Properties:
+   Name = P2
+   Family = paragraph
+   Parent Style Name = Table_20_Contents
+
+ TextProperties
+   Properties:
+    Revision Save Id = 0045da08
+    Paragraph Revision Save Id = 0045da08
+
+Style
+  Properties:
+   Name = P3
+   Family = paragraph
+   Parent Style Name = Table_20_Contents
+
+ TextProperties
+   Properties:
+    Font Weight = bold
+    Revision Save Id = 0045da08
+    Paragraph Revision Save Id = 0045da08
+    Font Weight Asian = bold
+    Font Weight Complex = bold
+
+Style
+  Properties:
+   Name = P4
+   Family = paragraph
+   Parent Style Name = Heading_20_2
+
+ ParagraphProperties
+   Properties:
+    Break Before = page
+
+ TextProperties
+   Properties:
+    Revision Save Id = 00463456
+    Paragraph Revision Save Id = 00463456
+
+Style
+  Properties:
+   Name = P5
+   Family = paragraph
+   Parent Style Name = Normal
+
+ TextProperties
+   Properties:
+    Revision Save Id = 00463456
+    Paragraph Revision Save Id = 00463456
+
+Style
+  Properties:
+   Name = T1
+   Family = text
+
+ TextProperties
+   Properties:
+    Revision Save Id = 0045da08
+
+Style
+  Properties:
+   Name = T2
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Style = italic
+    Font Style Asian = italic
+    Font Style Complex = italic
+
+Style
+  Properties:
+   Name = fr1
+   Family = graphic
+   Parent Style Name = Graphics
+
+ GraphicProperties
+   Properties:
+    Run Through = foreground
+    Wrap = none
+    Vertical Position = top
+    Vertical Relative = baseline
+    Horizontal Position = center
+    Horizontal Relative = paragraph
+    Mirror = none
+    Clip = rect(0in, 0in, 0in, 0in)
+    Luminance = 0%
+    Contrast = 0%
+    Red = 0%
+    Green = 0%
+    Blue = 0%
+    Gamma = 100%
+    Color Inversion = false
+    Image Opacity = 100%
+    Color Mode = standard
+    Wrap Influence On Position = once-concurrent
+    Allow Overlap = true
+
+Style
+  Properties:
+   Name = Sect1
+   Family = section
+
+ SectionProperties
+   Properties:
+    Dont Balance Text Columns = false
+    Editable = false
+
+  StyleColumns
+    Properties:
+     Column Count = 4
+     Column Gap = 0.2in
+
+   StyleColumn
+     Properties:
+      Relative Width = 16383*
+      Start Indent = 0in
+      End Indent = 0.1in
+
+   StyleColumn
+     Properties:
+      Relative Width = 16383*
+      Start Indent = 0.1in
+      End Indent = 0.1in
+
+   StyleColumn
+     Properties:
+      Relative Width = 16383*
+      Start Indent = 0.1in
+      End Indent = 0.1in
+
+   StyleColumn
+     Properties:
+      Relative Width = 16386*
+      Start Indent = 0.1in
+      End Indent = 0in
+
+
+*** Base Styles ***
+DefaultStyle
+  Properties:
+   Family = graphic
+
+ GraphicProperties
+   Properties:
+    Stroke = solid
+    Stroke Width = 0.0138in
+    Stroke Color = #172c51
+    Stroke Linejoin = miter
+    Stroke Linecap = butt
+    Fill Color = #4472c4
+    Wrap Option = wrap
+    Shadow Offset X = 0.1181in
+    Shadow Offset Y = 0.1181in
+    Start Line Spacing Horizontal = 0.1114in
+    Start Line Spacing Vertical = 0.1114in
+    End Line Spacing Horizontal = 0.1114in
+    End Line Spacing Vertical = 0.1114in
+    Writing Mode = lr-tb
+    Flow With Text = false
+
+ ParagraphProperties
+   Properties:
+    Line Height = 107%
+    Text Alignment = start
+    Text Autospace = ideograph-alpha
+    Line Break = strict
+    Tab Stop Distance = 0in
+    Font Independent Line Spacing = false
+
+  TabStops
+    Properties:
+
+ TextProperties
+   Properties:
+    Font Variant = normal
+    Text Transform = none
+    Use Window Font Color = true
+    Opacity = 0%
+    Text Outline = false
+    Text Line Through Style = none
+    Text Line Through Type = none
+    Text Position = 0% 100%
+    Font Name = Calibri
+    Font Size = 11pt
+    Letter Spacing = normal
+    Language = en
+    Country = US
+    Font Style = normal
+    Text Underline Style = none
+    Font Weight = normal
+    Letter Kerning = true
+    Font Name Asian = Calibri
+    Font Size Asian = 11pt
+    Language Asian = en
+    Country Asian = US
+    Font Style Asian = normal
+    Font Weight Asian = normal
+    Font Name Complex = Times New Roman
+    Font Size Complex = 11pt
+    Language Complex = ar
+    Country Complex = SA
+    Font Style Complex = normal
+    Font Weight Complex = normal
+    Text Emphasize = none
+    Text Scale = 100%
+    Font Relief = none
+
+DefaultStyle
+  Properties:
+   Family = paragraph
+
+ ParagraphProperties
+   Properties:
+    Margin Top = 0in
+    Margin Bottom = 0.111in
+    Contextual Spacing = false
+    Line Height = 107%
+    Text Alignment = start
+    Justify Single Word = false
+    Keep Together = auto
+    Orphans = 2
+    Widows = 2
+    Hyphenation Ladder Count = no-limit
+    Hyphenation Keep = auto
+    Keep Hyphenation Type = column
+    Keep Hypenation Line = false
+    Break Before = auto
+    Break After = auto
+    Background Color = transparent
+    Padding = 0in
+    Border = none
+    Shadow = none
+    Keep With Next = auto
+    Number Lines = true
+    Line Number = 0
+    Text Autospace = ideograph-alpha
+    Punctuation Wrap = hanging
+    Line Break = strict
+    Tab Stop Distance = 0.5in
+    Vertical Alignment = auto
+    Snap To Layout Grid = true
+    Writing Mode = lr-tb
+
+  BackgroundImage
+    Properties:
+
+ TextProperties
+   Properties:
+    Font Variant = normal
+    Text Transform = none
+    Use Window Font Color = true
+    Opacity = 0%
+    Text Outline = false
+    Text Line Through Style = none
+    Text Line Through Type = none
+    Text Position = 0% 100%
+    Font Name = Calibri
+    Font Size = 11pt
+    Letter Spacing = normal
+    Language = en
+    Country = US
+    Font Style = normal
+    Text Underline Style = none
+    Font Weight = normal
+    Letter Kerning = true
+    Background Color = transparent
+    Font Name Asian = Calibri
+    Font Size Asian = 11pt
+    Language Asian = en
+    Country Asian = US
+    Font Style Asian = normal
+    Font Weight Asian = normal
+    Font Name Complex = Times New Roman
+    Font Size Complex = 11pt
+    Language Complex = ar
+    Country Complex = SA
+    Font Style Complex = normal
+    Font Weight Complex = normal
+    Text Emphasize = none
+    Text Combine = none
+    Text Scale = 100%
+    Font Relief = none
+    Hyphenate = true
+    Hyphenation No Caps = false
+    Hyphenation No Last Word = false
+    Hyphenation Word Character Count = no-limit
+    Hyphenation Zone = no-limit
+
+DefaultStyle
+  Properties:
+   Family = table
+
+ TableProperties
+   Properties:
+    Border Model = collapsing
+
+DefaultStyle
+  Properties:
+   Family = table-row
+
+ TableRowProperties
+   Properties:
+    Keep Together = auto
+
+Style
+  Properties:
+   Name = Standard
+   Family = paragraph
+   Class = text
+   Master Page Name = 
+
+ ParagraphProperties
+   Properties:
+    Hyphenation Ladder Count = no-limit
+    Hyphenation Keep = auto
+    Keep Hyphenation Type = column
+    Keep Hypenation Line = false
+    Page Number = auto
+
+ TextProperties
+   Properties:
+    Font Name = Roboto
+    Font Family = Roboto
+    Font Style Name = Regular
+    Font Pitch = variable
+    Hyphenate = false
+    Hyphenation No Caps = false
+    Hyphenation No Last Word = false
+    Hyphenation Word Character Count = no-limit
+    Hyphenation Zone = no-limit
+
+Style
+  Properties:
+   Name = Heading
+   Family = paragraph
+   Parent Style Name = Standard
+   Next Style Name = Text_20_body
+   Class = chapter
+
+ ParagraphProperties
+   Properties:
+    Margin Top = 0.1665in
+    Margin Bottom = 0.0835in
+    Contextual Spacing = false
+    Keep With Next = always
+
+ TextProperties
+   Properties:
+    Font Name = Roboto Light
+    Font Family = &apos;Roboto Light&apos;
+    Font Style Name = Regular
+    Font Pitch = variable
+    Font Size = 14pt
+    Font Weight = 250
+    Font Name Asian = MS Gothic
+    Font Family Asian = &apos;MS Gothic&apos;
+    Font Family Generic Asian = system
+    Font Pitch Asian = variable
+    Font Size Asian = 14pt
+    Font Name Complex = Tahoma
+    Font Family Complex = Tahoma
+    Font Family Generic Complex = system
+    Font Pitch Complex = variable
+    Font Size Complex = 14pt
+
+Style
+  Properties:
+   Name = Text_20_body
+   Display Name = Text body
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = text
+
+ ParagraphProperties
+   Properties:
+    Margin Top = 0in
+    Margin Bottom = 0.0972in
+    Contextual Spacing = false
+    Line Height = 115%
+
+Style
+  Properties:
+   Name = Heading_20_1
+   Display Name = Heading 1
+   Family = paragraph
+   Parent Style Name = Normal
+   Next Style Name = Normal
+   Default Outline Level = 1
+   Class = chapter
+
+ ParagraphProperties
+   Properties:
+    Margin Top = 0.1665in
+    Margin Bottom = 0in
+    Contextual Spacing = false
+    Keep Together = always
+    Hyphenation Ladder Count = no-limit
+    Hyphenation Keep = auto
+    Keep Hyphenation Type = column
+    Keep Hypenation Line = false
+    Keep With Next = always
+
+ TextProperties
+   Properties:
+    Color = #0f4761
+    Opacity = 100%
+    Font Name = Roboto Light
+    Font Family = &apos;Roboto Light&apos;
+    Font Style Name = Regular
+    Font Pitch = variable
+    Font Size = 16pt
+    Font Weight = 250
+    Font Name Asian = Times New Roman
+    Font Family Asian = &apos;Times New Roman&apos;
+    Font Family Generic Asian = roman
+    Font Pitch Asian = variable
+    Font Size Asian = 16pt
+    Font Name Complex = Times New Roman
+    Font Family Complex = &apos;Times New Roman&apos;
+    Font Family Generic Complex = roman
+    Font Pitch Complex = variable
+    Font Size Complex = 16pt
+    Hyphenate = false
+    Hyphenation No Caps = false
+    Hyphenation No Last Word = false
+    Hyphenation Word Character Count = no-limit
+    Hyphenation Zone = no-limit
+
+Style
+  Properties:
+   Name = Heading_20_2
+   Display Name = Heading 2
+   Family = paragraph
+   Parent Style Name = Normal
+   Next Style Name = Normal
+   Default Outline Level = 2
+   Class = chapter
+
+ ParagraphProperties
+   Properties:
+    Margin Top = 0.028in
+    Margin Bottom = 0in
+    Contextual Spacing = false
+    Keep Together = always
+    Hyphenation Ladder Count = no-limit
+    Hyphenation Keep = auto
+    Keep Hyphenation Type = column
+    Keep Hypenation Line = false
+    Keep With Next = always
+
+ TextProperties
+   Properties:
+    Color = #0f4761
+    Opacity = 100%
+    Font Name = Roboto Light
+    Font Family = &apos;Roboto Light&apos;
+    Font Style Name = Regular
+    Font Pitch = variable
+    Font Size = 13pt
+    Font Weight = 250
+    Font Name Asian = Times New Roman
+    Font Family Asian = &apos;Times New Roman&apos;
+    Font Family Generic Asian = roman
+    Font Pitch Asian = variable
+    Font Size Asian = 13pt
+    Font Name Complex = Times New Roman
+    Font Family Complex = &apos;Times New Roman&apos;
+    Font Family Generic Complex = roman
+    Font Pitch Complex = variable
+    Font Size Complex = 13pt
+    Hyphenate = false
+    Hyphenation No Caps = false
+    Hyphenation No Last Word = false
+    Hyphenation Word Character Count = no-limit
+    Hyphenation Zone = no-limit
+
+Style
+  Properties:
+   Name = Heading_20_3
+   Display Name = Heading 3
+   Family = paragraph
+   Parent Style Name = Normal
+   Next Style Name = Normal
+   Default Outline Level = 3
+   Class = chapter
+
+ ParagraphProperties
+   Properties:
+    Margin Top = 0.028in
+    Margin Bottom = 0in
+    Contextual Spacing = false
+    Keep Together = always
+    Hyphenation Ladder Count = no-limit
+    Hyphenation Keep = auto
+    Keep Hyphenation Type = column
+    Keep Hypenation Line = false
+    Padding = 0.0201in
+    Border Left = none
+    Border Right = none
+    Border Top = none
+    Border Bottom = 0.06pt solid #999999
+    Keep With Next = always
+
+ TextProperties
+   Properties:
+    Color = #0f4761
+    Opacity = 100%
+    Font Name = Roboto Light
+    Font Family = &apos;Roboto Light&apos;
+    Font Style Name = Regular
+    Font Pitch = variable
+    Font Size = 12pt
+    Font Weight = 250
+    Font Name Asian = Times New Roman
+    Font Family Asian = &apos;Times New Roman&apos;
+    Font Family Generic Asian = roman
+    Font Pitch Asian = variable
+    Font Size Asian = 12pt
+    Font Name Complex = Times New Roman
+    Font Family Complex = &apos;Times New Roman&apos;
+    Font Family Generic Complex = roman
+    Font Pitch Complex = variable
+    Font Size Complex = 12pt
+    Hyphenate = false
+    Hyphenation No Caps = false
+    Hyphenation No Last Word = false
+    Hyphenation Word Character Count = no-limit
+    Hyphenation Zone = no-limit
+
+Style
+  Properties:
+   Name = Normal
+   Family = paragraph
+
+ ParagraphProperties
+   Properties:
+    Hyphenation Ladder Count = no-limit
+    Hyphenation Keep = auto
+    Keep Hyphenation Type = column
+    Keep Hypenation Line = false
+
+ TextProperties
+   Properties:
+    Font Name = Roboto
+    Font Family = Roboto
+    Font Style Name = Regular
+    Font Pitch = variable
+    Hyphenate = false
+    Hyphenation No Caps = false
+    Hyphenation No Last Word = false
+    Hyphenation Word Character Count = no-limit
+    Hyphenation Zone = no-limit
+
+Style
+  Properties:
+   Name = Title
+   Family = paragraph
+   Parent Style Name = Normal
+   Next Style Name = Normal
+   Class = chapter
+
+ ParagraphProperties
+   Properties:
+    Margin Top = 0in
+    Margin Bottom = 0in
+    Contextual Spacing = true
+    Line Height = 100%
+    Hyphenation Ladder Count = no-limit
+    Hyphenation Keep = auto
+    Keep Hyphenation Type = column
+    Keep Hypenation Line = false
+
+ TextProperties
+   Properties:
+    Font Name = Roboto Light
+    Font Family = &apos;Roboto Light&apos;
+    Font Style Name = Regular
+    Font Pitch = variable
+    Font Size = 28pt
+    Letter Spacing = -0.0071in
+    Font Weight = 250
+    Letter Kerning = true
+    Font Name Asian = Times New Roman
+    Font Family Asian = &apos;Times New Roman&apos;
+    Font Family Generic Asian = roman
+    Font Pitch Asian = variable
+    Font Size Asian = 28pt
+    Font Name Complex = Times New Roman
+    Font Family Complex = &apos;Times New Roman&apos;
+    Font Family Generic Complex = roman
+    Font Pitch Complex = variable
+    Font Size Complex = 28pt
+    Hyphenate = false
+    Hyphenation No Caps = false
+    Hyphenation No Last Word = false
+    Hyphenation Word Character Count = no-limit
+    Hyphenation Zone = no-limit
+
+Style
+  Properties:
+   Name = List_20_Paragraph
+   Display Name = List Paragraph
+   Family = paragraph
+   Parent Style Name = Normal
+
+ ParagraphProperties
+   Properties:
+    Margin Left = 0.5in
+    Margin Top = 0in
+    Margin Bottom = 0.111in
+    Contextual Spacing = true
+    Hyphenation Ladder Count = no-limit
+    Hyphenation Keep = auto
+    Keep Hyphenation Type = column
+    Keep Hypenation Line = false
+
+  TabStops
+    Properties:
+
+ TextProperties
+   Properties:
+    Hyphenate = false
+    Hyphenation No Caps = false
+    Hyphenation No Last Word = false
+    Hyphenation Word Character Count = no-limit
+    Hyphenation Zone = no-limit
+
+Style
+  Properties:
+   Name = Table_20_Contents
+   Display Name = Table Contents
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = extra
+
+ ParagraphProperties
+   Properties:
+    Orphans = 0
+    Widows = 0
+    Number Lines = false
+    Line Number = 0
+
+Style
+  Properties:
+   Name = Addressee
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = extra
+
+ ParagraphProperties
+   Properties:
+    Margin Top = 0in
+    Margin Bottom = 0.0417in
+    Contextual Spacing = false
+    Number Lines = false
+    Line Number = 0
+
+Style
+  Properties:
+   Name = Quotations
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = html
+
+ ParagraphProperties
+   Properties:
+    Margin Left = 0.3937in
+    Margin Right = 0.3937in
+    Margin Top = 0in
+    Margin Bottom = 0.1965in
+    Contextual Spacing = false
+    Text Indent = 0in
+    Auto Text Indent = false
+
+Style
+  Properties:
+   Name = Caption
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = extra
+
+ ParagraphProperties
+   Properties:
+    Margin Top = 0.0835in
+    Margin Bottom = 0.0835in
+    Contextual Spacing = false
+    Number Lines = false
+    Line Number = 0
+
+ TextProperties
+   Properties:
+    Font Size = 10pt
+    Font Style = italic
+    Font Size Asian = 10pt
+    Font Style Asian = italic
+    Font Size Complex = 10pt
+    Font Style Complex = italic
+
+Style
+  Properties:
+   Name = Comment
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = extra
+
+ ParagraphProperties
+   Properties:
+    Margin Left = 0.0398in
+    Margin Right = 0.0398in
+    Margin Top = 0.039in
+    Margin Bottom = 0in
+    Contextual Spacing = false
+    Line Height = 100%
+    Text Indent = 0in
+    Auto Text Indent = false
+
+ TextProperties
+   Properties:
+    Use Window Font Color = true
+    Opacity = 0%
+    Font Size = 10pt
+    Font Size Asian = 10pt
+    Font Size Complex = 10pt
+
+Style
+  Properties:
+   Name = Salutation
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = text
+
+ ParagraphProperties
+   Properties:
+    Number Lines = false
+    Line Number = 0
+
+Style
+  Properties:
+   Name = Endnote
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = extra
+
+ ParagraphProperties
+   Properties:
+    Margin Left = 0.2362in
+    Text Indent = -0.2362in
+    Auto Text Indent = false
+    Number Lines = false
+    Line Number = 0
+
+ TextProperties
+   Properties:
+    Font Size = 10pt
+    Font Size Asian = 10pt
+    Font Size Complex = 10pt
+
+Style
+  Properties:
+   Name = Footnote
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = extra
+
+ ParagraphProperties
+   Properties:
+    Margin Left = 0.2362in
+    Text Indent = -0.2362in
+    Auto Text Indent = false
+    Number Lines = false
+    Line Number = 0
+
+ TextProperties
+   Properties:
+    Font Size = 10pt
+    Font Size Asian = 10pt
+    Font Size Complex = 10pt
+
+Style
+  Properties:
+   Name = Frame_20_contents
+   Display Name = Frame contents
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = extra
+
+Style
+  Properties:
+   Name = Header_20_and_20_Footer
+   Display Name = Header and Footer
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = extra
+
+ ParagraphProperties
+   Properties:
+    Number Lines = false
+    Line Number = 0
+
+  TabStops
+    Properties:
+
+   TabStop
+     Properties:
+      Position = 3.4626in
+      Type = center
+
+   TabStop
+     Properties:
+      Position = 6.9252in
+      Type = right
+
+Style
+  Properties:
+   Name = Horizontal_20_Line
+   Display Name = Horizontal Line
+   Family = paragraph
+   Parent Style Name = Standard
+   Next Style Name = Text_20_body
+   Class = html
+
+ ParagraphProperties
+   Properties:
+    Margin Top = 0in
+    Margin Bottom = 0.1965in
+    Contextual Spacing = false
+    Border Line Width Bottom = 0.0008in 0.0016in 0.0008in
+    Padding = 0in
+    Border Left = none
+    Border Right = none
+    Border Top = none
+    Border Bottom = 0.2pt double #808080
+    Number Lines = false
+    Line Number = 0
+    Join Border = false
+
+ TextProperties
+   Properties:
+    Font Size = 6pt
+    Font Size Asian = 6pt
+    Font Size Complex = 6pt
+
+Style
+  Properties:
+   Name = Index
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = index
+
+ ParagraphProperties
+   Properties:
+    Number Lines = false
+    Line Number = 0
+
+Style
+  Properties:
+   Name = List_20_Contents
+   Display Name = List Contents
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = html
+
+ ParagraphProperties
+   Properties:
+    Margin Left = 0.3937in
+
+Style
+  Properties:
+   Name = List_20_Heading
+   Display Name = List Heading
+   Family = paragraph
+   Parent Style Name = Standard
+   Next Style Name = List_20_Contents
+   Class = html
+
+ ParagraphProperties
+   Properties:
+    Margin Left = 0in
+
+Style
+  Properties:
+   Name = Preformatted_20_Text
+   Display Name = Preformatted Text
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = html
+
+ ParagraphProperties
+   Properties:
+    Margin Top = 0in
+    Margin Bottom = 0in
+    Contextual Spacing = false
+
+ TextProperties
+   Properties:
+    Font Name = Liberation Mono
+    Font Family = &apos;Liberation Mono&apos;
+    Font Family Generic = modern
+    Font Pitch = fixed
+    Font Size = 10pt
+    Font Name Asian = Liberation Mono
+    Font Family Asian = &apos;Liberation Mono&apos;
+    Font Family Generic Asian = modern
+    Font Pitch Asian = fixed
+    Font Size Asian = 10pt
+    Font Name Complex = Liberation Mono
+    Font Family Complex = &apos;Liberation Mono&apos;
+    Font Family Generic Complex = modern
+    Font Pitch Complex = fixed
+    Font Size Complex = 10pt
+
+Style
+  Properties:
+   Name = Sender
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = extra
+
+ ParagraphProperties
+   Properties:
+    Margin Top = 0in
+    Margin Bottom = 0.0417in
+    Contextual Spacing = false
+    Number Lines = false
+    Line Number = 0
+
+Style
+  Properties:
+   Name = Signature
+   Family = paragraph
+   Parent Style Name = Standard
+   Class = text
+
+ ParagraphProperties
+   Properties:
+    Number Lines = false
+    Line Number = 0
+
+Style
+  Properties:
+   Name = List
+   Family = paragraph
+   Parent Style Name = Text_20_body
+   Class = list
+
+Style
+  Properties:
+   Name = Table_20_Heading
+   Display Name = Table Heading
+   Family = paragraph
+   Parent Style Name = Table_20_Contents
+   Class = extra
+
+ ParagraphProperties
+   Properties:
+    Text Alignment = center
+    Justify Single Word = false
+    Number Lines = false
+    Line Number = 0
+
+ TextProperties
+   Properties:
+    Font Weight = bold
+    Font Weight Asian = bold
+    Font Weight Complex = bold
+
+Style
+  Properties:
+   Name = Default_20_Paragraph_20_Font
+   Display Name = Default Paragraph Font
+   Family = text
+
+Style
+  Properties:
+   Name = Title_20_Char
+   Display Name = Title Char
+   Family = text
+   Parent Style Name = Default_20_Paragraph_20_Font
+
+ TextProperties
+   Properties:
+    Font Name = Calibri Light
+    Font Family = &apos;Calibri Light&apos;
+    Font Family Generic = swiss
+    Font Pitch = variable
+    Font Size = 28pt
+    Letter Spacing = -0.0071in
+    Letter Kerning = true
+    Font Name Asian = Times New Roman
+    Font Family Asian = &apos;Times New Roman&apos;
+    Font Family Generic Asian = roman
+    Font Pitch Asian = variable
+    Font Size Asian = 28pt
+    Font Name Complex = Times New Roman
+    Font Family Complex = &apos;Times New Roman&apos;
+    Font Family Generic Complex = roman
+    Font Pitch Complex = variable
+    Font Size Complex = 28pt
+
+Style
+  Properties:
+   Name = Heading_20_1_20_Char
+   Display Name = Heading 1 Char
+   Family = text
+   Parent Style Name = Default_20_Paragraph_20_Font
+
+ TextProperties
+   Properties:
+    Color = #2f5496
+    Opacity = 100%
+    Font Name = Calibri Light
+    Font Family = &apos;Calibri Light&apos;
+    Font Family Generic = swiss
+    Font Pitch = variable
+    Font Size = 16pt
+    Font Name Asian = Times New Roman
+    Font Family Asian = &apos;Times New Roman&apos;
+    Font Family Generic Asian = roman
+    Font Pitch Asian = variable
+    Font Size Asian = 16pt
+    Font Name Complex = Times New Roman
+    Font Family Complex = &apos;Times New Roman&apos;
+    Font Family Generic Complex = roman
+    Font Pitch Complex = variable
+    Font Size Complex = 16pt
+
+Style
+  Properties:
+   Name = Heading_20_2_20_Char
+   Display Name = Heading 2 Char
+   Family = text
+   Parent Style Name = Default_20_Paragraph_20_Font
+
+ TextProperties
+   Properties:
+    Color = #2f5496
+    Opacity = 100%
+    Font Name = Calibri Light
+    Font Family = &apos;Calibri Light&apos;
+    Font Family Generic = swiss
+    Font Pitch = variable
+    Font Size = 13pt
+    Font Name Asian = Times New Roman
+    Font Family Asian = &apos;Times New Roman&apos;
+    Font Family Generic Asian = roman
+    Font Pitch Asian = variable
+    Font Size Asian = 13pt
+    Font Name Complex = Times New Roman
+    Font Family Complex = &apos;Times New Roman&apos;
+    Font Family Generic Complex = roman
+    Font Pitch Complex = variable
+    Font Size Complex = 13pt
+
+Style
+  Properties:
+   Name = Heading_20_3_20_Char
+   Display Name = Heading 3 Char
+   Family = text
+   Parent Style Name = Default_20_Paragraph_20_Font
+
+ TextProperties
+   Properties:
+    Color = #1f3763
+    Opacity = 100%
+    Font Name = Calibri Light
+    Font Family = &apos;Calibri Light&apos;
+    Font Family Generic = swiss
+    Font Pitch = variable
+    Font Size = 12pt
+    Font Name Asian = Times New Roman
+    Font Family Asian = &apos;Times New Roman&apos;
+    Font Family Generic Asian = roman
+    Font Pitch Asian = variable
+    Font Size Asian = 12pt
+    Font Name Complex = Times New Roman
+    Font Family Complex = &apos;Times New Roman&apos;
+    Font Family Generic Complex = roman
+    Font Pitch Complex = variable
+    Font Size Complex = 12pt
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO1LVL1
+   Display Name = WW_CharLFO1LVL1
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Symbol
+    Font Family = Symbol
+    Font Family Generic = roman
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO1LVL2
+   Display Name = WW_CharLFO1LVL2
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Courier New
+    Font Family = &apos;Courier New&apos;
+    Font Family Generic = modern
+    Font Pitch = fixed
+    Font Name Complex = Courier New
+    Font Family Complex = &apos;Courier New&apos;
+    Font Family Generic Complex = modern
+    Font Pitch Complex = fixed
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO1LVL3
+   Display Name = WW_CharLFO1LVL3
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Wingdings
+    Font Family = Wingdings
+    Font Family Generic = system
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO1LVL4
+   Display Name = WW_CharLFO1LVL4
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Symbol
+    Font Family = Symbol
+    Font Family Generic = roman
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO1LVL5
+   Display Name = WW_CharLFO1LVL5
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Courier New
+    Font Family = &apos;Courier New&apos;
+    Font Family Generic = modern
+    Font Pitch = fixed
+    Font Name Complex = Courier New
+    Font Family Complex = &apos;Courier New&apos;
+    Font Family Generic Complex = modern
+    Font Pitch Complex = fixed
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO1LVL6
+   Display Name = WW_CharLFO1LVL6
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Wingdings
+    Font Family = Wingdings
+    Font Family Generic = system
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO1LVL7
+   Display Name = WW_CharLFO1LVL7
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Symbol
+    Font Family = Symbol
+    Font Family Generic = roman
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO1LVL8
+   Display Name = WW_CharLFO1LVL8
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Courier New
+    Font Family = &apos;Courier New&apos;
+    Font Family Generic = modern
+    Font Pitch = fixed
+    Font Name Complex = Courier New
+    Font Family Complex = &apos;Courier New&apos;
+    Font Family Generic Complex = modern
+    Font Pitch Complex = fixed
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO1LVL9
+   Display Name = WW_CharLFO1LVL9
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Wingdings
+    Font Family = Wingdings
+    Font Family Generic = system
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO2LVL1
+   Display Name = WW_CharLFO2LVL1
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Symbol
+    Font Family = Symbol
+    Font Family Generic = roman
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO2LVL2
+   Display Name = WW_CharLFO2LVL2
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Courier New
+    Font Family = &apos;Courier New&apos;
+    Font Family Generic = modern
+    Font Pitch = fixed
+    Font Name Complex = Courier New
+    Font Family Complex = &apos;Courier New&apos;
+    Font Family Generic Complex = modern
+    Font Pitch Complex = fixed
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO2LVL3
+   Display Name = WW_CharLFO2LVL3
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Wingdings
+    Font Family = Wingdings
+    Font Family Generic = system
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO2LVL4
+   Display Name = WW_CharLFO2LVL4
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Symbol
+    Font Family = Symbol
+    Font Family Generic = roman
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO2LVL5
+   Display Name = WW_CharLFO2LVL5
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Courier New
+    Font Family = &apos;Courier New&apos;
+    Font Family Generic = modern
+    Font Pitch = fixed
+    Font Name Complex = Courier New
+    Font Family Complex = &apos;Courier New&apos;
+    Font Family Generic Complex = modern
+    Font Pitch Complex = fixed
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO2LVL6
+   Display Name = WW_CharLFO2LVL6
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Wingdings
+    Font Family = Wingdings
+    Font Family Generic = system
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO2LVL7
+   Display Name = WW_CharLFO2LVL7
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Symbol
+    Font Family = Symbol
+    Font Family Generic = roman
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO2LVL8
+   Display Name = WW_CharLFO2LVL8
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Courier New
+    Font Family = &apos;Courier New&apos;
+    Font Family Generic = modern
+    Font Pitch = fixed
+    Font Name Complex = Courier New
+    Font Family Complex = &apos;Courier New&apos;
+    Font Family Generic Complex = modern
+    Font Pitch Complex = fixed
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO2LVL9
+   Display Name = WW_CharLFO2LVL9
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Wingdings
+    Font Family = Wingdings
+    Font Family Generic = system
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO3LVL1
+   Display Name = WW_CharLFO3LVL1
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Symbol
+    Font Family = Symbol
+    Font Family Generic = roman
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO3LVL2
+   Display Name = WW_CharLFO3LVL2
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Courier New
+    Font Family = &apos;Courier New&apos;
+    Font Family Generic = modern
+    Font Pitch = fixed
+    Font Name Complex = Courier New
+    Font Family Complex = &apos;Courier New&apos;
+    Font Family Generic Complex = modern
+    Font Pitch Complex = fixed
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO3LVL3
+   Display Name = WW_CharLFO3LVL3
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Wingdings
+    Font Family = Wingdings
+    Font Family Generic = system
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO3LVL4
+   Display Name = WW_CharLFO3LVL4
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Symbol
+    Font Family = Symbol
+    Font Family Generic = roman
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO3LVL5
+   Display Name = WW_CharLFO3LVL5
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Courier New
+    Font Family = &apos;Courier New&apos;
+    Font Family Generic = modern
+    Font Pitch = fixed
+    Font Name Complex = Courier New
+    Font Family Complex = &apos;Courier New&apos;
+    Font Family Generic Complex = modern
+    Font Pitch Complex = fixed
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO3LVL6
+   Display Name = WW_CharLFO3LVL6
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Wingdings
+    Font Family = Wingdings
+    Font Family Generic = system
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO3LVL7
+   Display Name = WW_CharLFO3LVL7
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Symbol
+    Font Family = Symbol
+    Font Family Generic = roman
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO3LVL8
+   Display Name = WW_CharLFO3LVL8
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Courier New
+    Font Family = &apos;Courier New&apos;
+    Font Family Generic = modern
+    Font Pitch = fixed
+    Font Name Complex = Courier New
+    Font Family Complex = &apos;Courier New&apos;
+    Font Family Generic Complex = modern
+    Font Pitch Complex = fixed
+
+Style
+  Properties:
+   Name = WW_5f_CharLFO3LVL9
+   Display Name = WW_CharLFO3LVL9
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = Wingdings
+    Font Family = Wingdings
+    Font Family Generic = system
+    Font Pitch = variable
+    Font Character Set = x-symbol
+
+Style
+  Properties:
+   Name = Bullet_20_Symbols
+   Display Name = Bullet Symbols
+   Family = text
+
+ TextProperties
+   Properties:
+    Font Name = OpenSymbol
+    Font Family = OpenSymbol
+    Font Character Set = x-symbol
+    Font Name Asian = OpenSymbol
+    Font Family Asian = OpenSymbol
+    Font Character Set Asian = x-symbol
+    Font Name Complex = OpenSymbol
+    Font Family Complex = OpenSymbol
+    Font Character Set Complex = x-symbol
+
+Style
+  Properties:
+   Name = Footnote_20_Symbol
+   Display Name = Footnote Symbol
+   Family = text
+
+Style
+  Properties:
+   Name = Endnote_20_Symbol
+   Display Name = Endnote Symbol
+   Family = text
+
+Style
+  Properties:
+   Name = Internet_20_link
+   Display Name = Internet link
+   Family = text
+
+ TextProperties
+   Properties:
+    Color = #000080
+    Opacity = 100%
+    Text Underline Style = solid
+    Text Underline Width = auto
+    Text Underline Color = font-color
+
+Style
+  Properties:
+   Name = Visited_20_Internet_20_Link
+   Display Name = Visited Internet Link
+   Family = text
+
+ TextProperties
+   Properties:
+    Color = #800000
+    Opacity = 100%
+    Text Underline Style = solid
+    Text Underline Width = auto
+    Text Underline Color = font-color
+
+Style
+  Properties:
+   Name = Numbering_20_Symbols
+   Display Name = Numbering Symbols
+   Family = text
+
+Style
+  Properties:
+   Name = Footnote_20_anchor
+   Display Name = Footnote anchor
+   Family = text
+
+ TextProperties
+   Properties:
+    Text Position = super 58%
+
+Style
+  Properties:
+   Name = Endnote_20_anchor
+   Display Name = Endnote anchor
+   Family = text
+
+ TextProperties
+   Properties:
+    Text Position = super 58%
+
+Style
+  Properties:
+   Name = Graphics
+   Family = graphic
+
+ GraphicProperties
+   Properties:
+    Anchor Type = paragraph
+    X = 0in
+    Y = 0in
+    Wrap = dynamic
+    Number Wrapped Paragraphs = no-limit
+    Wrap Contour = false
+    Vertical Position = top
+    Vertical Relative = paragraph
+    Horizontal Position = center
+    Horizontal Relative = paragraph
+    Background Color = transparent
+    Fill = none
+
+OutlineStyle
+  Properties:
+   Name = Outline
+
+ OutlineLevelStyle
+   Properties:
+    Level = 1
+    Number List Forward = %1%
+    Number Format = 
+
+  ListLevelProperties
+    Properties:
+
+ OutlineLevelStyle
+   Properties:
+    Level = 2
+    Number List Forward = %2%
+    Number Format = 
+
+  ListLevelProperties
+    Properties:
+
+ OutlineLevelStyle
+   Properties:
+    Level = 3
+    Number List Forward = %3%
+    Number Format = 
+
+  ListLevelProperties
+    Properties:
+
+ OutlineLevelStyle
+   Properties:
+    Level = 4
+    Number List Forward = %4%
+    Number Format = 
+
+  ListLevelProperties
+    Properties:
+     List Level Position And Space Mode = label-alignment
+
+   ListLevelLabelAlignment
+     Properties:
+      Label Followed By = listtab
+
+ OutlineLevelStyle
+   Properties:
+    Level = 5
+    Number List Forward = %5%
+    Number Format = 
+
+  ListLevelProperties
+    Properties:
+     List Level Position And Space Mode = label-alignment
+
+   ListLevelLabelAlignment
+     Properties:
+      Label Followed By = listtab
+
+ OutlineLevelStyle
+   Properties:
+    Level = 6
+    Number List Forward = %6%
+    Number Format = 
+
+  ListLevelProperties
+    Properties:
+     List Level Position And Space Mode = label-alignment
+
+   ListLevelLabelAlignment
+     Properties:
+      Label Followed By = listtab
+
+ OutlineLevelStyle
+   Properties:
+    Level = 7
+    Number List Forward = %7%
+    Number Format = 
+
+  ListLevelProperties
+    Properties:
+     List Level Position And Space Mode = label-alignment
+
+   ListLevelLabelAlignment
+     Properties:
+      Label Followed By = listtab
+
+ OutlineLevelStyle
+   Properties:
+    Level = 8
+    Number List Forward = %8%
+    Number Format = 
+
+  ListLevelProperties
+    Properties:
+     List Level Position And Space Mode = label-alignment
+
+   ListLevelLabelAlignment
+     Properties:
+      Label Followed By = listtab
+
+ OutlineLevelStyle
+   Properties:
+    Level = 9
+    Number List Forward = %9%
+    Number Format = 
+
+  ListLevelProperties
+    Properties:
+     List Level Position And Space Mode = label-alignment
+
+   ListLevelLabelAlignment
+     Properties:
+      Label Followed By = listtab
+
+ OutlineLevelStyle
+   Properties:
+    Level = 10
+    Number List Forward = %10%
+    Number Format = 
+
+  ListLevelProperties
+    Properties:
+     List Level Position And Space Mode = label-alignment
+
+   ListLevelLabelAlignment
+     Properties:
+      Label Followed By = listtab
+
+NotesConfiguration
+  Properties:
+   Note Class = footnote
+   Citation Style Name = Footnote_20_Symbol
+   Citation Body Style Name = Footnote_20_anchor
+   Number Format = 1
+   Start Value = 0
+   Footnotes Position = page
+   Start Numbering At = document
+
+NotesConfiguration
+  Properties:
+   Note Class = endnote
+   Citation Style Name = Endnote_20_Symbol
+   Citation Body Style Name = Endnote_20_anchor
+   Master Page Name = Endnote
+   Number Format = i
+   Start Value = 0
+
+LinenumberingConfiguration
+  Properties:
+   Number Lines = false
+   Offset = 0.1965in
+   Number Format = 1
+   Number Position = left
+   Increment = 5
+
+DefaultPageLayout
+  Properties:
+
+ PageLayoutProperties
+   Properties:
+    Border = none
+    Padding = 0in
+    Writing Mode = lr-tb
+    Layout Grid Standard Mode = true
+
+ThemeObject
+  Properties:
+   Name = Office
+
+ ThemeColors
+   Properties:
+    Name = LibreOffice
+
+  ColorObject
+    Properties:
+     Name = dark1
+     Color = #000000
+
+  ColorObject
+    Properties:
+     Name = light1
+     Color = #ffffff
+
+  ColorObject
+    Properties:
+     Name = dark2
+     Color = #000000
+
+  ColorObject
+    Properties:
+     Name = light2
+     Color = #ffffff
+
+  ColorObject
+    Properties:
+     Name = accent1
+     Color = #18a303
+
+  ColorObject
+    Properties:
+     Name = accent2
+     Color = #0369a3
+
+  ColorObject
+    Properties:
+     Name = accent3
+     Color = #a33e03
+
+  ColorObject
+    Properties:
+     Name = accent4
+     Color = #8e03a3
+
+  ColorObject
+    Properties:
+     Name = accent5
+     Color = #c99c00
+
+  ColorObject
+    Properties:
+     Name = accent6
+     Color = #c9211e
+
+  ColorObject
+    Properties:
+     Name = hyperlink
+     Color = #0000ee
+
+  ColorObject
+    Properties:
+     Name = followed-hyperlink
+     Color = #551a8b
+
+
+*** Master Styles ***
+MasterPage
+  Properties:
+   Name = Standard
+   Page Layout Name = Mpm1
+   Style Name = Mdp1
+
+MasterPage
+  Properties:
+   Name = MP0
+   Page Layout Name = Mpm2
+   Style Name = Mdp1
+
+MasterPage
+  Properties:
+   Name = Endnote
+   Page Layout Name = Mpm3
+   Style Name = Mdp1
+
+MasterPage
+  Properties:
+   Name = First_20_Page
+   Display Name = First Page
+   Page Layout Name = Mpm4
+   Next Style Name = Standard
+
+MasterPage
+  Properties:
+   Name = Left_20_Page
+   Display Name = Left Page
+   Page Layout Name = Mpm5
+   Next Style Name = Right_20_Page
+
+MasterPage
+  Properties:
+   Name = Right_20_Page
+   Display Name = Right Page
+   Page Layout Name = Mpm6
+   Next Style Name = Left_20_Page
+
+MasterPage
+  Properties:
+   Name = Envelope
+   Page Layout Name = Mpm7
+
+MasterPage
+  Properties:
+   Name = Index
+   Page Layout Name = Mpm4
+
+MasterPage
+  Properties:
+   Name = HTML
+   Page Layout Name = Mpm8
+
+MasterPage
+  Properties:
+   Name = Footnote
+   Page Layout Name = Mpm9
+
+MasterPage
+  Properties:
+   Name = Landscape
+   Page Layout Name = Mpm10
+
+
+*** Settings ***
+ConfigItem
+  Properties:
+   Name = ViewAreaTop
+   Type = long
+
+ Text
+   Properties:
+    Text = 199510
+
+ConfigItem
+  Properties:
+   Name = ViewAreaLeft
+   Type = long
+
+ Text
+   Properties:
+    Text = 0
+
+ConfigItem
+  Properties:
+   Name = ViewAreaWidth
+   Type = long
+
+ Text
+   Properties:
+    Text = 30080
+
+ConfigItem
+  Properties:
+   Name = ViewAreaHeight
+   Type = long
+
+ Text
+   Properties:
+    Text = 16004
+
+ConfigItem
+  Properties:
+   Name = ShowRedlineChanges
+   Type = boolean
+
+ Text
+   Properties:
+    Text = false
+
+ConfigItem
+  Properties:
+   Name = InBrowseMode
+   Type = boolean
+
+ Text
+   Properties:
+    Text = false
+
+ConfigItemMapIndexed
+  Properties:
+   Name = Views
+
+ ConfigItemMapEntry
+   Properties:
+
+  ConfigItem
+    Properties:
+     Name = ViewId
+     Type = string
+
+   Text
+     Properties:
+      Text = view2
+
+  ConfigItem
+    Properties:
+     Name = ViewLeft
+     Type = long
+
+   Text
+     Properties:
+      Text = 13788
+
+  ConfigItem
+    Properties:
+     Name = ViewTop
+     Type = long
+
+   Text
+     Properties:
+      Text = 202773
+
+  ConfigItem
+    Properties:
+     Name = VisibleLeft
+     Type = long
+
+   Text
+     Properties:
+      Text = 0
+
+  ConfigItem
+    Properties:
+     Name = VisibleTop
+     Type = long
+
+   Text
+     Properties:
+      Text = 199510
+
+  ConfigItem
+    Properties:
+     Name = VisibleRight
+     Type = long
+
+   Text
+     Properties:
+      Text = 30078
+
+  ConfigItem
+    Properties:
+     Name = VisibleBottom
+     Type = long
+
+   Text
+     Properties:
+      Text = 215512
+
+  ConfigItem
+    Properties:
+     Name = ZoomType
+     Type = short
+
+   Text
+     Properties:
+      Text = 0
+
+  ConfigItem
+    Properties:
+     Name = ViewLayoutColumns
+     Type = short
+
+   Text
+     Properties:
+      Text = 1
+
+  ConfigItem
+    Properties:
+     Name = ViewLayoutBookMode
+     Type = boolean
+
+   Text
+     Properties:
+      Text = false
+
+  ConfigItem
+    Properties:
+     Name = ZoomFactor
+     Type = short
+
+   Text
+     Properties:
+      Text = 100
+
+  ConfigItem
+    Properties:
+     Name = IsSelectedFrame
+     Type = boolean
+
+   Text
+     Properties:
+      Text = false
+
+  ConfigItem
+    Properties:
+     Name = KeepRatio
+     Type = boolean
+
+   Text
+     Properties:
+      Text = false
+
+  ConfigItem
+    Properties:
+     Name = AnchoredTextOverflowLegacy
+     Type = boolean
+
+   Text
+     Properties:
+      Text = true
+
+  ConfigItem
+    Properties:
+     Name = LegacySingleLineFontwork
+     Type = boolean
+
+   Text
+     Properties:
+      Text = true
+
+  ConfigItem
+    Properties:
+     Name = ConnectorUseSnapRect
+     Type = boolean
+
+   Text
+     Properties:
+      Text = false
+
+  ConfigItem
+    Properties:
+     Name = IgnoreBreakAfterMultilineField
+     Type = boolean
+
+   Text
+     Properties:
+      Text = false
+
+  ConfigItem
+    Properties:
+     Name = UseTrailingEmptyLinesInLayout
+     Type = boolean
+
+   Text
+     Properties:
+      Text = false
+
+

@@ -2,7 +2,7 @@
   "profiles": {
     "OdtSharpConsole": {
       "commandName": "Project",
-      "commandLineArgs": "odtsharpconsole /wait /action:OpenWorkingDocument /infile:TheImportanceOfOpenSource.odt /option:Dump,C:\\Temp\\OdtDocumentBlocks.txt /workingpath:%GITHUBPATH%\\OdtSharp\\Docs\\ReferenceDocument"
+      "commandLineArgs": "odtsharpconsole /wait /action:OpenWorkingDocument /infile:TheImportanceOfOpenSource.odt /option:Dump,OdtDocumentBlocks.txt /workingpath:%GITHUBPATH%\\OdtSharp\\Docs\\ReferenceDocument"
     }
   }
 }

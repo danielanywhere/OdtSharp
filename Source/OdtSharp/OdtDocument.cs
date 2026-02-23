@@ -175,6 +175,37 @@ namespace OdtSharp
 		////*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
+		//* DeserializeSettings																										*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Deserialize the settings definitions.
+		/// </summary>
+		/// <param name="document">
+		/// Reference to the document for which the settings will be processed.
+		/// </param>
+		private static void DeserializeSettings(OdtDocumentItem document)
+		{
+			ElementCollection blocks = null;
+			HtmlDocument html = null;
+			HtmlNodeItem node = null;
+
+			if(document?.mContentFile?.Nodes.Count > 0)
+			{
+				html = document.mSettingsFile;
+				//	Font faces.
+				blocks = document.mSettings;
+				blocks.Clear();
+				node = html.Nodes.FindMatch(x =>
+					x.NodeType == "config:config-item-set");
+				if(node != null)
+				{
+					AddNodesAsBlocks(node.Nodes, blocks);
+				}
+			}
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
 		//* DeserializeStyles																											*
 		//*-----------------------------------------------------------------------*
 		/// <summary>
@@ -202,8 +233,8 @@ namespace OdtSharp
 				{
 					AddNodesAsBlocks(node.Nodes, blocks);
 				}
-				//	Automatic styles.
-				blocks = document.mAutomaticStyles;
+				//	Automatic page styles.
+				blocks = document.mAutomaticPageStyles;
 				blocks.Clear();
 				node = html.Nodes.FindMatch(x =>
 					x.NodeType == "office:automatic-styles");
@@ -217,6 +248,23 @@ namespace OdtSharp
 				blocks.Clear();
 				node = html.Nodes.FindMatch(x =>
 					x.NodeType == "office:styles");
+				if(node != null)
+				{
+					AddNodesAsBlocks(node.Nodes, blocks);
+				}
+				//	Automatic base styles.
+				blocks = document.mAutomaticBaseStyles;
+				blocks.Clear();
+				node = html.Nodes.FindMatch(x =>
+					x.NodeType == "office:automatic-styles");
+				if(node != null)
+				{
+					AddNodesAsBlocks(node.Nodes, blocks);
+				}
+				//	Master styles.
+				blocks = document.mMasterStyles;
+				blocks.Clear();
+				node = html.Nodes.FindMatch(x => x.NodeType == "office:master-styles");
 				if(node != null)
 				{
 					AddNodesAsBlocks(node.Nodes, blocks);
@@ -644,18 +692,36 @@ namespace OdtSharp
 		//*	Public																																*
 		//*************************************************************************
 		//*-----------------------------------------------------------------------*
-		//*	AutomaticStyles																												*
+		//*	AutomaticBaseStyles																										*
 		//*-----------------------------------------------------------------------*
 		/// <summary>
-		/// Private member for <see cref="AutomaticStyles">AutomaticStyles</see>.
+		/// Private member for
+		/// <see cref="AutomaticBaseStyles">AutomaticBaseStyles</see>.
 		/// </summary>
-		private ElementCollection mAutomaticStyles = new ElementCollection();
+		private ElementCollection mAutomaticBaseStyles = new ElementCollection();
 		/// <summary>
 		/// Get a reference to the collection of automatic styles on this document.
 		/// </summary>
-		public ElementCollection AutomaticStyles
+		public ElementCollection AutomaticBaseStyles
 		{
-			get { return mAutomaticStyles; }
+			get { return mAutomaticBaseStyles; }
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
+		//*	AutomaticPageStyles																										*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Private member for
+		/// <see cref="AutomaticPageStyles">AutomaticPageStyles</see>.
+		/// </summary>
+		private ElementCollection mAutomaticPageStyles = new ElementCollection();
+		/// <summary>
+		/// Get a reference to the collection of automatic styles on this document.
+		/// </summary>
+		public ElementCollection AutomaticPageStyles
+		{
+			get { return mAutomaticPageStyles; }
 		}
 		//*-----------------------------------------------------------------------*
 
@@ -714,11 +780,20 @@ namespace OdtSharp
 				builder.AppendLine("*** Font Faces ***");
 				DumpElements(document.mFontFaces, 0, builder);
 				builder.AppendLine();
+				builder.AppendLine("*** Automatic Base Styles ***");
+				DumpElements(document.mAutomaticBaseStyles, 0, builder);
+				builder.AppendLine();
+				builder.AppendLine("*** Automatic Page Styles ***");
+				DumpElements(document.mAutomaticPageStyles, 0, builder);
+				builder.AppendLine();
 				builder.AppendLine("*** Base Styles ***");
 				DumpElements(document.mBaseStyles, 0, builder);
 				builder.AppendLine();
-				builder.AppendLine("*** Automatic Styles ***");
-				DumpElements(document.mAutomaticStyles, 0, builder);
+				builder.AppendLine("*** Master Styles ***");
+				DumpElements(document.mMasterStyles, 0, builder);
+				builder.AppendLine();
+				builder.AppendLine("*** Settings ***");
+				DumpElements(document.mSettings, 0, builder);
 				builder.AppendLine();
 			}
 		}
@@ -845,11 +920,11 @@ namespace OdtSharp
 		/// <summary>
 		/// Private member for <see cref="MasterStyles">MasterStyles</see>.
 		/// </summary>
-		private StyleCollection mMasterStyles = new StyleCollection();
+		private ElementCollection mMasterStyles = new ElementCollection();
 		/// <summary>
 		/// Get a reference to the collection of master styles on this document.
 		/// </summary>
-		public StyleCollection MasterStyles
+		public ElementCollection MasterStyles
 		{
 			get { return mMasterStyles; }
 		}
@@ -937,13 +1012,13 @@ namespace OdtSharp
 						result.mContentFile = new HtmlDocument(content, true, true, true);
 						content = File.ReadAllText(
 							Path.Combine(result.mOdtProject.FullName, "settings.xml"));
-						result.mSettingsFile = new HtmlDocument(content, true, true);
+						result.mSettingsFile = new HtmlDocument(content, true, true, true);
 						content = File.ReadAllText(
 							Path.Combine(result.mOdtProject.FullName, "styles.xml"));
-						result.mStylesFile = new HtmlDocument(content, true, true);
+						result.mStylesFile = new HtmlDocument(content, true, true, true);
 						result.mMimeType = File.ReadAllText(
 							Path.Combine(result.mOdtProject.FullName, "mimetype"));
-						//DeserializeSettings(result);
+						DeserializeSettings(result);
 						DeserializeStyles(result);
 						DeserializeTextContent(result);
 					}
@@ -1018,11 +1093,11 @@ namespace OdtSharp
 		/// <summary>
 		/// Private member for <see cref="Settings">Settings</see>.
 		/// </summary>
-		private SettingCollection mSettings = new SettingCollection();
+		private ElementCollection mSettings = new ElementCollection();
 		/// <summary>
 		/// Get a reference to the collection of settings on this document.
 		/// </summary>
-		public SettingCollection Settings
+		public ElementCollection Settings
 		{
 			get { return mSettings; }
 			set { mSettings = value; }
@@ -1043,21 +1118,21 @@ namespace OdtSharp
 		}
 		//*-----------------------------------------------------------------------*
 
-		//*-----------------------------------------------------------------------*
-		//*	Styles																																*
-		//*-----------------------------------------------------------------------*
-		/// <summary>
-		/// Private member for <see cref="Styles">Styles</see>.
-		/// </summary>
-		private StyleCollection mStyles = new StyleCollection();
-		/// <summary>
-		/// Get a reference to the collection of general styles on this document.
-		/// </summary>
-		public StyleCollection Styles
-		{
-			get { return mStyles; }
-		}
-		//*-----------------------------------------------------------------------*
+		////*-----------------------------------------------------------------------*
+		////*	Styles																																*
+		////*-----------------------------------------------------------------------*
+		///// <summary>
+		///// Private member for <see cref="Styles">Styles</see>.
+		///// </summary>
+		//private StyleCollection mStyles = new StyleCollection();
+		///// <summary>
+		///// Get a reference to the collection of general styles on this document.
+		///// </summary>
+		//public StyleCollection Styles
+		//{
+		//	get { return mStyles; }
+		//}
+		////*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
 		//*	UseSoftPageBreaks																											*
