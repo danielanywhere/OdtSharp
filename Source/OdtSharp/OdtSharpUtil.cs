@@ -43,6 +43,32 @@ namespace OdtSharp
 		//*	Public																																*
 		//*************************************************************************
 		//*-----------------------------------------------------------------------*
+		//*	Base64ToString																												*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Return a base64 representation of the caller's string.
+		/// </summary>
+		/// <param name="base64">
+		/// The base64 character content to convert.
+		/// </param>
+		/// <returns>
+		/// The natural string representation of the base64 data.
+		/// </returns>
+		public static string Base64ToString(string base64)
+		{
+			byte[] buffer = null;
+			string result = "";
+
+			if(base64?.Length > 0)
+			{
+				buffer = Convert.FromBase64String(base64);
+				result = Encoding.UTF8.GetString(buffer);
+			}
+			return result;
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
 		//* GetAttributeValue																											*
 		//*-----------------------------------------------------------------------*
 		/// <summary>
@@ -191,6 +217,32 @@ namespace OdtSharp
 			if(text?.Length > 0)
 			{
 				result = Regex.Replace(text, ResourceMain.rxCapitalWords, " ${word}");
+			}
+			return result;
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
+		//*	StringToBase64																												*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Return a base64 representation of the caller's string.
+		/// </summary>
+		/// <param name="text">
+		/// The text to be converted.
+		/// </param>
+		/// <returns>
+		/// The base64 data representation of the original string.
+		/// </returns>
+		public static string StringToBase64(string text)
+		{
+			byte[] buffer = null;
+			string result = "";
+
+			if(text?.Length > 0)
+			{
+				buffer = Encoding.UTF8.GetBytes(text);
+				result = Convert.ToBase64String(buffer);
 			}
 			return result;
 		}

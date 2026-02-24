@@ -22,6 +22,8 @@ using System.Linq;
 using System.Text;
 
 using Html;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using OdtSharp.OpenDocument;
 
 namespace OdtSharp
@@ -74,6 +76,7 @@ namespace OdtSharp
 		/// <summary>
 		/// Get a reference to the collection of child blocks in this block.
 		/// </summary>
+		[JsonProperty(Order = 3)]
 		public ElementCollection Elements
 		{
 			get { return mElements; }
@@ -91,6 +94,8 @@ namespace OdtSharp
 		/// <summary>
 		/// Get/Set the recognized type of this block.
 		/// </summary>
+		[JsonConverter(typeof(StringEnumConverter))]
+		[JsonProperty(Order = 0)]
 		public OpenDocumentElementTypeEnum ElementType
 		{
 			get { return mElementType; }
@@ -108,6 +113,7 @@ namespace OdtSharp
 		/// <summary>
 		/// Get/Set the type of node represented by this block.
 		/// </summary>
+		[JsonProperty(Order = 1)]
 		public string NodeType
 		{
 			get { return mNodeType; }
@@ -125,6 +131,8 @@ namespace OdtSharp
 		/// <summary>
 		/// Get/Set the original content of this item.
 		/// </summary>
+		[JsonConverter(typeof(StringBase64JsonConverter))]
+		[JsonProperty(Order = 4)]
 		internal string OriginalContent
 		{
 			get { return mOriginalContent; }
@@ -142,76 +150,93 @@ namespace OdtSharp
 		/// <summary>
 		/// Get a reference to the collection of properties on this item.
 		/// </summary>
+		[JsonProperty(Order = 2)]
 		public PropertyCollection Properties
 		{
 			get { return mProperties; }
 		}
 		//*-----------------------------------------------------------------------*
 
-		////*-----------------------------------------------------------------------*
-		////*	Text																																	*
-		////*-----------------------------------------------------------------------*
-		///// <summary>
-		///// Get/Set the text of this element.
-		///// </summary>
-		//public string Text
-		//{
-		//	get
-		//	{
-		//		string result = "";
-		//		string text = "";
-		//		ElementItem textItem = (
-		//			this.mElementType == OpenDocumentElementTypeEnum.Text ?
-		//				this :
-		//				mElements.FirstOrDefault(x =>
-		//					x.ElementType == OpenDocumentElementTypeEnum.Text));
+		//*-----------------------------------------------------------------------*
+		//*	ShouldSerializeElements																								*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Return a value indicating whether the Elements property should be
+		/// serialized.
+		/// </summary>
+		/// <returns>
+		/// A value indicating whether or not to serialize the property.
+		/// </returns>
+		public bool ShouldSerializeElements()
+		{
+			return mElements.Count > 0;
+		}
+		//*-----------------------------------------------------------------------*
 
-		//		if(textItem != null)
-		//		{
-		//			text = textItem.mProperties
-		//				.Where(x => x.Name == "text")
-		//				.Select(y => y.Value).FirstOrDefault();
-		//			if(text?.Length > 0)
-		//			{
-		//				result = text;
-		//			}
-		//		}
-		//		return result;
-		//	}
-		//	set
-		//	{
-		//		ElementItem textItem = null;
+		//*-----------------------------------------------------------------------*
+		//*	ShouldSerializeElementType																						*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Return a value indicating whether the ElementType property should be
+		/// serialized.
+		/// </summary>
+		/// <returns>
+		/// A value indicating whether or not to serialize the property.
+		/// </returns>
+		public bool ShouldSerializeElementType()
+		{
+			return mElementType != OpenDocumentElementTypeEnum.None;
+		}
+		//*-----------------------------------------------------------------------*
 
-		//		if(value?.Length > 0)
-		//		{
-		//			if(this.mElementType == OpenDocumentElementTypeEnum.Text)
-		//			{
-		//				textItem = this;
-		//			}
-		//			else
-		//			{
-		//				textItem = mElements.FirstOrDefault(x =>
-		//					x.ElementType == OpenDocumentElementTypeEnum.Text);
-		//				if(textItem == null)
-		//				{
-		//					textItem = new ElementItem()
-		//					{
-		//						ElementType = OpenDocumentElementTypeEnum.Text
-		//					};
-		//					this.mElements.Add(textItem);
-		//				}
-		//			}
-		//			PropertyCollection.SetPropertyValue(textItem.mProperties,
-		//				"Text", value);
-		//		}
-		//		else
-		//		{
-		//			this.mElements.RemoveAll(x =>
-		//				x.ElementType == OpenDocumentElementTypeEnum.Text);
-		//		}
-		//	}
-		//}
-		////*-----------------------------------------------------------------------*
+		//*-----------------------------------------------------------------------*
+		//*	ShouldSerializeNodeType																								*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Return a value indicating whether the NodeType property should be
+		/// serialized.
+		/// </summary>
+		/// <returns>
+		/// A value indicating whether or not to serialize the property.
+		/// </returns>
+		public bool ShouldSerializeNodeType()
+		{
+			return mElementType == OpenDocumentElementTypeEnum.None &&
+				mNodeType.Length > 0;
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
+		//*	ShouldSerializeOriginalContent																				*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Return a value indicating whether the OriginalContent property should
+		/// be serialized.
+		/// </summary>
+		/// <returns>
+		/// A value indicating whether or not to serialize the property.
+		/// </returns>
+		public bool ShouldSerializeOriginalContent()
+		{
+			return mOriginalContent.Length > 0;
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
+		//*	ShouldSerializeProperties																							*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Return a value indicating whether the Properties property should be
+		/// serialized.
+		/// </summary>
+		/// <returns>
+		/// A value indicating whether or not to serialize the property.
+		/// </returns>
+		public bool ShouldSerializeProperties()
+		{
+			return mProperties.Count > 0;
+		}
+		//*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
 		//* ToString																															*

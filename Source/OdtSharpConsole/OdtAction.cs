@@ -64,6 +64,37 @@ namespace OdtSharpConsole
 		//*************************************************************************
 		//*	Private																																*
 		//*************************************************************************
+		//*-----------------------------------------------------------------------*
+		//* ExportJson																														*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Export the input file as JSON.
+		/// </summary>
+		/// <param name="action">
+		/// Reference to the action containing information about the files to
+		/// read and export.
+		/// </param>
+		private static void ExportJson(OdtActionItem action)
+		{
+			ActionDocumentItem actionDocument = null;
+			string content = "";
+
+			if(action != null)
+			{
+				if(CheckElements(action,
+					ActionElementEnum.InputFilename | ActionElementEnum.OutputFilename))
+				{
+					actionDocument = GetWorkingDocument(action);
+					if(actionDocument is OdtWorkingDocumentItem odtDocument)
+					{
+						content = OdtDocumentItem.ToJson(odtDocument.Document);
+						File.WriteAllText(action.OutputFile.FullName, content);
+					}
+				}
+			}
+		}
+		//*-----------------------------------------------------------------------*
+
 		//*************************************************************************
 		//*	Protected																															*
 		//*************************************************************************
@@ -120,6 +151,24 @@ namespace OdtSharpConsole
 						$" Working document index out of range at: {docIndex}",
 						$"{MessageImportanceEnum.Warn}");
 				}
+			}
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
+		//* RunCustomAction																												*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Run a custom action.
+		/// </summary>
+		protected override void RunCustomAction()
+		{
+			base.RunCustomAction();
+			switch(this.Action.ToLower())
+			{
+				case "exportjson":
+					ExportJson(this);
+					break;
 			}
 		}
 		//*-----------------------------------------------------------------------*

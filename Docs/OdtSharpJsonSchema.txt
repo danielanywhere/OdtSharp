@@ -1,0 +1,35 @@
+OdtDocumentItem
+[
+	SourceFilename: string,
+	MimeType: string,
+	GlobalText: bool,
+	UseSoftPageBreaks: bool,
+	Elements: ElementCollection,
+	FontFaces: ElementCollection,
+	AutoPageStyles: ElementCollection,
+	AutoBaseStyles: ElementCollection,
+	MasterStyles: ElementCollection,
+	BaseStyles: ElementCollection,
+	Settings: ElementCollection,
+	ContentData: string,
+	StylesData: string,
+	SettingsData: string
+]
+
+ElementCollection : List<ElementItem>
+ElementItem
+[
+	ElementType: OpenDocumentElementTypeEnum,
+	NodeType: string,
+	Properties: PropertyCollection,
+	Elements: ElementCollection,
+	OriginalContent: string
+]
+
+PropertyCollection : List<PropertyItem>
+PropertyItem
+[
+	Name: string,
+	Value: string
+]
+

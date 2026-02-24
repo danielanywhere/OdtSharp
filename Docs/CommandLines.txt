@@ -1,1 +1,2 @@
 odtsharpconsole /wait /action:OpenWorkingDocument /infile:TheImportanceOfOpenSource.odt /option:Dump,C:\Temp\OdtDocumentBlocks.txt /workingpath:%GITHUBPATH%\OdtSharp\Docs\ReferenceDocument
+odtsharpconsole /wait /action:ExportJson /infile:TheImportanceOfOpenSource.odt /outfile:OdtDocumentExample.json /workingpath:%GITHUBPATH%\OdtSharp\Docs\ReferenceDocument

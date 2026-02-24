@@ -62,10 +62,10 @@ namespace OdtSharpConsole
 			Trace.Listeners.Add(consoleListener);
 			Console.WriteLine("OdtSharpConsole.exe");
 
-			//OdtActionItem.RecognizedActions.AddRange(new string[]
-			//{
-			//	""
-			//});
+			OdtActionItem.RecognizedActions.AddRange(new string[]
+			{
+				"ExportJSON"
+			});
 
 			prg.mActionItem = new OdtActionItem();
 
@@ -96,13 +96,19 @@ namespace OdtSharpConsole
 						if(argItem.Value.Length > 0)
 						{
 							prg.mActionItem.InputFilename = argItem.Value;
-							prg.mActionItem.OutputName = argItem.Value;
 						}
 						break;
 					case "option":
 						if(argItem.Value.Length > 0)
 						{
 							prg.mActionItem.Options.Add(argItem.Value);
+						}
+						break;
+					case "outfile":
+						//	Output file.
+						if(argItem.Value.Length > 0)
+						{
+							prg.mActionItem.OutputName = argItem.Value;
 						}
 						break;
 					case "workingpath":

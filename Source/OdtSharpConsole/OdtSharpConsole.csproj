@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Dans.ActionEngine.Library" Version="26.2117.4453" />
+    <PackageReference Include="Dans.ActionEngine.Library" Version="26.2224.4542" />
     <PackageReference Include="Dans.StyleAgnosticCommandArgs.Library" Version="26.2118.4210" />
   </ItemGroup>
 

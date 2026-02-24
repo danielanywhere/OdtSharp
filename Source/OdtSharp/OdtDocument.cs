@@ -27,6 +27,7 @@ using System.Xml;
 using Html;
 using ICSharpCode.SharpZipLib.Core;
 using ICSharpCode.SharpZipLib.Zip;
+using Newtonsoft.Json;
 using OdtSharp.OpenDocument;
 using static OdtSharp.OdtSharpUtil;
 
@@ -203,7 +204,7 @@ namespace OdtSharp
 					AddNodesAsBlocks(node.Nodes, blocks);
 				}
 				//	Automatic page styles.
-				blocks = document.mAutomaticPageStyles;
+				blocks = document.mAutoPageStyles;
 				blocks.Clear();
 				node = html.Nodes.FindMatch(x =>
 					x.NodeType == "office:automatic-styles");
@@ -226,7 +227,7 @@ namespace OdtSharp
 					AddNodesAsBlocks(node.Nodes, blocks);
 				}
 				//	Automatic base styles.
-				blocks = document.mAutomaticBaseStyles;
+				blocks = document.mAutoBaseStyles;
 				blocks.Clear();
 				node = html.Nodes.FindMatch(x =>
 					x.NodeType == "office:automatic-styles");
@@ -461,36 +462,38 @@ namespace OdtSharp
 		//*	Public																																*
 		//*************************************************************************
 		//*-----------------------------------------------------------------------*
-		//*	AutomaticBaseStyles																										*
+		//*	AutoBaseStyles																												*
 		//*-----------------------------------------------------------------------*
 		/// <summary>
 		/// Private member for
-		/// <see cref="AutomaticBaseStyles">AutomaticBaseStyles</see>.
+		/// <see cref="AutoBaseStyles">AutoBaseStyles</see>.
 		/// </summary>
-		private ElementCollection mAutomaticBaseStyles = new ElementCollection();
+		private ElementCollection mAutoBaseStyles = new ElementCollection();
 		/// <summary>
 		/// Get a reference to the collection of automatic styles on this document.
 		/// </summary>
-		public ElementCollection AutomaticBaseStyles
+		[JsonProperty(Order = 7)]
+		public ElementCollection AutoBaseStyles
 		{
-			get { return mAutomaticBaseStyles; }
+			get { return mAutoBaseStyles; }
 		}
 		//*-----------------------------------------------------------------------*
 
 		//*-----------------------------------------------------------------------*
-		//*	AutomaticPageStyles																										*
+		//*	AutoPageStyles																												*
 		//*-----------------------------------------------------------------------*
 		/// <summary>
 		/// Private member for
-		/// <see cref="AutomaticPageStyles">AutomaticPageStyles</see>.
+		/// <see cref="AutoPageStyles">AutoPageStyles</see>.
 		/// </summary>
-		private ElementCollection mAutomaticPageStyles = new ElementCollection();
+		private ElementCollection mAutoPageStyles = new ElementCollection();
 		/// <summary>
 		/// Get a reference to the collection of automatic styles on this document.
 		/// </summary>
-		public ElementCollection AutomaticPageStyles
+		[JsonProperty(Order = 6)]
+		public ElementCollection AutoPageStyles
 		{
-			get { return mAutomaticPageStyles; }
+			get { return mAutoPageStyles; }
 		}
 		//*-----------------------------------------------------------------------*
 
@@ -504,9 +507,29 @@ namespace OdtSharp
 		/// <summary>
 		/// Get a reference to the collection of base styles on this document.
 		/// </summary>
+		[JsonProperty(Order = 9)]
 		public ElementCollection BaseStyles
 		{
 			get { return mBaseStyles; }
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
+		//*	ContentData																														*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Private member for <see cref="ContentData">ContentData</see>.
+		/// </summary>
+		private string mContentData = "";
+		/// <summary>
+		/// Get/Set the content data of this document.
+		/// </summary>
+		[JsonConverter(typeof(StringBase64JsonConverter))]
+		[JsonProperty(Order = 11)]
+		internal string ContentData
+		{
+			get { return mContentData; }
+			set { mContentData = value; }
 		}
 		//*-----------------------------------------------------------------------*
 
@@ -543,17 +566,17 @@ namespace OdtSharp
 		{
 			if(document?.mElements.Count > 0)
 			{
-				builder.AppendLine("*** Elements ***");
+				builder.AppendLine("*** Content ***");
 				DumpElements(document.mElements, 0, builder);
 				builder.AppendLine();
 				builder.AppendLine("*** Font Faces ***");
 				DumpElements(document.mFontFaces, 0, builder);
 				builder.AppendLine();
 				builder.AppendLine("*** Automatic Base Styles ***");
-				DumpElements(document.mAutomaticBaseStyles, 0, builder);
+				DumpElements(document.mAutoBaseStyles, 0, builder);
 				builder.AppendLine();
 				builder.AppendLine("*** Automatic Page Styles ***");
-				DumpElements(document.mAutomaticPageStyles, 0, builder);
+				DumpElements(document.mAutoPageStyles, 0, builder);
 				builder.AppendLine();
 				builder.AppendLine("*** Base Styles ***");
 				DumpElements(document.mBaseStyles, 0, builder);
@@ -617,6 +640,7 @@ namespace OdtSharp
 		/// <summary>
 		/// Get a reference to the collection of content elements in this document.
 		/// </summary>
+		[JsonProperty(Order = 4)]
 		public ElementCollection Elements
 		{
 			get { return mElements; }
@@ -634,6 +658,7 @@ namespace OdtSharp
 		/// Get a reference to the collection of font face declarations in this
 		/// document.
 		/// </summary>
+		[JsonProperty(Order = 5)]
 		public ElementCollection FontFaces
 		{
 			get { return mFontFaces; }
@@ -678,6 +703,7 @@ namespace OdtSharp
 		/// Get/Set whether this document uses a global (Master Document) text
 		/// strategy.
 		/// </summary>
+		[JsonProperty(Order = 2)]
 		public bool GlobalText
 		{
 			get { return mGlobalText; }
@@ -695,6 +721,7 @@ namespace OdtSharp
 		/// <summary>
 		/// Get a reference to the collection of master styles on this document.
 		/// </summary>
+		[JsonProperty(Order = 8)]
 		public ElementCollection MasterStyles
 		{
 			get { return mMasterStyles; }
@@ -711,6 +738,7 @@ namespace OdtSharp
 		/// <summary>
 		/// Get/Set the mime type of this document.
 		/// </summary>
+		[JsonProperty(Order = 1)]
 		public string MimeType
 		{
 			get { return mMimeType; }
@@ -764,13 +792,19 @@ namespace OdtSharp
 					{
 						content = File.ReadAllText(
 							Path.Combine(result.mOdtProject.FullName, "content.xml"));
+						result.mContentData = content;
 						result.mContentFile = new HtmlDocument(content, true, true, true);
+
 						content = File.ReadAllText(
 							Path.Combine(result.mOdtProject.FullName, "settings.xml"));
+						result.mSettingsData = content;
 						result.mSettingsFile = new HtmlDocument(content, true, true, true);
+
 						content = File.ReadAllText(
 							Path.Combine(result.mOdtProject.FullName, "styles.xml"));
+						result.mStylesData = content;
 						result.mStylesFile = new HtmlDocument(content, true, true, true);
+
 						result.mMimeType = File.ReadAllText(
 							Path.Combine(result.mOdtProject.FullName, "mimetype"));
 						DeserializeXml(result);
@@ -834,10 +868,30 @@ namespace OdtSharp
 		/// <summary>
 		/// Get a reference to the collection of settings on this document.
 		/// </summary>
+		[JsonProperty(Order = 10)]
 		public ElementCollection Settings
 		{
 			get { return mSettings; }
 			set { mSettings = value; }
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
+		//*	SettingsData																													*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Private member for <see cref="SettingsData">SettingsData</see>.
+		/// </summary>
+		private string mSettingsData = "";
+		/// <summary>
+		/// Get/Set the underlying settings data for this document.
+		/// </summary>
+		[JsonConverter(typeof(StringBase64JsonConverter))]
+		[JsonProperty(Order = 13)]
+		internal string SettingsData
+		{
+			get { return mSettingsData; }
+			set { mSettingsData = value; }
 		}
 		//*-----------------------------------------------------------------------*
 
@@ -848,10 +902,55 @@ namespace OdtSharp
 		/// <summary>
 		/// Get/Set the full path and filename of the ODT source file.
 		/// </summary>
+		[JsonProperty(Order = 0)]
 		public string SourceFilename
 		{
 			get { return mSourceFilename; }
 			set { mSourceFilename = value; }
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
+		//*	StylesData																														*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Private member for <see cref="StylesData">StylesData</see>.
+		/// </summary>
+		private string mStylesData = "";
+		/// <summary>
+		/// Get/Set the underlying styles data for this document.
+		/// </summary>
+		[JsonConverter(typeof(StringBase64JsonConverter))]
+		[JsonProperty(Order = 12)]
+		internal string StylesData
+		{
+			get { return mStylesData; }
+			set { mStylesData = value; }
+		}
+		//*-----------------------------------------------------------------------*
+
+		//*-----------------------------------------------------------------------*
+		//* ToJson																																*
+		//*-----------------------------------------------------------------------*
+		/// <summary>
+		/// Return the JSON representation of this document.
+		/// </summary>
+		/// <param name="document">
+		/// Reference to the document to convert.
+		/// </param>
+		/// <returns>
+		/// The JSON content of the provided document.
+		/// </returns>
+		public static string ToJson(OdtDocumentItem document)
+		{
+			string result = "";
+
+			if(document != null)
+			{
+				result = JsonConvert.SerializeObject(document,
+					Newtonsoft.Json.Formatting.Indented);
+			}
+			return result;
 		}
 		//*-----------------------------------------------------------------------*
 
@@ -866,6 +965,7 @@ namespace OdtSharp
 		/// <summary>
 		/// Get/Set a value indicating whether to use soft page breaks.
 		/// </summary>
+		[JsonProperty(Order = 3)]
 		public bool UseSoftPageBreaks
 		{
 			get { return mUseSoftPageBreaks; }
