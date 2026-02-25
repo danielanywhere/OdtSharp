@@ -32,7 +32,7 @@ Preliminary development of this project is currently in progress. If you find a 
 
 The following section follows the early progress of this project.
 
-**20260221.0804**. In this update, I have moved to a single definition for all blocks. Basic nodes can now be referred to as simple elements instead of text blocks, style blocks, or other specialized entities. This means that whether deserializing text content, styles, or settings, the process is virtually the same. The challenge it will bring the library begins accepting input is properly regulating the types of elements and attributes that are allowed to be fitted into any target area since at this time, literally anything can be placed anywhere.
+**20260221.0804**. In this update, I have moved to a single definition for all blocks. Basic nodes can now be referred to as simple elements instead of text blocks, style blocks, or other specialized entities. This means that whether deserializing text content, styles, or settings, the process is virtually the same. The challenge it will bring as the library begins accepting input is properly regulating the types of elements and attributes that are allowed to be fitted into any target area since at this time, literally anything can be placed anywhere.
 
 Rules and associations will be created soon to add guardrails for various contexts. However, the current definition has a complete hierarchy that can assure the success of those guardrails, as you can see in the file Docs/OpenDocumentDefinition.json, which is in a working draft version at this time.
 
